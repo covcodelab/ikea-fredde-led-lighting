@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>FREDDE LED Hinge Options</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: workshop sheet. Two model panels side by side (stacked on phones), comparison table and fit notes underneath. */
+:root{
+  --bg:#f1f2f0; --fg:#1b1f24; --muted:#5b6470; --line:#d3d7db; --panel:#e4e7e9; --card:#fafaf9; --accent:#b8700f;
+  --dim:#1d6aa8; --d-ctx:#dde0e3; --d-alu:#c3cad1; --d-prof:#6b717a; --d-hinge:#2c2f34; --d-wood:#dcc193;
+  --font-display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --font-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141619;--fg:#e6e8eb;--muted:#9aa3ad;--line:#2c3138;--panel:#1d2126;--card:#191c20;--accent:#f0a336;--dim:#6fb0ea;--d-ctx:#262a30;--d-alu:#5a636d;--d-prof:#3b4048;--d-hinge:#0b0c0e;--d-wood:#7a6142;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#141619;--fg:#e6e8eb;--muted:#9aa3ad;--line:#2c3138;--panel:#1d2126;--card:#191c20;--accent:#f0a336;--dim:#6fb0ea;--d-ctx:#262a30;--d-alu:#5a636d;--d-prof:#3b4048;--d-hinge:#0b0c0e;--d-wood:#7a6142;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:15px;line-height:1.55}
+.page{max-width:1180px;margin:0 auto;padding-block:28px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:28px}
+h1,h2{font-family:var(--font-display);font-weight:600;letter-spacing:.01em;text-wrap:balance;margin:0}
+h1{font-size:clamp(28px,4vw,38px);line-height:1.1}
+h2{font-size:24px;line-height:1.15}
+.lede{color:var(--muted);max-width:68ch;margin:6px 0 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{font-family:var(--font-mono);font-size:12.5px;border:1px solid var(--line);border-radius:4px;padding:3px 8px;color:var(--muted);background:var(--card)}
+.chip b{color:var(--fg);font-weight:500}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:20px}
+.model{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.model header{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.tag{font-family:var(--font-mono);font-size:12px;color:var(--muted)}
+.view{position:relative;width:100%;height:380px;border-radius:6px;overflow:hidden;background:var(--panel);touch-action:none}
+.view canvas{display:block}
+.lbl{font-family:var(--font-body);font-size:12px;color:var(--fg);background:var(--card);border:1px solid var(--line);padding:1px 6px;border-radius:3px;white-space:nowrap}
+.controls{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;font-size:14px;color:var(--muted)}
+.controls input[type=range]{flex:1;min-width:150px;accent-color:var(--accent)}
+.controls .val{font-family:var(--font-mono);color:var(--fg);min-width:3ch;font-variant-numeric:tabular-nums}
+.controls label.cb{display:flex;align-items:center;gap:6px}
+.readouts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;border-top:1px solid var(--line);padding-top:12px}
+.ro span{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.ro b{font-family:var(--font-mono);font-weight:500;font-size:17px;font-variant-numeric:tabular-nums}
+.hint{font-size:12.5px;color:var(--muted);margin:0}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+thead th{font-family:var(--font-display);font-weight:600;font-size:16px;letter-spacing:.02em}
+td.num{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:20px}
+.notes section{min-width:0}
+.notes h2{font-size:20px;margin-bottom:6px}
+.notes ul{margin:0;padding-left:18px;color:var(--fg)}
+.notes li{margin:4px 0}
+.err{padding:20px;color:var(--muted)}
+input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.drawings{display:flex;flex-direction:column;gap:20px}
+.plist tr.grp th{background:var(--panel);font-family:var(--font-display);font-weight:600;font-size:15px;letter-spacing:.03em;padding:7px 14px}
+.plist td.q,.plist th.q{text-align:center;white-space:nowrap}
+.plist td.pr,.plist th.pr{text-align:right;white-space:nowrap;font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+.plist a{color:var(--dim);text-underline-offset:2px}
+h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:12px;font-size:13px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:16px;height:10px;border:1px solid var(--fg);border-radius:2px;display:inline-block}
+.dwgwrap{overflow-x:auto;background:var(--card);border-radius:6px}
+.dwg{display:block;width:100%;min-width:560px;height:auto}
+.dwg.sm{min-width:280px}
+.parts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px}
+.dnotes{margin:0;padding-left:18px;font-size:13.5px;color:var(--muted)}
+.dnotes li{margin:3px 0}
+.dwg .ctx{fill:var(--d-ctx);stroke:var(--muted);stroke-width:.25}
+.dwg .alu{fill:var(--d-alu);stroke:var(--fg);stroke-width:.25}
+.dwg .prof{fill:var(--d-prof);stroke:var(--fg);stroke-width:.3}
+.dwg .hinge{fill:var(--d-hinge);stroke:var(--fg);stroke-width:.25}
+.dwg .wood{fill:var(--d-wood);stroke:var(--fg);stroke-width:.25}
+.dwg .led{fill:var(--accent)}
+.dwg .diff{fill:var(--card);stroke:var(--fg);stroke-width:.25}
+.dwg .hid{fill:none;stroke:var(--fg);stroke-width:.2;stroke-dasharray:1 .7}
+.dwg .cl{fill:none;stroke:var(--muted);stroke-width:.18;stroke-dasharray:4 1 1 1}
+.dwg .ext{stroke:var(--dim);stroke-width:.14}
+.dwg .dim{stroke:var(--dim);stroke-width:.2}
+.dwg .arr{fill:var(--dim)}
+.dwg .dt{font-family:var(--font-mono);font-size:2.6px;fill:var(--dim)}
+.dwg .nt{font-family:var(--font-body);font-size:2.4px;fill:var(--fg)}
+</style>
+</head>
+<body>
+
+<div class="page">
+  <header>
+    <h1>FREDDE LED hinge options</h1>
+    <p class="lede">Two ways to hang the black ALP3025-B profile under the top shelf on an adjustable-friction hinge, so it can tilt and throw light forward under the front rail. Drag either model to look around it. The slider tilts the profile on its hinge.</p>
+    <div class="chips">
+      <span class="chip">Rail <b>25 mm</b> deep · <b>15 mm</b> thick · back face <b>25 mm</b> from shelf edge</span>
+      <span class="chip">Clip U <b>9 × 9 mm</b></span>
+      <span class="chip">Wall slot <b>19 × 3 mm</b>, base <b>3 mm</b> above U floor</span>
+      <span class="chip">Profile <b>33 / 26 × 25.5 mm</b></span>
+    </div>
+  </header>
+
+  <div class="grid">
+    <article class="model">
+      <header><h2>Southco E6 small</h2><span class="tag">E6-10-101-20 · 0–0.25 Nm</span></header>
+      <div class="view" id="v-s"></div>
+      <div class="controls">
+        <label for="t-s">Tilt</label><input id="t-s" type="range" min="0" max="60" step="1" value="0"><span class="val" id="tv-s">0°</span>
+        <label class="cb"><input id="x-s" type="checkbox">See-through profile</label>
+        <label class="cb"><input id="l-s" type="checkbox" checked>Labels</label>
+      </div>
+      <div class="readouts">
+        <div class="ro"><span>Below rail</span><b id="b-s">–</b></div>
+        <div class="ro"><span>From shelf edge</span><b>≈77 mm</b></div>
+        <div class="ro"><span>Parts to make</span><b>3</b></div>
+      </div>
+      <p class="hint">Flat bar through both clip-wall slots, hinge hung below it, fixed leaf on a 10 mm hardwood spacer butted against the rail.</p>
+    </article>
+
+    <article class="model">
+      <header><h2>Kipp K0440 small</h2><span class="tag">K0440.56181800 · 0–5 Nm</span></header>
+      <div class="view" id="v-k"></div>
+      <div class="controls">
+        <label for="t-k">Tilt</label><input id="t-k" type="range" min="0" max="60" step="1" value="0"><span class="val" id="tv-k">0°</span>
+        <label class="cb"><input id="x-k" type="checkbox">See-through profile</label>
+        <label class="cb"><input id="l-k" type="checkbox" checked>Labels</label>
+      </div>
+      <div class="readouts">
+        <div class="ro"><span>Below rail</span><b id="b-k">–</b></div>
+        <div class="ro"><span>From shelf edge</span><b>≈55 mm</b></div>
+        <div class="ro"><span>Parts to make</span><b>1</b></div>
+      </div>
+      <p class="hint">Hinge folded shut under the shelf. The lower leaf screws to the profile through a tapped strip in the T-slot. No clip block needed.</p>
+    </article>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th></th><th>Southco E6</th><th>Kipp K0440</th></tr></thead>
+      <tbody>
+        <tr><td>Hinge size</td><td class="num">25.4 × 30.5 mm</td><td class="num">56 (63 with caps) × 54 mm</td></tr>
+        <tr><td>Torque</td><td>Up to 0.25 Nm, screw adjuster on the knuckle</td><td>0–5 Nm, 4 mm hex key in the knuckle end</td></tr>
+        <tr><td>Fixing</td><td>Threaded studs and nuts, panels up to 7.9 mm</td><td>Counterbored holes for M6, 36 mm apart</td></tr>
+        <tr><td>Profile below rail at rest</td><td class="num">≈17 mm</td><td class="num">≈22 mm</td></tr>
+        <tr><td>Parts to make</td><td>Stepped flat bar, spacer with nut recesses, trimmed studs</td><td>One tapped strip, 9.5 × about 2 mm, M3 at 36 mm</td></tr>
+        <tr><td>Uses the clip block</td><td>Yes</td><td>No</td></tr>
+        <tr><td>Tilt</td><td>One way from flat</td><td>Up to 180° from folded</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <section class="drawings" id="parts">
+    <header>
+      <h2>Parts list</h2>
+      <p class="lede">Quantities are for one run of 800–900 mm, hung on two hinges about 180 mm in from each end. Prices were checked on 25 October 2026 and may change.</p>
+    </header>
+    <div class="tablewrap">
+      <table class="plist">
+        <thead><tr><th>Item</th><th>Part or spec</th><th class="q">Qty</th><th>Source</th><th class="pr">Price each</th></tr></thead>
+        <tbody>
+          <tr class="grp"><th colspan="5">Both options</th></tr>
+          <tr><td>LED profile</td><td>LEDBRITE ALP3025-B, black, 2 m, with opal diffuser and end caps. Cut profile and diffuser to 800–900 mm. One length leaves enough for a second run.</td><td class="q">1</td><td><a href="https://www.ledbrite.co.uk/ledbrite-alp3025-b-30-x-24-1mm-black-2-metre-anti-glare-recessed-led-aluminium-profile" target="_blank" rel="noopener">LEDBRITE</a></td><td class="pr">£19.90</td></tr>
+          <tr><td>LED strip</td><td>SIRYYUI COB strip, 24 V, 8 mm wide, tunable white 2700–6500 K, CRI 90+, IP20. Kit with RF remote and plug-in power supply. Cut to 800–900 mm at a marked cut point. At 8 mm it sits easily in the 19 mm channel.</td><td class="q">3 m kit</td><td><a href="https://amzn.eu/d/0fuojfsw" target="_blank" rel="noopener">Amazon</a></td><td class="pr">£23.99</td></tr>
+          <tr class="grp"><th colspan="5">Southco option</th></tr>
+          <tr><td>Hinge</td><td>Southco E6-10-101-20, black acetal, 0.25 Nm, 4 nuts included</td><td class="q">2</td><td><a href="https://shop.southco.com/en_gb/e6-10-101-20" target="_blank" rel="noopener">Southco UK shop</a></td><td class="pr">£8.67</td></tr>
+          <tr><td>Clip block</td><td>Profile mounting clip with its slide plate and screw, springs removed</td><td class="q">2</td><td>Clips you already have</td><td class="pr">–</td></tr>
+          <tr><td>Flat bar</td><td>3 mm aluminium sheet or 20 × 3 mm flat bar, about 45 mm per bar. Cut to the flat bar drawing.</td><td class="q">2</td><td>Metal or DIY supplier</td><td class="pr">–</td></tr>
+          <tr><td>Spacer</td><td>10 mm hardwood, 18 × 40 mm. Cut to the spacer drawing.</td><td class="q">2</td><td>Offcut</td><td class="pr">–</td></tr>
+          <tr><td>Retaining bolt</td><td>M2.5 × 6 mm pan head screw with nut</td><td class="q">2</td><td>Hardware supplier</td><td class="pr">–</td></tr>
+          <tr><td>Wood screws</td><td>4 × 20 mm, spacer to shelf</td><td class="q">4</td><td>Hardware supplier</td><td class="pr">–</td></tr>
+          <tr class="grp"><th colspan="5">Kipp option</th></tr>
+          <tr><td>Hinge</td><td>Kipp K0440.56181800, without guide tabs, 0–5 Nm</td><td class="q">2</td><td><a href="https://uk.misumi-ec.com/vona2/maker/kipp/mech/M1700000000/M1723000000" target="_blank" rel="noopener">MISUMI UK</a> or <a href="https://www.aftfasteners.com/kipp-hinge-w-adjustable-friction-54x56-mm-thermoplastic-black-stainless-steel-qty-1-k0440-56181800/" target="_blank" rel="noopener">AFT Fasteners</a></td><td class="pr">≈ US$28.99</td></tr>
+          <tr><td>Tapped strip</td><td>Aluminium, 9.5 × about 2 × 50 mm. Check the T-slot cavity first, then cut to the strip drawing.</td><td class="q">2</td><td>Metal or DIY supplier</td><td class="pr">–</td></tr>
+          <tr><td>Machine screws</td><td>M3 × 10 mm with M3 washers, hinge to strip. Check the length against the counterbore depth.</td><td class="q">4</td><td>Hardware supplier</td><td class="pr">–</td></tr>
+          <tr><td>Wood screws</td><td>5 × 16 mm, hinge to shelf, shorter than the shelf is thick</td><td class="q">4</td><td>Hardware supplier</td><td class="pr">–</td></tr>
+          <tr class="grp"><th colspan="5">Tools</th></tr>
+          <tr><td>Southco</td><td>Drills 2.7, 4 and 5.5 mm, an 11 mm flat or Forstner bit for the nut recesses, a hacksaw and file</td><td class="q">–</td><td>–</td><td class="pr">–</td></tr>
+          <tr><td>Kipp</td><td>2.5 mm drill, M3 tap, 4 mm hex key for the friction adjuster</td><td class="q">–</td><td>–</td><td class="pr">–</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="drawings">
+    <header>
+      <h2>Dimensioned drawings</h2>
+      <p class="lede">End views looking along the profile, with the front of the desk on the right. Both assemblies are drawn at the same scale. Dimensions in mm, at rest with no tilt.</p>
+      <div class="legend">
+        <span><i class="sw" style="background:var(--d-hinge)"></i>Hinge</span>
+        <span><i class="sw" style="background:var(--d-alu)"></i>Aluminium and fixings</span>
+        <span><i class="sw" style="background:var(--d-wood)"></i>Hardwood spacer</span>
+        <span><i class="sw" style="background:var(--d-prof)"></i>LED profile</span>
+        <span><i class="sw" style="background:var(--d-ctx)"></i>Shelf and rail</span>
+        <span><i class="sw" style="background:none;border-style:dashed"></i>Hidden</span>
+      </div>
+    </header>
+    <div class="grid">
+      <article class="model">
+        <header><h3>Southco E6 assembly</h3><span class="tag">End view</span></header>
+        <div class="dwgwrap" id="d-s"></div>
+        <ul class="dnotes">
+          <li>Hinge axis 15 below the shelf. Knuckle about Ø10.</li>
+          <li>Bar underside 6 above the profile base, because the slot base is 3 above the U floor.</li>
+          <li>Spacer 10 thick, butted against the back of the rail.</li>
+          <li>Studs trimmed to about 9 on the bar side and 10 on the spacer side.</li>
+        </ul>
+      </article>
+      <article class="model">
+        <header><h3>Kipp K0440 assembly</h3><span class="tag">End view</span></header>
+        <div class="dwgwrap" id="d-k"></div>
+        <ul class="dnotes">
+          <li>Hinge axis 10.5 below the shelf. Knuckle Ø20.</li>
+          <li>Knuckle clears the back of the rail by about 2.25.</li>
+          <li>Axis 4.75 in front of the profile's front edge, so the leaf holes sit over the T-slot.</li>
+          <li>Leaves 27 from the axis and 8 thick.</li>
+        </ul>
+      </article>
+    </div>
+    <h2>Parts to make</h2>
+    <div class="parts">
+      <article class="model">
+        <header><h3>Flat bar</h3><span class="tag">Southco · plan</span></header>
+        <div class="dwgwrap" id="d-bar"></div>
+        <ul class="dnotes">
+          <li>3 mm aluminium, filed to slide in the 3 mm slots.</li>
+          <li>The narrow part is 18.5 wide so it passes the 19 mm slots and rests on both end lips.</li>
+          <li>Ø5.5 holes for the hinge studs. Ø2.7 hole for an M2.5 retaining bolt, 4 off the centreline.</li>
+          <li>The dashed outline shows where the clip block sits.</li>
+        </ul>
+      </article>
+      <article class="model">
+        <header><h3>Spacer</h3><span class="tag">Southco · plan</span></header>
+        <div class="dwgwrap" id="d-sp"></div>
+        <ul class="dnotes">
+          <li>Hardwood, 10 thick. The rail face is on the right.</li>
+          <li>Ø5.5 through holes for the studs, each with a Ø11 × 3 deep nut recess in the top face (dashed).</li>
+          <li>Two Ø4 holes for wood screws into the shelf.</li>
+        </ul>
+      </article>
+      <article class="model">
+        <header><h3>Tapped strip</h3><span class="tag">Kipp · plan</span></header>
+        <div class="dwgwrap" id="d-st"></div>
+        <ul class="dnotes">
+          <li>Aluminium, about 2 thick. Measure the T-slot cavity first: the supplier's drawing suggests about 2 mm behind 1.3 mm lips.</li>
+          <li>Drill 2.5 and tap M3. Slide it in from the end of the profile.</li>
+          <li>Fix with M3 screws and washers through the Kipp counterbores.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <div class="notes">
+    <section>
+      <h2>Southco fit notes</h2>
+      <ul>
+        <li>The bar is 19 mm wide inside the slots so it rests on both end lips, then widens to about 26 mm for the 15 mm stud spacing.</li>
+        <li>Trim the bar-side studs to 8–9 mm or they reach past the underside of the shelf.</li>
+        <li>Bore the nut recesses in the spacer's top face so each nut sits about 7 mm from the bottom.</li>
+        <li>A small bolt through the bar inside the U stops it sliding out sideways.</li>
+        <li>A 900 mm run needs about 0.06 Nm per hinge, well within the 0.25 Nm maximum.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Kipp fit notes</h2>
+      <ul>
+        <li>Order the version without guide tabs. The 6–10 mm tabs won't fit this profile's slot.</li>
+        <li>Set the hinge axis about 4.75 mm in front of the profile's front edge so the leaf's holes sit over the T-slot.</li>
+        <li>Leave a small gap between the 20 mm knuckle and the back of the rail.</li>
+        <li>A 900 mm run needs only about 0.03 Nm per hinge, near the bottom of the range, so adjust in small turns.</li>
+        <li>Measure the T-slot cavity height before cutting the strip. It looks closer to 2 mm than 2.5 mm.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Assumptions</h2>
+      <ul>
+        <li>Clip walls about 3 mm thick.</li>
+        <li>Profile T-slot sizes are scaled from the supplier's cross-section drawing.</li>
+        <li>One hinge set is shown on a 120 mm length of profile. An 800–900 mm run uses two, about 180 mm in from each end, on one straight axis.</li>
+        <li>Profile weight of about 0.4 kg per metre, used for the torque figures.</li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/renderers/CSS2DRenderer.js"></script>
+<script>
+(function(){
+const ready=window.THREE&&THREE.OrbitControls&&THREE.CSS2DRenderer;
+const M=(c,o)=>new THREE.MeshStandardMaterial(Object.assign({color:c,metalness:0.3,roughness:0.6},o||{}));
+function box(x0,x1,y0,y1,z0,z1,m,p){const e=new THREE.Mesh(new THREE.BoxGeometry(x1-x0,y1-y0,z1-z0),m);e.position.set((x0+x1)/2,(y0+y1)/2,(z0+z1)/2);p.add(e);return e;}
+function cyl(r,h,x,y,z,ax,m,p,s){const e=new THREE.Mesh(new THREE.CylinderGeometry(r,r,h,s||24),m);if(ax==='z')e.rotation.x=Math.PI/2;e.position.set(x,y,z);p.add(e);return e;}
+function prism(pts,z0,z1,m,p){const sh=new THREE.Shape(pts.map(q=>new THREE.Vector2(q[0],q[1])));const g=new THREE.ExtrudeGeometry(sh,{depth:z1-z0,bevelEnabled:false});g.translate(0,0,z0);const e=new THREE.Mesh(g,m);p.add(e);return e;}
+function label(t,p,x,y,z){const d=document.createElement('div');d.className='lbl';d.textContent=t;const o=new THREE.CSS2DObject(d);o.position.set(x,y,z);p.add(o);}
+const PROFILE=[[-39,0],[-5,0],[-5,4],[-15,4],[-15,10],[15,10],[15,4],[5,4],[5,0],[39,0],[39,70],[50,70],[50,77],[28,77],[28,16],[-28,16],[-28,77],[-50,77],[-50,70],[-39,70]].map(q=>[q[0]/3,-q[1]/3]);
+function mats(){return{alu:M(0xc4c8cc,{metalness:0.6,roughness:0.35}),bar:M(0xa9afb6,{metalness:0.6,roughness:0.4}),blk:M(0x26262a,{metalness:0.1,roughness:0.65}),zinc:M(0x9aa0a6,{metalness:0.7,roughness:0.3}),dark:M(0x050505,{metalness:0,roughness:1}),shelf:M(0x2a2a2a,{transparent:true,opacity:0.28,depthWrite:false}),rail:M(0x35353a,{metalness:0.5,roughness:0.45}),wood:M(0xc79a5f,{metalness:0,roughness:0.8})};}
+function addProfile(m){
+  const pm=M(0x2f2f33,{metalness:0.4,roughness:0.5});prism(PROFILE,-60,60,pm,m);
+  label('LED profile',m,-16.7,-16,-60);
+  box(-6,6,-5.9,-5.33,-58,58,new THREE.MeshStandardMaterial({color:0xffb347,emissive:0xffa020,emissiveIntensity:0.8}),m);
+  box(-9.3,9.3,-23.6,-22.8,-60,60,new THREE.MeshStandardMaterial({color:0xffffff,transparent:true,opacity:0.55,emissive:0xfff2d6,emissiveIntensity:0.3}),m);
+  prism([[-9,-24],[9,-24],[28,-80],[-28,-80]],-60,60,new THREE.MeshBasicMaterial({color:0xffc56b,transparent:true,opacity:0.12,depthWrite:false,side:THREE.DoubleSide}),m);
+  return pm;
+}
+function buildSouthco(scene,m,k){
+  box(-60,77,16,34,-60,60,k.shelf,scene);label('Shelf',scene,-50,34,-50);
+  box(52,67,-9,16,-60,60,k.rail,scene);label('Front rail',scene,60,-9,-55);
+  box(34,52,6,16,-20,20,k.wood,scene);label('Spacer',scene,43,16,20);
+  prism([[33,6],[48.25,6],[48.25,4.5],[35,-3],[33,-4]],-12.7,12.7,k.blk,scene);
+  cyl(5,25.4,33,1,0,'z',k.blk,scene);cyl(2,0.6,33,1,12.9,'z',k.alu,scene);
+  label('Southco E6',scene,38,-5,12.7);
+  const pm=addProfile(m);
+  box(-7.5,7.5,0,3,-17.5,17.5,k.alu,m);
+  [[-7.5,-4.5],[4.5,7.5]].forEach(w=>{const a=w[0],b=w[1];box(a,b,3,6,-17.5,17.5,k.alu,m);box(a,b,6,12,9.5,17.5,k.alu,m);box(a,b,6,12,-17.5,-9.5,k.alu,m);box(a,b,9,12,6,9.5,k.alu,m);box(a,b,9,12,-9.5,-6,k.alu,m);});
+  label('Clip block',m,-7.5,12,-17.5);
+  box(-4.6,4.6,-3.2,-1.9,-17,17,k.alu,m);cyl(1.5,8,0,-1,0,'y',k.zinc,m);cyl(2.7,2,0,4,0,'y',k.zinc,m);
+  box(-9,18,6,9,-9.5,9.5,k.bar,m);box(18,32,6,9,-13,13,k.bar,m);label('Flat bar',m,22,9,-13);
+  cyl(2.7,2,0,10,-5,'y',k.zinc,m);cyl(1.4,6,0,6,-5,'y',k.zinc,m);
+  prism([[33,6],[17.75,6],[17.75,4.5],[31,-3],[33,-4]],-12.7,12.7,k.blk,m);
+  [-7.5,7.5].forEach(z=>{cyl(2.5,9,22.84,10.5,z,'y',k.zinc,m);cyl(5.77,3,22.84,10.5,z,'y',k.zinc,m,6);});
+  return pm;
+}
+function buildKipp(scene,m,k){
+  const AX=17.75,AY=10.5;
+  box(-60,55,21,39,-60,60,k.shelf,scene);label('Shelf',scene,-50,39,-50);
+  box(30,45,-4,21,-60,60,k.rail,scene);label('Front rail',scene,37.5,-4,-55);
+  box(-9.25,AX,13,21,-28,28,k.blk,scene);
+  cyl(10,56,AX,AY,0,'z',k.blk,scene);
+  cyl(9,3.5,AX,AY,29.75,'z',k.blk,scene);cyl(9,3.5,AX,AY,-29.75,'z',k.blk,scene);
+  cyl(2.3,0.6,AX,AY,31.8,'z',k.dark,scene,6);
+  [-18,18].forEach(z=>cyl(4.8,1.5,0,12.25,z,'y',k.zinc,scene));
+  label('Kipp K0440',scene,AX,AY+10,31.5);
+  box(-9.25,AX,0,8,-28,28,k.blk,m);label('Folded leaf',m,-9.25,4,-28);
+  [-18,18].forEach(z=>{cyl(4.5,1,0,8.5,z,'y',k.zinc,m);cyl(2.8,2,0,10,z,'y',k.zinc,m);cyl(1.5,12,0,3,z,'y',k.zinc,m);});
+  const pm=addProfile(m);
+  box(-4.6,4.6,-3.2,-1.9,-25,25,k.alu,m);label('Tapped strip',m,4.6,-2.5,25);
+  return pm;
+}
+function viewer(id,cfg){
+  const wrap=document.getElementById('v-'+id),tilt=document.getElementById('t-'+id),tv=document.getElementById('tv-'+id),xr=document.getElementById('x-'+id),below=document.getElementById('b-'+id);
+  if(!ready){wrap.innerHTML='<p class="err">The 3D view could not load. Check your connection and reload the page.</p>';return;}
+  const H=()=>wrap.clientHeight||380,W=()=>wrap.clientWidth||460;
+  const scene=new THREE.Scene();
+  const cam=new THREE.PerspectiveCamera(35,W()/H(),1,3000);cam.position.set(140,30,165);
+  let r;
+  try{r=new THREE.WebGLRenderer({antialias:true,alpha:true});}catch(e){wrap.innerHTML='<p class="err">This browser could not start 3D graphics.</p>';return;}
+  r.setPixelRatio(Math.min(window.devicePixelRatio||1,2));r.setSize(W(),H());wrap.appendChild(r.domElement);
+  const lr=new THREE.CSS2DRenderer();lr.setSize(W(),H());Object.assign(lr.domElement.style,{position:'absolute',top:'0',left:'0',pointerEvents:'none'});wrap.appendChild(lr.domElement);
+  const ctl=new THREE.OrbitControls(cam,r.domElement);ctl.target.set(cfg.target[0],cfg.target[1],0);ctl.enableDamping=true;ctl.update();
+  scene.add(new THREE.AmbientLight(0xffffff,0.6));
+  const d1=new THREE.DirectionalLight(0xffffff,0.8);d1.position.set(100,150,120);scene.add(d1);
+  const d2=new THREE.DirectionalLight(0xffffff,0.45);d2.position.set(-60,-120,80);scene.add(d2);
+  const pivot=new THREE.Group();pivot.position.set(cfg.ax,cfg.ay,0);scene.add(pivot);
+  const m=new THREE.Group();m.position.set(-cfg.ax,-cfg.ay,0);pivot.add(m);
+  const pm=cfg.build(scene,m,mats());
+  const corners=[[-16.67,-25.67],[16.67,-25.67]];
+  function setT(){const v=+tilt.value,t=v*Math.PI/180;pivot.rotation.z=t;tv.textContent=v+'°';
+    let minY=1e9;corners.forEach(c=>{const a=c[0]-cfg.ax,b=c[1]-cfg.ay;const y=cfg.ay+a*Math.sin(t)+b*Math.cos(t);if(y<minY)minY=y;});
+    below.textContent=Math.round(cfg.railBottom-minY)+' mm';}
+  tilt.addEventListener('input',setT);setT();
+  const lb=document.getElementById('l-'+id);
+  lb.addEventListener('change',()=>{lr.domElement.hidden=!lb.checked;});lr.domElement.hidden=!lb.checked;
+  xr.addEventListener('change',()=>{pm.transparent=xr.checked;pm.opacity=xr.checked?0.3:1;pm.depthWrite=!xr.checked;pm.needsUpdate=true;});
+  new ResizeObserver(()=>{cam.aspect=W()/H();cam.updateProjectionMatrix();r.setSize(W(),H());lr.setSize(W(),H());}).observe(wrap);
+  (function loop(){requestAnimationFrame(loop);ctl.update();r.render(scene,cam);lr.render(scene,cam);})();
+}
+viewer('s',{build:buildSouthco,ax:33,ay:1,railBottom:-9,target:[15,-5]});
+viewer('k',{build:buildKipp,ax:17.75,ay:10.5,railBottom:-4,target:[5,0]});
+})();
+</script>
+<script>
+(function(){
+const NS='http://www.w3.org/2000/svg';let uid=0;
+function mk(t,a,p){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e;}
+function dwg(id,vb,flip,title,small){
+  const host=document.getElementById(id);const x0=vb[0],y0=vb[1],x1=vb[2],y1=vb[3];const Y=v=>flip?-v:v;
+  const svg=mk('svg',{viewBox:x0+' '+(flip?-y1:y0)+' '+(x1-x0)+' '+(y1-y0),class:'dwg'+(small?' sm':''),role:'img','aria-label':title},host);
+  const mid='ar'+(++uid);const defs=mk('defs',{},svg);
+  const mkr=mk('marker',{id:mid,viewBox:'0 0 10 10',refX:'10',refY:'5',markerWidth:'2',markerHeight:'2',markerUnits:'userSpaceOnUse',orient:'auto-start-reverse'},defs);
+  mk('path',{d:'M0,1.5 L10,5 L0,8.5 z',class:'arr'},mkr);
+  const up=flip?1:-1;
+  const D={
+    rect(xa,xb,ya,yb,c){return mk('rect',{x:Math.min(xa,xb),y:Math.min(Y(ya),Y(yb)),width:Math.abs(xb-xa),height:Math.abs(yb-ya),class:c},svg);},
+    poly(p,c){return mk('polygon',{points:p.map(q=>q[0]+','+Y(q[1])).join(' '),class:c},svg);},
+    circ(x,y,r,c){return mk('circle',{cx:x,cy:Y(y),r:r,class:c},svg);},
+    line(xa,ya,xb,yb,c){return mk('line',{x1:xa,y1:Y(ya),x2:xb,y2:Y(yb),class:c},svg);},
+    text(x,y,t,c,anc,rot){const e=mk('text',{x:x,y:Y(y),class:c||'nt','text-anchor':anc||'middle'},svg);if(rot)e.setAttribute('transform','rotate('+rot+' '+x+' '+Y(y)+')');e.textContent=t;return e;},
+    dimH(xa,ya,xb,yb,yd,t){[[xa,ya],[xb,yb]].forEach(p=>{if(Math.abs(p[1]-yd)<0.01)return;const s=Math.sign(yd-p[1]);D.line(p[0],p[1]+s*0.8,p[0],yd+s*1.2,'ext');});
+      const l=D.line(xa,yd,xb,yd,'dim');l.setAttribute('marker-start','url(#'+mid+')');l.setAttribute('marker-end','url(#'+mid+')');D.text((xa+xb)/2,yd+up*0.9,t,'dt');},
+    dimV(xa,ya,xb,yb,xd,t){[[xa,ya],[xb,yb]].forEach(p=>{if(Math.abs(p[0]-xd)<0.01)return;const s=Math.sign(xd-p[0]);D.line(p[0]+s*0.8,p[1],xd+s*1.2,p[1],'ext');});
+      const l=D.line(xd,ya,xd,yb,'dim');l.setAttribute('marker-start','url(#'+mid+')');l.setAttribute('marker-end','url(#'+mid+')');D.text(xd-0.9,(ya+yb)/2,t,'dt','middle',-90);}
+  };
+  return D;
+}
+const PROF=[[-39,0],[-5,0],[-5,4],[-15,4],[-15,10],[15,10],[15,4],[5,4],[5,0],[39,0],[39,70],[50,70],[50,77],[28,77],[28,16],[-28,16],[-28,77],[-50,77],[-50,70],[-39,70]].map(q=>[q[0]/3,-q[1]/3]);
+function profile(D){D.poly(PROF,'prof');D.rect(-6,6,-5.9,-5.33,'led');D.rect(-9.3,9.3,-23.6,-22.8,'diff');}
+
+const S=dwg('d-s',[-34,-38,100,56],true,'Southco E6 assembly, dimensioned end view');
+S.rect(-28,77,16,34,'ctx');S.rect(52,67,-9,16,'ctx');
+profile(S);S.rect(-4.6,4.6,-3.2,-1.9,'alu');S.rect(-1.5,1.5,-3.2,3,'alu');
+S.rect(-7.5,7.5,0,3,'alu');S.rect(-7.5,-4.5,3,6,'alu');S.rect(-7.5,-4.5,9,12,'alu');S.rect(4.5,7.5,3,6,'alu');S.rect(4.5,7.5,9,12,'alu');
+S.rect(-2.7,2.7,3,5,'alu');
+S.rect(-9,32,6,9,'alu');S.rect(-2.7,2.7,9,11,'alu');
+S.rect(20.34,25.34,12,15,'alu');S.rect(17.84,27.84,9,12,'alu');
+S.rect(34,52,6,16,'wood');S.rect(37.66,48.66,13,16,'hid');S.rect(40.66,45.66,6,13,'hid');
+S.poly([[33,6],[48.25,6],[48.25,4.5],[35,-3],[33,-4]],'hinge');S.poly([[33,6],[17.75,6],[17.75,4.5],[31,-3],[33,-4]],'hinge');
+S.circ(33,1,5,'hinge');S.circ(33,1,1.3,'diff');
+S.line(0,-31,0,36,'cl');S.line(33,-7,33,36,'cl');S.line(27,1,39,1,'cl');
+S.dimH(0,36,33,36,39,'33');S.dimH(33,36,52,16,39,'19');S.dimH(52,16,67,16,39,'15');S.dimH(67,16,77,34,39,'10');
+S.dimH(0,36,77,34,45,'77');
+S.dimV(67,16,67,-9,82,'25');S.dimV(67,-9,16.67,-25.67,72,'16.5');
+S.dimV(-21,16,-13,0,-21,'16');S.dimV(-13,0,-16.67,-25.67,-21,'25.5');S.dimV(-28,16,-16.67,-25.67,-28,'41.5');
+
+const K=dwg('d-k',[-34,-38,100,56],true,'Kipp K0440 assembly, dimensioned end view');
+K.rect(-28,55,21,39,'ctx');K.rect(30,45,-4,21,'ctx');
+profile(K);K.rect(-4.6,4.6,-3.2,-1.5,'alu');
+K.rect(-9.25,17.75,0,8,'hinge');K.rect(-9.25,17.75,13,21,'hinge');K.circ(17.75,10.5,10,'hinge');K.circ(17.75,10.5,1.8,'diff');
+K.rect(-1.5,1.5,-3.2,6,'hid');K.rect(-3.5,3.5,6,8,'hid');K.rect(-3.5,3.5,13,15,'hid');K.rect(-1.5,1.5,15,33,'hid');
+K.line(0,-31,0,41,'cl');K.line(17.75,-1,17.75,41,'cl');K.line(6,10.5,29,10.5,'cl');
+K.dimH(0,41,17.75,41,44,'17.75');K.dimH(17.75,41,30,21,44,'12.25');K.dimH(30,21,45,21,44,'15');K.dimH(45,21,55,39,44,'10');
+K.dimH(0,41,55,39,50,'55');
+K.dimV(45,21,45,-4,63,'25');K.dimV(45,-4,16.67,-25.67,50,'21.5');
+K.dimV(-21,21,-13,0,-21,'21');K.dimV(-13,0,-16.67,-25.67,-21,'25.5');K.dimV(-28,21,-16.67,-25.67,-28,'46.5');
+
+const B=dwg('d-bar',[-26,-27,48,25],false,'Flat bar, dimensioned plan',true);
+B.rect(-7.5,7.5,-17.5,17.5,'hid');
+B.poly([[-9,-9.25],[18,-9.25],[18,-13],[32,-13],[32,13],[18,13],[18,9.25],[-9,9.25]],'alu');
+B.circ(22.84,-7.5,2.75,'diff');B.circ(22.84,7.5,2.75,'diff');B.circ(0,-4,1.35,'diff');
+B.line(-12,0,36,0,'cl');
+B.text(25,3.2,'2× Ø5.5','nt');B.text(0,-6.3,'Ø2.7','nt');
+B.dimH(-9,-9.25,18,-13,-17,'27');B.dimH(18,-13,32,-13,-17,'14');B.dimH(-9,-9.25,32,-13,-22,'41');
+B.dimV(-9,-9.25,-9,9.25,-14,'18.5');B.dimV(22.84,-7.5,22.84,7.5,37,'15');B.dimV(32,-13,32,13,42,'26');
+B.dimH(-9,9.25,0,-4,17,'9');B.dimH(22.84,7.5,32,13,17,'9.2');
+
+const P=dwg('d-sp',[-20,-29,34,29],false,'Spacer, dimensioned plan',true);
+P.rect(0,18,-20,20,'wood');
+[-7.5,7.5].forEach(z=>{P.circ(9.16,z,5.5,'hid');P.circ(9.16,z,2.75,'diff');});
+[-16.5,16.5].forEach(z=>P.circ(9,z,2,'diff'));
+P.dimH(0,-20,18,-20,-24,'18');P.dimV(18,-20,18,20,26,'40');
+P.dimV(9.16,-7.5,9.16,7.5,-6,'15');P.dimV(9,-16.5,9,16.5,-12,'33');P.dimH(0,20,9.16,7.5,24,'9.2');
+
+const T=dwg('d-st',[-6,-17,60,9],false,'Tapped strip, dimensioned plan',true);
+T.rect(0,50,-4.75,4.75,'alu');T.circ(7,0,1.25,'diff');T.circ(43,0,1.25,'diff');T.line(-3,0,53,0,'cl');
+T.text(25,3.6,'2× M3 tapped','nt');
+T.dimH(0,-4.75,7,0,-9,'7');T.dimH(7,0,43,0,-9,'36');T.dimH(43,0,50,-4.75,-9,'7');T.dimH(0,-4.75,50,-4.75,-14,'50');
+T.dimV(50,-4.75,50,4.75,55,'9.5');
+})();
+</script>
+</body>
+</html>
