@@ -31,10 +31,10 @@ The 3D models load three.js from a CDN, so they need an internet connection.
 | Part | E6-10-101-20 | E6-10-301-20 | E6-10-101-20 | K0440.56181800 (no guide tabs) | ST-7A3-15ST-33 (two, not handed) |
 | Hinge price | £8.67 | £9.91 | £8.67 | ≈ US$28.99 | £9.89 |
 | Torque | up to 0.25 Nm | up to 0.8 Nm, adjuster reachable from below | up to 0.25 Nm | 0–5 Nm | fixed 0.17 Nm |
-| Mounting | flat bar through the clip-wall slots, hinge below it on studs, fixed leaf on a 10 mm hardwood spacer against the rail | same layout, but screw-fixed: M4 screws through the bar, wood screws into the spacer | hinge folded shut under the shelf, knuckle by the rail; shelf studs glued in, profile studs through a 3 mm plate screwed to a tapped strip | hinge folded shut under the shelf, lower leaf screwed to a tapped strip in the profile's T-slot | one hinge just past each end of the profile; body screwed under the shelf, 7 mm arm folded back over the profile base and screwed to it |
+| Mounting | flat bar through the clip-wall slots, hinge below it on studs, fixed leaf on a 10 mm hardwood spacer against the rail | same layout, but screw-fixed: M4 screws through the flat bar, wood screws into the hardwood spacer | hinge folded shut under the shelf, knuckle by the rail; shelf studs glued in, profile studs through a 3 mm adapter plate screwed to a tapped strip, over a recess spacer | hinge folded shut under the shelf, lower leaf on a recess spacer, screwed to a tapped strip in the profile's T-slot | one hinge just past each end of the profile; body screwed under the shelf, 7 mm arm folded back over the profile base and screwed to a tapped strip and recess spacer |
 | Profile bottom below the rail | about 15 | about 15 | about 14 | about 22 | about 8 |
 | Tilt before touching the rail or shelf | 90°+ | 90°+ | about 63° | about 56° | about 70° |
-| Parts to make | flat bar, spacer, trimmed studs | flat bar, spacer | adapter plate, recess spacer, short tapped strip, trimmed studs | one tapped strip and a recess spacer | two short tapped strips and two recess spacers |
+| Parts to make | flat bar, hardwood spacer with nut recesses, trimmed studs | flat bar, hardwood spacer | adapter plate, tapped strip, recess spacer, trimmed studs | tapped strip, recess spacer | tapped strip, recess spacer |
 | Removable | yes | yes | profile yes, hinge glued to the shelf | yes | yes |
 | Torque needed per hinge (900 mm run) | about 0.06 Nm | about 0.05 Nm | about 0.05 Nm | about 0.03 Nm | at most 0.03 Nm |
 
@@ -44,7 +44,7 @@ The medium Southco is the easiest of the flat layouts to build: no studs to trim
 
 Quantities are for one 800–900 mm run on two hinges, set about 180 mm in from each end.
 
-### Both options
+### All layouts
 
 | Item | Part | Qty | Source | Price |
 |---|---|---|---|---|
@@ -57,10 +57,10 @@ Quantities are for one 800–900 mm run on two hinges, set about 180 mm in from 
 |---|---|---|---|---|
 | Hinge | Southco E6-10-101-20 | 2 | [Southco UK shop](https://shop.southco.com/en_gb/e6-10-101-20) | £8.67 |
 | Clip block | Supplied profile clip, springs removed | 2 | Existing | – |
-| Flat bar | 3 mm aluminium, about 45 mm per bar | 2 | Metal or DIY supplier | – |
-| Hardwood spacer | 10 mm hardwood, 18 × 40 mm | 2 | Offcut | – |
+| Flat bar, Southco small | 3 mm aluminium, about 45 mm per bar | 2 | Metal or DIY supplier | – |
+| Hardwood spacer, Southco small | 10 mm hardwood, 18 × 40 mm | 2 | Offcut | – |
 | Retaining bolt | M2.5 × 6 pan head with nut | 2 | Hardware supplier | – |
-| Wood screws | 4 × 20 mm | 4 | Hardware supplier | – |
+| Wood screws | 4 × 20 mm, hardwood spacer to shelf | 4 | Hardware supplier | – |
 
 ### Southco medium, flat
 
@@ -68,11 +68,11 @@ Quantities are for one 800–900 mm run on two hinges, set about 180 mm in from 
 |---|---|---|---|---|
 | Hinge | Southco E6-10-301-20 (screws not supplied) | 2 | [Southco UK shop](https://shop.southco.com/en_gb/e6-10-301-20) | £9.91 |
 | Clip block | Supplied profile clip, springs removed | 2 | Existing | – |
-| Flat bar | 3 mm aluminium, about 40 × 35 mm | 2 | Metal or DIY supplier | – |
-| Hardwood spacer | 10 mm hardwood, 20 × 54 mm | 2 | Offcut | – |
-| Machine screws | M4 × 10 pan or cheese head with nuts, heads to fit Ø8.9 counterbores | 4 | Hardware supplier | – |
-| Wood screws | 4 × 12 mm, hinge to spacer | 4 | Hardware supplier | – |
-| Wood screws | 4 × 20 mm, spacer to shelf | 4 | Hardware supplier | – |
+| Flat bar, Southco medium | 3 mm aluminium, about 40 × 35 mm | 2 | Metal or DIY supplier | – |
+| Hardwood spacer, Southco medium | 10 mm hardwood, 20 × 54 mm | 2 | Offcut | – |
+| Machine screws | M4 × 10 pan or cheese head with nuts, hinge to flat bar, heads to fit Ø8.9 counterbores | 4 | Hardware supplier | – |
+| Wood screws | 4 × 12 mm, hinge to hardwood spacer | 4 | Hardware supplier | – |
+| Wood screws | 4 × 20 mm, hardwood spacer to shelf | 4 | Hardware supplier | – |
 | Retaining bolt | M2.5 × 6 pan head with nut | 2 | Hardware supplier | – |
 
 ### Southco small, folded
@@ -80,10 +80,10 @@ Quantities are for one 800–900 mm run on two hinges, set about 180 mm in from 
 | Item | Part | Qty | Source | Price |
 |---|---|---|---|---|
 | Hinge | Southco E6-10-101-20 | 2 | [Southco UK shop](https://shop.southco.com/en_gb/e6-10-101-20) | £8.67 |
-| Adapter plate | 3 mm aluminium, 38 × 26 mm | 2 | Metal or DIY supplier | – |
-| Tapped strip | Aluminium, 9.5 × 1.8 × 30 mm, 2 × M3 at 16 mm | 2 | Metal or DIY supplier | – |
-| Recess spacer | Aluminium 1.5 mm, 19 × 26 mm, two Ø3.4 holes 16 apart | 2 | Metal or DIY supplier | – |
-| Machine screws | M3 × 8 pan head | 4 | Hardware supplier | – |
+| Adapter plate, Southco folded | 3 mm aluminium, 38 × 26 mm | 2 | Metal or DIY supplier | – |
+| Tapped strip, Southco folded | Aluminium, 30 × 9.5 × 1.8 mm, two M3 holes 16 apart | 2 | Metal or DIY supplier | – |
+| Recess spacer, Southco folded | Aluminium 1.5 mm, 26 × 19 mm, two Ø3.4 holes 16 apart | 2 | Metal or DIY supplier | – |
+| Machine screws | M3 × 8 pan head with a washer, adapter plate to tapped strip | 4 | Hardware supplier | – |
 | Epoxy | Two-part, for the shelf-side studs in 6 mm holes | 1 | Hardware supplier | – |
 
 ### Kipp, folded
@@ -91,20 +91,18 @@ Quantities are for one 800–900 mm run on two hinges, set about 180 mm in from 
 | Item | Part | Qty | Source | Price |
 |---|---|---|---|---|
 | Hinge | Kipp K0440.56181800 | 2 | [MISUMI UK](https://uk.misumi-ec.com/vona2/maker/kipp/mech/M1700000000/M1723000000) or [AFT Fasteners](https://www.aftfasteners.com/kipp-hinge-w-adjustable-friction-54x56-mm-thermoplastic-black-stainless-steel-qty-1-k0440-56181800/) | ≈ US$28.99 |
-| Tapped strip | Aluminium, 9.5 × 1.8 × 50 mm, 2 × M3 at 36 mm | 2 | Metal or DIY supplier | – |
-| Recess spacer | Aluminium 1.5 mm, 20 × 56 mm, two Ø3.4 holes 36 apart | 2 | Metal or DIY supplier | – |
-| Machine screws | M3 × 10 with washers | 4 | Hardware supplier | – |
-| Wood screws | 5 × 16 mm | 4 | Hardware supplier | – |
-
-Prices checked on 25 October 2026.
+| Tapped strip, Kipp | Aluminium, 50 × 9.5 × 1.8 mm, two M3 holes 36 apart | 2 | Metal or DIY supplier | – |
+| Recess spacer, Kipp | Aluminium 1.5 mm, 56 × 20 mm, two Ø3.4 holes 36 apart | 2 | Metal or DIY supplier | – |
+| Machine screws | M3 × 12 with M3 washers, hinge to tapped strip | 4 | Hardware supplier | – |
+| Wood screws | 5 × 16 mm, hinge to shelf | 4 | Hardware supplier | – |
 
 ### Southco ST-7A3, end mounted
 
 | Item | Part | Qty | Source | Price |
 |---|---|---|---|---|
 | Hinge | ST-7A3-15ST-33, type T, 0.17 Nm, natural zinc | 2 | [Southco UK shop](https://shop.southco.com/en_gb/st-7a3-15st-33) | £9.89 |
-| Tapped strip, T-slot | Aluminium, 9.5 × 1.8 × 12 mm, one M3 hole 4.25 from one end | 2 | Metal or DIY supplier | – |
-| Recess spacer | Aluminium 1.5 mm, 22 × 12 mm, Ø3.4 hole and M3 tapped hole 9 apart | 2 | Metal or DIY supplier | – |
+| Tapped strip, ST-7A3 | Aluminium, 12 × 9.5 × 1.8 mm, one M3 hole 4.25 from one end | 2 | Metal or DIY supplier | – |
+| Recess spacer, ST-7A3 | Aluminium 1.5 mm, 12 × 22 mm, Ø3.4 hole and M3 tapped hole 9 apart | 2 | Metal or DIY supplier | – |
 | Machine screws | Low-head socket cap screws (DIN 7984): 2 × M3 × 10 cut to 9 mm, 2 × M3 × 6 | 4 | Hardware supplier | – |
 | Threadlocker | Low strength, for the arm screws | 1 | Hardware supplier | – |
 | Wood screws | 3 × 16 mm pan head, hinge body to shelf | 4 | Hardware supplier | – |
@@ -120,13 +118,15 @@ Setting out (profile centred on the desk):
 | Shelf screws from the shelf's front edge | 65 | 65 |
 | Hinge axis from the shelf's front edge | 57 | 57 |
 
+Prices checked on 25 October 2026.
+
 ## Open checks
 
 - For the ST-7A3, check the arm folds back beside the body at rest. Its rear screw threads into the recess spacer and mainly stops the arm twisting.
 - For the folded Southco, fold a hinge shut by hand and check it closes a full 180°.
-- Profile back face, measured from photos (±0.3 mm): side walls stand about 1.4 mm above the T-slot hooks, so a 1.5 mm recess spacer goes under any flat leaf, plate or arm. T-slot opening about 7.2 mm, cavity about 9.8 × 2.0 mm under lips about 1.5 mm thick. Dry-fit strips and screws before final assembly.
+- Profile back face, measured from photos (±0.3 mm): side walls stand about 1.4 mm above the T-slot hooks, so a 1.5 mm recess spacer goes under any flat leaf, adapter plate or arm. T-slot opening about 7.2 mm, cavity about 9.8 × 2.0 mm under lips about 1.5 mm thick. Dry-fit the tapped strips, recess spacers and screws before final assembly.
 - Measure the real profile. The supplier cross-section and the LEDBRITE listing give different sizes.
-- Check the Southco stud length against the bar and spacer before trimming.
+- Check the Southco stud length against the flat bar and hardwood spacer before trimming.
 
 ## Reference documents
 
