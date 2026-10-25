@@ -273,11 +273,10 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
         <div class="drow-body">
           <div class="dwgwrap" id="d-m"></div>
           <ul class="dnotes">
-            <li>Hinge axis about 16 below the shelf. Knuckle Ø12.7, leaves 5.8 thick.</li>
+            <li>Hinge axis 6.7 from the mounting face, so about 16.7 below the shelf. Knuckle Ø12.7, leaves 5.8 thick.</li>
             <li>M4 screws up through the leaf and bar, with nuts on top of the bar (dashed through the bar).</li>
             <li>Wood screws up through the fixed leaf into the spacer (dashed).</li>
             <li>The clip block sets the profile height, so it hangs at the same height as the small flat layout.</li>
-            <li>The axis offset assumes the knuckle sits on the mounting face. Check it on the part.</li>
           </ul>
         </div>
       </article>
@@ -463,7 +462,7 @@ function buildSouthcoMedium(scene,m,k){
   box(48,63,-9,16,-60,60,k.rail,scene);label('Front rail',scene,55.5,-9,-55);
   box(28,48,6,16,-27,27,k.wood,scene);label('Spacer',scene,38,16,27);
   box(27,45.25,0.2,6,-21.45,21.45,k.blk,scene);
-  cyl(6.35,42.9,27,-0.35,0,'z',k.blk,scene);
+  cyl(6.35,42.9,27,-0.7,0,'z',k.blk,scene);
   label('Southco E6 medium',scene,36,0,21.45);
   const pm=addProfile(m);
   box(-7.5,7.5,0,3,-17.5,17.5,k.alu,m);
@@ -546,7 +545,7 @@ function viewer(id,cfg){
   (function loop(){requestAnimationFrame(loop);ctl.update();r.render(scene,cam);lr.render(scene,cam);})();
 }
 viewer('s',{build:buildSouthco,ax:33,ay:1,railBottom:-9,target:[15,-5],rail:[52,67,-9,16],polys:[PROFILE,RC(-9,32,6,9),RC(17.84,27.84,9,12),RC(20.34,25.34,12,15),RC(-7.5,7.5,0,12)]});
-viewer('m',{build:buildSouthcoMedium,ax:27,ay:-0.35,railBottom:-9,target:[15,-5],rail:[48,63,-9,16],polys:[PROFILE,RC(-9,10,6,9),RC(10,26,6,9),RC(10.26,18.34,9,12.2),RC(-7.5,7.5,0,12),RC(8.75,27,0.2,6)]});
+viewer('m',{build:buildSouthcoMedium,ax:27,ay:-0.7,railBottom:-9,target:[15,-5],rail:[48,63,-9,16],polys:[PROFILE,RC(-9,10,6,9),RC(10,26,6,9),RC(10.26,18.34,9,12.2),RC(-7.5,7.5,0,12),RC(8.75,27,0.2,6)]});
 viewer('c',{build:buildSouthcoFolded,ax:30,ay:8,railBottom:-12,target:[12,-3],rail:[37,52,-12,13],polys:[PROFILE,RC(-8,30,0,3),RC(14.84,24.84,-3,0),RC(17.34,22.34,-4,0),[[14.75,3],[30,3],[30,8],[16.5,4.5]]]});
 viewer('k',{build:buildKipp,ax:17.75,ay:10.5,railBottom:-4,target:[5,0],rail:[30,45,-4,21],polys:[PROFILE,RC(-9.25,17.75,0,8)]});
 })();
@@ -602,8 +601,8 @@ MD.rect(-2.7,2.7,3,5,'alu');
 MD.rect(-9,26,6,9,'alu');MD.rect(-2.7,2.7,9,11,'alu');
 MD.rect(10.26,18.34,9,12.2,'alu');MD.rect(12.3,16.3,12.2,13.7,'alu');MD.rect(12.3,16.3,0.2,9,'hid');
 MD.rect(28,48,6,16,'wood');MD.rect(37.7,41.7,6,14,'hid');
-MD.rect(8.75,27,0.2,6,'hinge');MD.rect(27,45.25,0.2,6,'hinge');MD.circ(27,-0.35,6.35,'hinge');MD.circ(27,-0.35,1.5,'diff');
-MD.line(0,-31,0,36,'cl');MD.line(27,-9,27,36,'cl');MD.line(19,-0.35,35,-0.35,'cl');
+MD.rect(8.75,27,0.2,6,'hinge');MD.rect(27,45.25,0.2,6,'hinge');MD.circ(27,-0.7,6.35,'hinge');MD.circ(27,-0.7,1.5,'diff');
+MD.line(0,-31,0,36,'cl');MD.line(27,-9,27,36,'cl');MD.line(19,-0.7,35,-0.7,'cl');
 MD.dimH(0,36,27,36,39,'27');MD.dimH(27,36,48,16,39,'21');MD.dimH(48,16,63,16,39,'15');MD.dimH(63,16,73,34,39,'10');
 MD.dimH(0,36,73,34,45,'73');
 MD.dimV(63,16,63,-9,80,'25');MD.dimV(63,-9,16.67,-25.67,70,'16.5');
