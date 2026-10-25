@@ -102,7 +102,8 @@ Prices checked on 25 October 2026.
 |---|---|---|---|---|
 | Hinge | ST-7A3-15ST-33, type T, 0.17 Nm, natural zinc | 2 | [Southco UK shop](https://shop.southco.com/en_gb/st-7a3-15st-33) | £9.89 |
 | Tapped strip | Aluminium, 9.5 × about 2 × 12 mm, one M3 hole 4.25 from one end | 2 | Metal or DIY supplier | – |
-| Machine screws | M3 × 8 socket head, arm to profile | 4 | Hardware supplier | – |
+| Machine screws | M3 × 8 low-head socket cap screw (DIN 7984), arm to profile | 4 | Hardware supplier | – |
+| Threadlocker | Low strength, for the arm screws | 1 | Hardware supplier | – |
 | Wood screws | 3 × 16 mm pan head, hinge body to shelf | 4 | Hardware supplier | – |
 
 Setting out (profile centred on the desk):

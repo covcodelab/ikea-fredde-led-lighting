@@ -72,6 +72,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
 .dwg.sm{min-width:220px;max-height:300px}
 .parts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px}
 .dstack{display:flex;flex-direction:column;gap:20px}
+.fx-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:16px}
 .drow-body{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(200px,1fr);gap:20px;align-items:start}
 @media (max-width:760px){.drow-body{grid-template-columns:minmax(0,1fr)}}
 .dnotes{margin:0;padding-left:18px;font-size:13.5px;color:var(--muted)}
@@ -91,6 +92,15 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
 .dwg .arr{fill:var(--dim)}
 .dwg .dt{font-family:var(--font-mono);font-size:2.6px;fill:var(--dim)}
 .dwg .nt{font-family:var(--font-body);font-size:2.4px;fill:var(--fg)}
+.dwg.det .ctx,.dwg.det .alu,.dwg.det .prof,.dwg.det .zinc,.dwg.det .diff,.dwg.det .wood{stroke-width:.12}
+.dwg.det .hid{stroke-width:.1;stroke-dasharray:.5 .35}
+.dwg.det .cl{stroke-width:.09;stroke-dasharray:2 .5 .5 .5}
+.dwg.det .ext{stroke-width:.07}.dwg.det .dim{stroke-width:.1}
+.dwg.det .dt{font-size:1.25px}.dwg.det .nt{font-size:1.15px}
+.dwg .ldr{stroke:var(--fg);stroke-width:.08}
+.dwg .bal{fill:var(--card);stroke:var(--fg);stroke-width:.1}
+.dwg .bt{font-family:var(--font-mono);font-size:1.2px;fill:var(--fg);text-anchor:middle}
+.dwg.det{min-width:420px}
 </style>
 </head>
 <body>
@@ -254,7 +264,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
           <tr class="grp"><th colspan="5">Southco ST-7A3, end mounted</th></tr>
           <tr><td>Hinge</td><td>ST-7A3-15ST-33, type T, symmetric 0.17 Nm, natural zinc. Not handed.</td><td class="q">2</td><td><a href="https://shop.southco.com/en_gb/st-7a3-15st-33" target="_blank" rel="noopener">Southco UK shop</a></td><td class="pr">£9.89</td></tr>
           <tr><td>Tapped strip</td><td>Aluminium, 9.5 × about 2 × 12 mm, one M3 hole 4.25 mm from one end</td><td class="q">2</td><td>Metal or DIY supplier</td><td class="pr">–</td></tr>
-          <tr><td>Machine screws</td><td>M3 × 8 mm socket head, arm to profile</td><td class="q">4</td><td>Hardware supplier</td><td class="pr">–</td></tr>
+          <tr><td>Machine screws</td><td>M3 × 8 mm low-head socket cap screw (DIN 7984), arm to profile. See the arm fixing detail</td><td class="q">4</td><td>Hardware supplier</td><td class="pr">–</td></tr>
           <tr><td>Wood screws</td><td>3 × 16 mm pan head, hinge body to shelf. Heads must fit the Ø6 counterbores</td><td class="q">4</td><td>Hardware supplier</td><td class="pr">–</td></tr>
           <tr class="grp"><th colspan="5">Tools</th></tr>
           <tr><td>Southco small, flat</td><td>Drills 2.7, 4 and 5.5 mm, an 11 mm flat or Forstner bit for the nut recesses, a hacksaw and file</td><td class="q">–</td><td>–</td><td class="pr">–</td></tr>
@@ -337,7 +347,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
           <div class="dwgwrap" id="d-e"></div>
           <ul class="dnotes">
             <li>Hinge axis 3.5 below the shelf, the middle of the 7 mm body. The 7 mm arm folds back over the profile base and fills the gap up to the shelf.</li>
-            <li>Arm screws, M3 × 8 with heads in the arm's counterbores: one into the tapped strip in the T-slot, one into a hole tapped in the base 9 behind the centreline (dashed).</li>
+            <li>Arm screws, M3 × 8 low-head (DIN 7984) with heads in the arm's counterbores: one into the tapped strip in the T-slot, one into a hole tapped in the base 9 behind the centreline (dashed).</li>
             <li>The hinge body (dashed) sits just past the end of the profile, so it never touches it.</li>
             <li>Axis 8 in front of the profile centreline, close to its centre of gravity, so it needs very little holding torque.</li>
             <li>Tilt stops at about 70°, when the front edge of the profile reaches the shelf.</li>
@@ -372,6 +382,46 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
         </div>
       </article>
     </div>
+    <article class="model" id="st-fixing">
+      <header><h3>ST-7A3 arm fixing to the back of the profile</h3><span class="tag">Detail, one end · ST-7A3-15ST-33</span></header>
+      <div class="fx-grid">
+        <figure style="margin:0;display:flex;flex-direction:column;gap:6px;min-width:0">
+          <div class="dwgwrap" id="d-fx"></div>
+          <figcaption class="hint">Section A–A through both arm screws, 4.25 from the end of the profile, looking along the profile. Front of the desk on the right.</figcaption>
+        </figure>
+        <figure style="margin:0;display:flex;flex-direction:column;gap:6px;min-width:0">
+          <div class="dwgwrap" id="d-fp"></div>
+          <figcaption class="hint">Plan of the profile end from above, showing the holes in the base. The arm and tapped strip are dashed.</figcaption>
+        </figure>
+      </div>
+      <div class="tablewrap">
+            <table class="plist" style="min-width:0">
+              <thead><tr><th class="q">No.</th><th>Part or hole</th><th class="q">Per end</th><th class="q">Per light</th></tr></thead>
+              <tbody>
+                <tr><td class="q">1</td><td>Hinge arm, ST-7A3-15ST-33. Holes Ø3.25 with Ø6.03 × 2.3 deep counterbores on both faces, 8 and 17 from the axis</td><td class="q">1</td><td class="q">2</td></tr>
+                <tr><td class="q">2</td><td>M3 × 8 low-head socket cap screw, DIN 7984, stainless. A standard socket head is 3 tall and would stand 0.7 above the arm and catch the shelf</td><td class="q">2</td><td class="q">4</td></tr>
+                <tr><td class="q">3</td><td>Tapped strip, aluminium 12 × 9.5 × 2. Drill Ø2.5 and tap M3 through, 4.25 from one end. Slides into the T-slot from the end of the profile</td><td class="q">1</td><td class="q">2</td></tr>
+                <tr><td class="q">4</td><td>Tapped hole in the profile base, 9 behind the centreline and 4.25 from the end. Drill Ø2.5, 4.5 deep, and tap M3, 4 deep</td><td class="q">1</td><td class="q">2</td></tr>
+                <tr><td class="q">5</td><td>Profile T-slot: opening about 3.4, cavity about 10 × 2 behind 1.3 lips</td><td class="q">–</td><td class="q">–</td></tr>
+                <tr><td class="q">6</td><td>Hinge body to shelf: 3 × 16 pan-head wood screws (head Ø6 or less) through the body counterbores, into Ø2 pilot holes 12 deep</td><td class="q">2</td><td class="q">4</td></tr>
+                <tr><td class="q">–</td><td>Low-strength threadlocker on the arm screws</td><td class="q">–</td><td class="q">1</td></tr>
+              </tbody>
+            </table>
+          </div>
+      <div class="fx-grid">
+        <div style="min-width:0"><h3 style="font-size:16px;margin-bottom:6px">Assembly order</h3>
+          <ol class="dnotes">
+            <li>Cut the profile and diffuser to length and fit the end caps.</li>
+            <li>At each end, drill and tap hole 4 in the base. Use a depth stop: the base is about 5.3 thick there and the LED channel is below.</li>
+            <li>Slide a tapped strip into the T-slot at each end so its hole sits 4.25 from the end.</li>
+            <li>Fold each arm back over the end of the profile and fit the two screws. Their heads sit below the arm's top face.</li>
+            <li>Mark the shelf screw line 65 from the shelf's front edge and the screw positions from the setting-out table. Drill the pilot holes.</li>
+            <li>Hold the light up, with the arms resting against the shelf, and screw the hinge bodies to the shelf.</li>
+          </ol></div>
+        <div style="min-width:0"><h3 style="font-size:16px;margin-bottom:6px">Check first</h3>
+          <ul class="dnotes"><li>Base thickness, slot and cavity sizes are scaled from the supplier's profile drawing. Measure the real profile before drilling.</li><li>Use low-head screws: the arm's top face rests against the shelf, so nothing may stand above it.</li><li>Southco's drawing note also recommends low-profile cap screws where the head must sit below the surface.</li></ul></div>
+      </div>
+    </article>
     <h2>Parts to make</h2>
     <div class="parts">
       <article class="model">
@@ -652,11 +702,12 @@ viewer('k',{build:buildKipp,ax:17.75,ay:10.5,railBottom:-4,target:[5,0],rail:[30
 (function(){
 const NS='http://www.w3.org/2000/svg';let uid=0;
 function mk(t,a,p){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e;}
-function dwg(id,vb,flip,title,small){
+function dwg(id,vb,flip,title,small,k){
+  k=k||1;
   const host=document.getElementById(id);const x0=vb[0],y0=vb[1],x1=vb[2],y1=vb[3];const Y=v=>flip?-v:v;
-  const svg=mk('svg',{viewBox:x0+' '+(flip?-y1:y0)+' '+(x1-x0)+' '+(y1-y0),class:'dwg'+(small?' sm':''),role:'img','aria-label':title},host);
+  const svg=mk('svg',{viewBox:x0+' '+(flip?-y1:y0)+' '+(x1-x0)+' '+(y1-y0),class:'dwg'+(small?' sm':'')+(k<1?' det':''),role:'img','aria-label':title},host);
   const mid='ar'+(++uid);const defs=mk('defs',{},svg);
-  const mkr=mk('marker',{id:mid,viewBox:'0 0 10 10',refX:'10',refY:'5',markerWidth:'2',markerHeight:'2',markerUnits:'userSpaceOnUse',orient:'auto-start-reverse'},defs);
+  const mkr=mk('marker',{id:mid,viewBox:'0 0 10 10',refX:'10',refY:'5',markerWidth:String(2*k),markerHeight:String(2*k),markerUnits:'userSpaceOnUse',orient:'auto-start-reverse'},defs);
   mk('path',{d:'M0,1.5 L10,5 L0,8.5 z',class:'arr'},mkr);
   const up=flip?1:-1;
   const D={
@@ -665,10 +716,11 @@ function dwg(id,vb,flip,title,small){
     circ(x,y,r,c){return mk('circle',{cx:x,cy:Y(y),r:r,class:c},svg);},
     line(xa,ya,xb,yb,c){return mk('line',{x1:xa,y1:Y(ya),x2:xb,y2:Y(yb),class:c},svg);},
     text(x,y,t,c,anc,rot){const e=mk('text',{x:x,y:Y(y),class:c||'nt','text-anchor':anc||'middle'},svg);if(rot)e.setAttribute('transform','rotate('+rot+' '+x+' '+Y(y)+')');e.textContent=t;return e;},
-    dimH(xa,ya,xb,yb,yd,t){[[xa,ya],[xb,yb]].forEach(p=>{if(Math.abs(p[1]-yd)<0.01)return;const s=Math.sign(yd-p[1]);D.line(p[0],p[1]+s*0.8,p[0],yd+s*1.2,'ext');});
-      const l=D.line(xa,yd,xb,yd,'dim');l.setAttribute('marker-start','url(#'+mid+')');l.setAttribute('marker-end','url(#'+mid+')');D.text((xa+xb)/2,yd+up*0.9,t,'dt');},
-    dimV(xa,ya,xb,yb,xd,t){[[xa,ya],[xb,yb]].forEach(p=>{if(Math.abs(p[0]-xd)<0.01)return;const s=Math.sign(xd-p[0]);D.line(p[0]+s*0.8,p[1],xd+s*1.2,p[1],'ext');});
-      const l=D.line(xd,ya,xd,yb,'dim');l.setAttribute('marker-start','url(#'+mid+')');l.setAttribute('marker-end','url(#'+mid+')');D.text(xd-0.9,(ya+yb)/2,t,'dt','middle',-90);}
+    dimH(xa,ya,xb,yb,yd,t){[[xa,ya],[xb,yb]].forEach(p=>{if(Math.abs(p[1]-yd)<0.01)return;const s=Math.sign(yd-p[1]);D.line(p[0],p[1]+s*0.8*k,p[0],yd+s*1.2*k,'ext');});
+      const l=D.line(xa,yd,xb,yd,'dim');l.setAttribute('marker-start','url(#'+mid+')');l.setAttribute('marker-end','url(#'+mid+')');D.text((xa+xb)/2,yd+up*0.9*k,t,'dt');},
+    dimV(xa,ya,xb,yb,xd,t){[[xa,ya],[xb,yb]].forEach(p=>{if(Math.abs(p[0]-xd)<0.01)return;const s=Math.sign(xd-p[0]);D.line(p[0]+s*0.8*k,p[1],xd+s*1.2*k,p[1],'ext');});
+      const l=D.line(xd,ya,xd,yb,'dim');l.setAttribute('marker-start','url(#'+mid+')');l.setAttribute('marker-end','url(#'+mid+')');D.text(xd-0.9*k,(ya+yb)/2,t,'dt','middle',-90);},
+    bal(n,bx,by,tx,ty){const a=Math.atan2(ty-by,tx-bx);D.line(bx+1.1*Math.cos(a),by+1.1*Math.sin(a),tx,ty,'ldr');D.circ(bx,by,1.1,'bal');const e=D.text(bx,by,String(n),'bt');e.setAttribute('dominant-baseline','central');}
   };
   return D;
 }
@@ -769,6 +821,34 @@ EP.text(-30,-6,'Profile base','nt','middle');EP.text(8,-7.5,'End cap','nt','midd
 EP.dimH(-4.25,0,0,13,22,'4.25');EP.dimH(0,13,3.55,0,17,'3.55');EP.dimH(3.55,0,12.55,0,17,'9');EP.dimH(12.55,0,16.2,12,17,'3.65');
 EP.dimV(-4.25,0,-4.25,8,-53,'8');EP.dimV(-4.25,-9,-4.25,0,-53,'9');
 EP.text(-61,9.2,'Axis','nt','start');
+
+const FX=dwg('d-fx',[-19,-9.5,23,13.5],true,'ST-7A3 arm fixing, section through the arm screws',false,0.45);
+FX.rect(-19,23,7,12,'ctx');
+FX.poly(PROF,'prof');FX.rect(-4,4,-5.9,-5.33,'led');
+FX.rect(-10.25,-7.75,-4.5,0,'diff');
+FX.rect(-4.75,4.75,-3.33,-1.33,'alu');
+FX.poly(stP(-12.9),'zinc');
+[0,-9].forEach(x=>{FX.rect(x-3.015,x+3.015,4.7,7,'diff');FX.rect(x-3.015,x+3.015,0,2.3,'diff');FX.rect(x-1.625,x+1.625,2.3,4.7,'diff');
+  FX.rect(x-1.5,x+1.5,-3.3,4.7,'alu');FX.rect(x-2.75,x+2.75,4.7,6.7,'alu');FX.rect(x-1.25,x+1.25,5.9,6.7,'diff');});
+FX.circ(8,3.5,0.5,'diff');
+FX.line(0,-9.5,0,12,'cl');FX.line(8,-1,8,9,'cl');FX.line(4,3.5,13,3.5,'cl');
+FX.dimH(-9,6.9,0,6.9,9.3,'9');FX.dimH(0,6.9,8,9,9.3,'8');FX.dimH(-9,6.9,8,9,12.2,'17');
+FX.dimV(11.5,7,11.5,0,16,'7');FX.dimV(13,3.5,13,0,18.5,'3.5');
+FX.dimV(-13,0,-9.33,-5.33,-15.5,'5.3');FX.dimV(-10.25,-4,-13,0,-18,'4');
+FX.bal(1,-16.5,4.8,-12.4,3.5);FX.bal(2,-16.5,1.6,-11.75,5.6);
+FX.bal(3,16,-4.5,4.75,-2.3);FX.bal(4,-16.5,-7.5,-9,-3);FX.bal(5,16,-1.6,1.7,-0.6);
+
+const FP=dwg('d-fp',[-22,-17,20,21],true,'ST-7A3 arm fixing, plan of the profile end',false,0.45);
+FP.rect(-22,0,-13,13,'prof');FP.rect(0,2,-16.67,16.67,'ctx');
+FP.line(-22,1.7,0,1.7,'hid');FP.line(-22,-1.7,0,-1.7,'hid');
+FP.rect(-12,0,-4.75,4.75,'hid');
+FP.poly([[0,11.5],[0,8],[-0.55,-9]].concat(arcP(-4.25,-9,3.7,0,-180,14),[[-8.5,8],[-8.5,11.5]]),'hid');
+FP.circ(-4.25,0,1.25,'diff');FP.circ(-4.25,-9,1.25,'diff');
+FP.line(-22,8,6,8,'cl');FP.line(-22,0,6,0,'cl');
+FP.dimH(-4.25,1.25,0,13,15.5,'4.25');FP.dimH(-12,4.75,0,13,18.5,'12');
+FP.dimV(-4.25,0,-4.25,8,7,'8');FP.dimV(-4.25,-9,-4.25,0,7,'9');FP.dimV(-12,-4.75,-12,4.75,-16,'9.5');
+FP.text(-21.5,8.6,'Hinge axis','nt','start');FP.text(1,-15.5,'End cap','nt','start');
+FP.bal(3,-14,-9.5,-10,-3.5);FP.bal(4,-9,-14.5,-4.9,-10);FP.bal(5,-19.5,-7,-18,-1.7);
 
 const K=dwg('d-k',[-34,-38,100,56],true,'Kipp K0440 assembly, dimensioned end view');
 K.rect(-28,55,21,39,'ctx');K.rect(30,45,-4,21,'ctx');
