@@ -29,7 +29,7 @@ h2{font-size:24px;line-height:1.15}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .chip{font-family:var(--font-mono);font-size:12.5px;border:1px solid var(--line);border-radius:4px;padding:3px 8px;color:var(--muted);background:var(--card)}
 .chip b{color:var(--fg);font-weight:500}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:20px}
 .model{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0}
 .model header{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
 .tag{font-family:var(--font-mono);font-size:12px;color:var(--muted)}
@@ -68,8 +68,8 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
 .sw{width:16px;height:10px;border:1px solid var(--fg);border-radius:2px;display:inline-block}
 .dwgwrap{overflow-x:auto;background:var(--card);border-radius:6px}
 .dwg{display:block;width:100%;min-width:560px;height:auto}
-.dwg.sm{min-width:220px}
-.parts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:20px}
+.dwg.sm{min-width:220px;max-height:300px}
+.parts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px}
 .dstack{display:flex;flex-direction:column;gap:20px}
 .drow-body{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(200px,1fr);gap:20px;align-items:start}
 @media (max-width:760px){.drow-body{grid-template-columns:minmax(0,1fr)}}
@@ -96,7 +96,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
 <div class="page">
   <header>
     <h1>FREDDE LED hinge options</h1>
-    <p class="lede">Three ways to hang the black ALP3025-B profile under the top shelf on adjustable-friction hinges, so it can tilt and throw light forward under the front rail. Drag any model to look around it. The slider tilts the profile on its hinge.</p>
+    <p class="lede">Four ways to hang the black ALP3025-B profile under the top shelf on adjustable-friction hinges, so it can tilt and throw light forward under the front rail. Drag any model to look around it. The slider tilts the profile on its hinge.</p>
     <div class="chips">
       <span class="chip">Rail <b>25 mm</b> deep · <b>15 mm</b> thick · back face <b>25 mm</b> from shelf edge</span>
       <span class="chip">Clip U <b>9 × 9 mm</b></span>
@@ -107,7 +107,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
 
   <div class="grid">
     <article class="model">
-      <header><h2>Southco, flat</h2><span class="tag">E6-10-101-20 · 0–0.25 Nm</span></header>
+      <header><h2>Southco small, flat</h2><span class="tag">E6-10-101-20 · 0–0.25 Nm</span></header>
       <div class="view" id="v-s"></div>
       <div class="controls">
         <label for="t-s">Tilt</label><input id="t-s" type="range" min="0" max="60" step="1" value="0"><span class="val" id="tv-s">0°</span>
@@ -124,7 +124,24 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
     </article>
 
     <article class="model">
-      <header><h2>Southco, folded</h2><span class="tag">E6-10-101-20 · 0–0.25 Nm</span></header>
+      <header><h2>Southco medium, flat</h2><span class="tag">E6-10-301-20 · 0–0.8 Nm</span></header>
+      <div class="view" id="v-m"></div>
+      <div class="controls">
+        <label for="t-m">Tilt</label><input id="t-m" type="range" min="0" max="60" step="1" value="0"><span class="val" id="tv-m">0°</span>
+        <label class="cb"><input id="x-m" type="checkbox">See-through profile</label>
+        <label class="cb"><input id="l-m" type="checkbox" checked>Labels</label>
+      </div>
+      <div class="readouts">
+        <div class="ro"><span>Below rail</span><b id="b-m">–</b></div>
+        <div class="ro"><span>Max tilt</span><b id="m-m">–</b></div>
+        <div class="ro"><span>From edge</span><b>73 mm</b></div>
+        <div class="ro"><span>Parts</span><b>2</b></div>
+      </div>
+      <p class="hint">Same layout as the small flat version, but the hinge is screw-fixed: M4 screws up through the flat bar and wood screws into the spacer. No studs to trim and no nut recesses.</p>
+    </article>
+
+    <article class="model">
+      <header><h2>Southco small, folded</h2><span class="tag">E6-10-101-20 · 0–0.25 Nm</span></header>
       <div class="view" id="v-c"></div>
       <div class="controls">
         <label for="t-c">Tilt</label><input id="t-c" type="range" min="0" max="60" step="1" value="0"><span class="val" id="tv-c">0°</span>
@@ -160,17 +177,18 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
 
   <div class="tablewrap">
     <table>
-      <thead><tr><th></th><th>Southco, flat</th><th>Southco, folded</th><th>Kipp, folded</th></tr></thead>
+      <thead><tr><th></th><th>Southco small, flat</th><th>Southco medium, flat</th><th>Southco small, folded</th><th>Kipp, folded</th></tr></thead>
       <tbody>
-        <tr><td>Hinge size</td><td class="num">25.4 × 30.5 mm</td><td class="num">25.4 × 30.5 mm</td><td class="num">56 (63 with caps) × 54 mm</td></tr>
-        <tr><td>Torque</td><td>Up to 0.25 Nm, screw adjuster on the knuckle</td><td>Up to 0.25 Nm, screw adjuster on the knuckle</td><td>0–5 Nm, 4 mm hex key in the knuckle end</td></tr>
-        <tr><td>Fixing</td><td>Studs and nuts through a flat bar and a spacer</td><td>Shelf studs glued into the shelf. Profile studs and nuts through a 3 mm plate</td><td>Screws through counterbored M6 holes, 36 mm apart</td></tr>
-        <tr><td>Profile below rail at rest</td><td class="num">≈17 mm</td><td class="num">≈14 mm</td><td class="num">≈22 mm</td></tr>
-        <tr><td>Tilt before touching the rail</td><td class="num">90°+</td><td class="num">≈63°</td><td class="num">≈56°</td></tr>
-        <tr><td>Parts to make</td><td>Stepped flat bar, spacer with nut recesses, trimmed studs</td><td>Adapter plate, short tapped strip, trimmed studs</td><td>One tapped strip, 9.5 × about 2 mm, M3 at 36 mm</td></tr>
-        <tr><td>Uses the clip block</td><td>Yes</td><td>No</td><td>No</td></tr>
-        <tr><td>Removable</td><td>Yes</td><td>Profile yes, hinge glued to the shelf</td><td>Yes</td></tr>
-        <tr><td>Hinge travel</td><td>One way from flat</td><td>Unfolds from shut, if the hinge folds a full 180° (check on the part)</td><td>Up to 180° from folded</td></tr>
+        <tr><td>Hinge price</td><td class="num">£8.67</td><td class="num">£9.91</td><td class="num">£8.67</td><td class="num">≈ US$28.99</td></tr>
+        <tr><td>Hinge size</td><td class="num">25.4 × 30.5 mm</td><td class="num">42.9 × 36.5 mm</td><td class="num">25.4 × 30.5 mm</td><td class="num">56 (63 with caps) × 54 mm</td></tr>
+        <tr><td>Torque</td><td>Up to 0.25 Nm, screw adjuster on the knuckle</td><td>Up to 0.8 Nm, screw adjuster on the leaf face, reachable from below</td><td>Up to 0.25 Nm, screw adjuster on the knuckle</td><td>0–5 Nm, 4 mm hex key in the knuckle end</td></tr>
+        <tr><td>Fixing</td><td>Studs and nuts through a flat bar and a spacer</td><td>M4 screws through counterbored holes, 31.8 × 25.4 mm pattern</td><td>Shelf studs glued into the shelf. Profile studs and nuts through a 3 mm plate</td><td>Screws through counterbored M6 holes, 36 mm apart</td></tr>
+        <tr><td>Profile below rail at rest</td><td class="num">≈17 mm</td><td class="num">≈17 mm</td><td class="num">≈14 mm</td><td class="num">≈22 mm</td></tr>
+        <tr><td>Tilt before touching the rail</td><td class="num">90°+</td><td class="num">90°+</td><td class="num">≈63°</td><td class="num">≈56°</td></tr>
+        <tr><td>Parts to make</td><td>Stepped flat bar, spacer with nut recesses, trimmed studs</td><td>Stepped flat bar, spacer</td><td>Adapter plate, short tapped strip, trimmed studs</td><td>One tapped strip, 9.5 × about 2 mm, M3 at 36 mm</td></tr>
+        <tr><td>Uses the clip block</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td></tr>
+        <tr><td>Removable</td><td>Yes</td><td>Yes</td><td>Profile yes, hinge glued to the shelf</td><td>Yes</td></tr>
+        <tr><td>Hinge travel</td><td>One way from flat</td><td>One way from flat</td><td>Unfolds from shut, if the hinge folds a full 180° (check on the part)</td><td>Up to 180° from folded</td></tr>
       </tbody>
     </table>
   </div>
@@ -187,14 +205,23 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
           <tr class="grp"><th colspan="5">Both options</th></tr>
           <tr><td>LED profile</td><td>LEDBRITE ALP3025-B, black, 2 m, with opal diffuser and end caps. Cut profile and diffuser to 800–900 mm. One length leaves enough for a second run.</td><td class="q">1</td><td><a href="https://www.ledbrite.co.uk/ledbrite-alp3025-b-30-x-24-1mm-black-2-metre-anti-glare-recessed-led-aluminium-profile" target="_blank" rel="noopener">LEDBRITE</a></td><td class="pr">£19.90</td></tr>
           <tr><td>LED strip</td><td>SIRYYUI COB strip, 24 V, 8 mm wide, tunable white 2700–6500 K, CRI 90+, IP20. Kit with RF remote and plug-in power supply. Cut to 800–900 mm at a marked cut point. At 8 mm it sits easily in the 19 mm channel.</td><td class="q">3 m kit</td><td><a href="https://amzn.eu/d/0fuojfsw" target="_blank" rel="noopener">Amazon</a></td><td class="pr">£23.99</td></tr>
-          <tr class="grp"><th colspan="5">Southco, flat</th></tr>
+          <tr class="grp"><th colspan="5">Southco small, flat</th></tr>
           <tr><td>Hinge</td><td>Southco E6-10-101-20, black acetal, 0.25 Nm, 4 nuts included</td><td class="q">2</td><td><a href="https://shop.southco.com/en_gb/e6-10-101-20" target="_blank" rel="noopener">Southco UK shop</a></td><td class="pr">£8.67</td></tr>
           <tr><td>Clip block</td><td>Profile mounting clip with its slide plate and screw, springs removed</td><td class="q">2</td><td>Clips you already have</td><td class="pr">–</td></tr>
           <tr><td>Flat bar</td><td>3 mm aluminium sheet or 20 × 3 mm flat bar, about 45 mm per bar. Cut to the flat bar drawing.</td><td class="q">2</td><td>Metal or DIY supplier</td><td class="pr">–</td></tr>
           <tr><td>Spacer</td><td>10 mm hardwood, 18 × 40 mm. Cut to the spacer drawing.</td><td class="q">2</td><td>Offcut</td><td class="pr">–</td></tr>
           <tr><td>Retaining bolt</td><td>M2.5 × 6 mm pan head screw with nut</td><td class="q">2</td><td>Hardware supplier</td><td class="pr">–</td></tr>
           <tr><td>Wood screws</td><td>4 × 20 mm, spacer to shelf</td><td class="q">4</td><td>Hardware supplier</td><td class="pr">–</td></tr>
-          <tr class="grp"><th colspan="5">Southco, folded</th></tr>
+          <tr class="grp"><th colspan="5">Southco medium, flat</th></tr>
+          <tr><td>Hinge</td><td>Southco E6-10-301-20, black acetal, 0.8 Nm, screws not supplied</td><td class="q">2</td><td><a href="https://shop.southco.com/en_gb/e6-10-301-20" target="_blank" rel="noopener">Southco UK shop</a></td><td class="pr">£9.91</td></tr>
+          <tr><td>Clip block</td><td>Profile mounting clip with its slide plate and screw, springs removed</td><td class="q">2</td><td>Clips you already have</td><td class="pr">–</td></tr>
+          <tr><td>Flat bar</td><td>3 mm aluminium, about 40 × 35 mm per bar. Cut to the medium flat bar drawing.</td><td class="q">2</td><td>Metal or DIY supplier</td><td class="pr">–</td></tr>
+          <tr><td>Spacer</td><td>10 mm hardwood, 20 × 54 mm. Cut to the medium spacer drawing.</td><td class="q">2</td><td>Offcut</td><td class="pr">–</td></tr>
+          <tr><td>Machine screws</td><td>M4 × 10 mm pan or cheese head with M4 nuts, hinge to bar. Heads must fit the Ø8.9 counterbores.</td><td class="q">4</td><td>Hardware supplier</td><td class="pr">–</td></tr>
+          <tr><td>Wood screws</td><td>4 × 12 mm, hinge to spacer</td><td class="q">4</td><td>Hardware supplier</td><td class="pr">–</td></tr>
+          <tr><td>Wood screws</td><td>4 × 20 mm, spacer to shelf</td><td class="q">4</td><td>Hardware supplier</td><td class="pr">–</td></tr>
+          <tr><td>Retaining bolt</td><td>M2.5 × 6 mm pan head screw with nut</td><td class="q">2</td><td>Hardware supplier</td><td class="pr">–</td></tr>
+          <tr class="grp"><th colspan="5">Southco small, folded</th></tr>
           <tr><td>Hinge</td><td>Southco E6-10-101-20, black acetal, 0.25 Nm, 4 nuts included</td><td class="q">2</td><td><a href="https://shop.southco.com/en_gb/e6-10-101-20" target="_blank" rel="noopener">Southco UK shop</a></td><td class="pr">£8.67</td></tr>
           <tr><td>Adapter plate</td><td>3 mm aluminium, 38 × 26 mm. Cut to the adapter plate drawing.</td><td class="q">2</td><td>Metal or DIY supplier</td><td class="pr">–</td></tr>
           <tr><td>Tapped strip</td><td>Aluminium, 9.5 × about 2 × 30 mm, M3 at 16 mm. Check the T-slot cavity first.</td><td class="q">2</td><td>Metal or DIY supplier</td><td class="pr">–</td></tr>
@@ -206,8 +233,9 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
           <tr><td>Machine screws</td><td>M3 × 10 mm with M3 washers, hinge to strip. Check the length against the counterbore depth.</td><td class="q">4</td><td>Hardware supplier</td><td class="pr">–</td></tr>
           <tr><td>Wood screws</td><td>5 × 16 mm, hinge to shelf, shorter than the shelf is thick</td><td class="q">4</td><td>Hardware supplier</td><td class="pr">–</td></tr>
           <tr class="grp"><th colspan="5">Tools</th></tr>
-          <tr><td>Southco, flat</td><td>Drills 2.7, 4 and 5.5 mm, an 11 mm flat or Forstner bit for the nut recesses, a hacksaw and file</td><td class="q">–</td><td>–</td><td class="pr">–</td></tr>
-          <tr><td>Southco, folded</td><td>Drills 2.5, 3.2, 5.5 and 6 mm, M3 tap, a hacksaw and file</td><td class="q">–</td><td>–</td><td class="pr">–</td></tr>
+          <tr><td>Southco small, flat</td><td>Drills 2.7, 4 and 5.5 mm, an 11 mm flat or Forstner bit for the nut recesses, a hacksaw and file</td><td class="q">–</td><td>–</td><td class="pr">–</td></tr>
+          <tr><td>Southco medium, flat</td><td>Drills 2.7, 3, 4 and 4.5 mm, a hacksaw and file</td><td class="q">–</td><td>–</td><td class="pr">–</td></tr>
+          <tr><td>Southco small, folded</td><td>Drills 2.5, 3.2, 5.5 and 6 mm, M3 tap, a hacksaw and file</td><td class="q">–</td><td>–</td><td class="pr">–</td></tr>
           <tr><td>Kipp</td><td>2.5 mm drill, M3 tap, 4 mm hex key for the friction adjuster</td><td class="q">–</td><td>–</td><td class="pr">–</td></tr>
         </tbody>
       </table>
@@ -217,7 +245,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
   <section class="drawings">
     <header>
       <h2>Dimensioned drawings</h2>
-      <p class="lede">End views looking along the profile, with the front of the desk on the right. All three assemblies are drawn at the same scale. Dimensions in mm, at rest with no tilt.</p>
+      <p class="lede">End views looking along the profile, with the front of the desk on the right. All four assemblies are drawn at the same scale. Dimensions in mm, at rest with no tilt.</p>
       <div class="legend">
         <span><i class="sw" style="background:var(--d-hinge)"></i>Hinge</span>
         <span><i class="sw" style="background:var(--d-alu)"></i>Aluminium and fixings</span>
@@ -229,7 +257,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
     </header>
     <div class="dstack">
       <article class="model">
-        <header><h3>Southco, flat</h3><span class="tag">End view</span></header>
+        <header><h3>Southco small, flat</h3><span class="tag">End view</span></header>
         <div class="drow-body">
           <div class="dwgwrap" id="d-s"></div>
           <ul class="dnotes">
@@ -241,7 +269,20 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
         </div>
       </article>
       <article class="model">
-        <header><h3>Southco, folded</h3><span class="tag">End view</span></header>
+        <header><h3>Southco medium, flat</h3><span class="tag">End view</span></header>
+        <div class="drow-body">
+          <div class="dwgwrap" id="d-m"></div>
+          <ul class="dnotes">
+            <li>Hinge axis about 16 below the shelf. Knuckle Ø12.7, leaves 5.8 thick.</li>
+            <li>M4 screws up through the leaf and bar, with nuts on top of the bar (dashed through the bar).</li>
+            <li>Wood screws up through the fixed leaf into the spacer (dashed).</li>
+            <li>The clip block sets the profile height, so it hangs at the same height as the small flat layout.</li>
+            <li>The axis offset assumes the knuckle sits on the mounting face. Check it on the part.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="model">
+        <header><h3>Southco small, folded</h3><span class="tag">End view</span></header>
         <div class="drow-body">
           <div class="dwgwrap" id="d-c"></div>
           <ul class="dnotes">
@@ -269,7 +310,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
     <h2>Parts to make</h2>
     <div class="parts">
       <article class="model">
-        <header><h3>Flat bar</h3><span class="tag">Southco · plan</span></header>
+        <header><h3>Flat bar, small</h3><span class="tag">Southco small flat · plan</span></header>
         <div class="dwgwrap" id="d-bar"></div>
         <ul class="dnotes">
           <li>3 mm aluminium, filed to slide in the 3 mm slots.</li>
@@ -279,12 +320,30 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
         </ul>
       </article>
       <article class="model">
-        <header><h3>Spacer</h3><span class="tag">Southco · plan</span></header>
+        <header><h3>Spacer, small</h3><span class="tag">Southco small flat · plan</span></header>
         <div class="dwgwrap" id="d-sp"></div>
         <ul class="dnotes">
           <li>Hardwood, 10 thick. The rail face is on the right.</li>
           <li>Ø5.5 through holes for the studs, each with a Ø11 × 3 deep nut recess in the top face (dashed).</li>
           <li>Two Ø4 holes for wood screws into the shelf.</li>
+        </ul>
+      </article>
+      <article class="model">
+        <header><h3>Flat bar, medium</h3><span class="tag">Southco medium flat · plan</span></header>
+        <div class="dwgwrap" id="d-barm"></div>
+        <ul class="dnotes">
+          <li>3 mm aluminium, filed to slide in the 3 mm slots. The narrow part is 18.5 wide.</li>
+          <li>Ø4.5 holes for M4 screws from the hinge, with nuts on top.</li>
+          <li>Ø2.7 hole for an M2.5 retaining bolt, 4 off the centreline.</li>
+        </ul>
+      </article>
+      <article class="model">
+        <header><h3>Spacer, medium</h3><span class="tag">Southco medium flat · plan</span></header>
+        <div class="dwgwrap" id="d-spm"></div>
+        <ul class="dnotes">
+          <li>Hardwood, 10 thick. The rail face is on the right.</li>
+          <li>Ø3 pilot holes, 8 deep, for the 4 × 12 hinge screws from below.</li>
+          <li>Ø4 through holes for the 4 × 20 screws into the shelf.</li>
         </ul>
       </article>
       <article class="model">
@@ -311,7 +370,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
 
   <div class="notes">
     <section>
-      <h2>Southco, flat: fit notes</h2>
+      <h2>Southco small, flat: fit notes</h2>
       <ul>
         <li>The bar is 19 mm wide inside the slots so it rests on both end lips, then widens to about 26 mm for the 15 mm stud spacing.</li>
         <li>Trim the bar-side studs to 8–9 mm or they reach past the underside of the shelf.</li>
@@ -321,7 +380,16 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
       </ul>
     </section>
     <section>
-      <h2>Southco, folded: fit notes</h2>
+      <h2>Southco medium, flat: fit notes</h2>
+      <ul>
+        <li>Southco doesn't supply the screws. Use M4 pan or cheese heads that sit inside the Ø8.9 × 2.5 counterbores.</li>
+        <li>The torque screw is on the leaf face, pointing down, so you can adjust it with the light in place.</li>
+        <li>A 900 mm run needs about 0.05 Nm per hinge, near the bottom of the 0.8 Nm range, so adjust in small turns.</li>
+        <li>The hinge is bigger than the small one, so the bar's wide end grows to 40 mm along the profile and the spacer to 54 mm.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Southco small, folded: fit notes</h2>
       <ul>
         <li>Before committing, fold a hinge shut by hand and check it closes a full 180°. Southco doesn't state the travel.</li>
         <li>The shelf-side studs are glued, so the hinges can't be removed from the shelf afterwards. The profile still unscrews from the plate.</li>
@@ -388,6 +456,25 @@ function buildSouthco(scene,m,k){
   cyl(2.7,2,0,10,-5,'y',k.zinc,m);cyl(1.4,6,0,6,-5,'y',k.zinc,m);
   prism([[33,6],[17.75,6],[17.75,4.5],[31,-3],[33,-4]],-12.7,12.7,k.blk,m);
   [-7.5,7.5].forEach(z=>{cyl(2.5,9,22.84,10.5,z,'y',k.zinc,m);cyl(5.77,3,22.84,10.5,z,'y',k.zinc,m,6);});
+  return pm;
+}
+function buildSouthcoMedium(scene,m,k){
+  box(-60,73,16,34,-60,60,k.shelf,scene);label('Shelf',scene,-50,34,-50);
+  box(48,63,-9,16,-60,60,k.rail,scene);label('Front rail',scene,55.5,-9,-55);
+  box(28,48,6,16,-27,27,k.wood,scene);label('Spacer',scene,38,16,27);
+  box(27,45.25,0.2,6,-21.45,21.45,k.blk,scene);
+  cyl(6.35,42.9,27,-0.35,0,'z',k.blk,scene);
+  label('Southco E6 medium',scene,36,0,21.45);
+  const pm=addProfile(m);
+  box(-7.5,7.5,0,3,-17.5,17.5,k.alu,m);
+  [[-7.5,-4.5],[4.5,7.5]].forEach(w=>{const a=w[0],b=w[1];box(a,b,3,6,-17.5,17.5,k.alu,m);box(a,b,6,12,9.5,17.5,k.alu,m);box(a,b,6,12,-17.5,-9.5,k.alu,m);box(a,b,9,12,6,9.5,k.alu,m);box(a,b,9,12,-9.5,-6,k.alu,m);});
+  label('Clip block',m,-7.5,12,-17.5);
+  box(-4.6,4.6,-3.2,-1.9,-17,17,k.alu,m);cyl(1.5,8,0,-1,0,'y',k.zinc,m);cyl(2.7,2,0,4,0,'y',k.zinc,m);
+  box(-9,10,6,9,-9.25,9.25,k.bar,m);box(10,26,6,9,-20,20,k.bar,m);label('Flat bar',m,18,9,-20);
+  cyl(2.7,2,0,10,-5,'y',k.zinc,m);cyl(1.4,6,0,6,-5,'y',k.zinc,m);
+  box(8.75,27,0.2,6,-21.45,21.45,k.blk,m);
+  cyl(3,1.5,20,-0.55,0,'y',k.alu,m);
+  [-15.9,15.9].forEach(z=>{cyl(2,1.5,14.3,12.95,z,'y',k.zinc,m);cyl(4.04,3.2,14.3,10.6,z,'y',k.zinc,m,6);});
   return pm;
 }
 function buildSouthcoFolded(scene,m,k){
@@ -459,6 +546,7 @@ function viewer(id,cfg){
   (function loop(){requestAnimationFrame(loop);ctl.update();r.render(scene,cam);lr.render(scene,cam);})();
 }
 viewer('s',{build:buildSouthco,ax:33,ay:1,railBottom:-9,target:[15,-5],rail:[52,67,-9,16],polys:[PROFILE,RC(-9,32,6,9),RC(17.84,27.84,9,12),RC(20.34,25.34,12,15),RC(-7.5,7.5,0,12)]});
+viewer('m',{build:buildSouthcoMedium,ax:27,ay:-0.35,railBottom:-9,target:[15,-5],rail:[48,63,-9,16],polys:[PROFILE,RC(-9,10,6,9),RC(10,26,6,9),RC(10.26,18.34,9,12.2),RC(-7.5,7.5,0,12),RC(8.75,27,0.2,6)]});
 viewer('c',{build:buildSouthcoFolded,ax:30,ay:8,railBottom:-12,target:[12,-3],rail:[37,52,-12,13],polys:[PROFILE,RC(-8,30,0,3),RC(14.84,24.84,-3,0),RC(17.34,22.34,-4,0),[[14.75,3],[30,3],[30,8],[16.5,4.5]]]});
 viewer('k',{build:buildKipp,ax:17.75,ay:10.5,railBottom:-4,target:[5,0],rail:[30,45,-4,21],polys:[PROFILE,RC(-9.25,17.75,0,8)]});
 })();
@@ -505,6 +593,37 @@ S.dimH(0,36,33,36,39,'33');S.dimH(33,36,52,16,39,'19');S.dimH(52,16,67,16,39,'15
 S.dimH(0,36,77,34,45,'77');
 S.dimV(67,16,67,-9,82,'25');S.dimV(67,-9,16.67,-25.67,72,'16.5');
 S.dimV(-21,16,-13,0,-21,'16');S.dimV(-13,0,-16.67,-25.67,-21,'25.5');S.dimV(-28,16,-16.67,-25.67,-28,'41.5');
+
+const MD=dwg('d-m',[-34,-38,100,56],true,'Southco medium flat assembly, dimensioned end view');
+MD.rect(-28,73,16,34,'ctx');MD.rect(48,63,-9,16,'ctx');
+profile(MD);MD.rect(-4.6,4.6,-3.2,-1.9,'alu');MD.rect(-1.5,1.5,-3.2,3,'alu');
+MD.rect(-7.5,7.5,0,3,'alu');MD.rect(-7.5,-4.5,3,6,'alu');MD.rect(-7.5,-4.5,9,12,'alu');MD.rect(4.5,7.5,3,6,'alu');MD.rect(4.5,7.5,9,12,'alu');
+MD.rect(-2.7,2.7,3,5,'alu');
+MD.rect(-9,26,6,9,'alu');MD.rect(-2.7,2.7,9,11,'alu');
+MD.rect(10.26,18.34,9,12.2,'alu');MD.rect(12.3,16.3,12.2,13.7,'alu');MD.rect(12.3,16.3,0.2,9,'hid');
+MD.rect(28,48,6,16,'wood');MD.rect(37.7,41.7,6,14,'hid');
+MD.rect(8.75,27,0.2,6,'hinge');MD.rect(27,45.25,0.2,6,'hinge');MD.circ(27,-0.35,6.35,'hinge');MD.circ(27,-0.35,1.5,'diff');
+MD.line(0,-31,0,36,'cl');MD.line(27,-9,27,36,'cl');MD.line(19,-0.35,35,-0.35,'cl');
+MD.dimH(0,36,27,36,39,'27');MD.dimH(27,36,48,16,39,'21');MD.dimH(48,16,63,16,39,'15');MD.dimH(63,16,73,34,39,'10');
+MD.dimH(0,36,73,34,45,'73');
+MD.dimV(63,16,63,-9,80,'25');MD.dimV(63,-9,16.67,-25.67,70,'16.5');
+MD.dimV(-21,16,-13,0,-21,'16');MD.dimV(-13,0,-16.67,-25.67,-21,'25.5');MD.dimV(-28,16,-16.67,-25.67,-28,'41.5');
+
+const BM=dwg('d-barm',[-24,-34,42,30],false,'Medium flat bar, dimensioned plan',true);
+BM.rect(-7.5,7.5,-17.5,17.5,'hid');
+BM.poly([[-9,-9.25],[10,-9.25],[10,-20],[26,-20],[26,20],[10,20],[10,9.25],[-9,9.25]],'alu');
+BM.circ(14.3,-15.9,2.25,'diff');BM.circ(14.3,15.9,2.25,'diff');BM.circ(0,-4,1.35,'diff');
+BM.line(-12,0,30,0,'cl');
+BM.text(18,3.2,'2× Ø4.5','nt');BM.text(0,-6.3,'Ø2.7','nt');
+BM.dimH(-9,-9.25,10,-20,-24,'19');BM.dimH(10,-20,26,-20,-24,'16');BM.dimH(-9,-9.25,26,-20,-29,'35');
+BM.dimV(-9,-9.25,-9,9.25,-14,'18.5');BM.dimV(14.3,-15.9,14.3,15.9,31,'31.8');BM.dimV(26,-20,26,20,36,'40');
+BM.dimH(-9,9.25,0,-4,25,'9');BM.dimH(14.3,15.9,26,20,25,'11.7');
+
+const SM=dwg('d-spm',[-18,-36,32,36],false,'Medium spacer, dimensioned plan',true);
+SM.rect(0,20,-27,27,'wood');
+[-15.9,15.9].forEach(z=>SM.circ(11.7,z,1.5,'diff'));[-23.5,23.5].forEach(z=>SM.circ(10,z,2,'diff'));
+SM.dimH(0,-27,20,-27,-31,'20');SM.dimV(20,-27,20,27,25,'54');
+SM.dimV(11.7,-15.9,11.7,15.9,-5,'31.8');SM.dimV(10,-23.5,10,23.5,-10,'47');SM.dimH(0,27,11.7,15.9,31,'11.7');
 
 const C=dwg('d-c',[-34,-38,100,56],true,'Southco folded assembly, dimensioned end view');
 C.rect(-28,62,13,31,'ctx');C.rect(37,52,-12,13,'ctx');
