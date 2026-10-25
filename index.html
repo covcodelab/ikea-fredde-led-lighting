@@ -575,12 +575,15 @@ function buildST(scene,m,k){
   box(-60,65,7,25,-60,70,k.shelf,scene);label('Shelf',scene,-50,25,-50);
   box(40,55,-18,7,-60,70,k.rail,scene);label('Front rail',scene,47.5,-18,-55);
   const zn=M(0xb9bec2,{metalness:0.7,roughness:0.4});
-  box(-3.3,12,0,7,40,56.2,zn,scene);cyl(2,0.25,8,3.5,56.33,'z',zn,scene);
+  const stP=x0=>{const q=[[x0,0],[8,0]];for(let i=1;i<12;i++){const a=-Math.PI/2+i*Math.PI/12;q.push([8+3.5*Math.cos(a),3.5+3.5*Math.sin(a)]);}q.push([8,7],[x0,7]);return q;};
+  prism(stP(-3.3),40,56.2,zn,scene);cyl(2,0.25,8,3.5,56.33,'z',zn,scene);
   [43.55,52.55].forEach(z=>cyl(2.5,0.6,0,-0.3,z,'y',k.zinc,scene));
   label('ST-7A3 hinge',scene,12,7,56);
   const pm=addProfile(m,-60,40);
   prism(PROFILE,40,42,M(0x55585e,{metalness:0.1,roughness:0.8}),m);
-  box(-12.9,8,0,7,31.5,40,zn,m);cyl(3.5,8.5,8,3.5,35.75,'z',zn,m);label('Hinge arm',m,-12.9,3.5,35.75);
+  const armP=[[8,40],[-9,39.45]];for(let i=1;i<12;i++){const a=Math.PI/2+i*Math.PI/12;armP.push([-9+3.7*Math.cos(a),35.75+3.7*Math.sin(a)]);}armP.push([-9,32.05],[8,31.5]);
+  const ag=new THREE.ExtrudeGeometry(new THREE.Shape(armP.map(q=>new THREE.Vector2(q[0],q[1]))),{depth:7,bevelEnabled:false});ag.rotateX(Math.PI/2);ag.translate(0,7,0);m.add(new THREE.Mesh(ag,zn));
+  cyl(3.5,8.5,8,3.5,35.75,'z',zn,m);label('Hinge arm',m,-12.9,3.5,35.75);
   box(-4.6,4.6,-3.2,-1.5,28,40,k.alu,m);label('Tapped strip',m,4.6,-2.5,28);
   return pm;
 }
@@ -669,6 +672,8 @@ function dwg(id,vb,flip,title,small){
   };
   return D;
 }
+function arcP(cx,cy,r,a0,a1,n){const q=[];for(let i=0;i<=n;i++){const a=(a0+(a1-a0)*i/n)*Math.PI/180;q.push([cx+r*Math.cos(a),cy+r*Math.sin(a)]);}return q;}
+function stP(x0){return [[x0,0]].concat(arcP(8,3.5,3.5,-90,90,14),[[x0,7]]);}
 const PROF=[[-39,0],[-5,0],[-5,4],[-15,4],[-15,10],[15,10],[15,4],[5,4],[5,0],[39,0],[39,70],[50,70],[50,77],[28,77],[28,16],[-28,16],[-28,77],[-50,77],[-50,70],[-39,70]].map(q=>[q[0]/3,-q[1]/3]);
 function profile(D){D.poly(PROF,'prof');D.rect(-6,6,-5.9,-5.33,'led');D.rect(-9.3,9.3,-23.6,-22.8,'diff');}
 
@@ -744,8 +749,8 @@ PL.dimV(8,-8,8,8,-5,'16');PL.dimV(38,-13,38,13,43,'26');PL.dimV(27.84,-7.5,27.84
 const E=dwg('d-e',[-34,-38,100,56],true,'Southco ST-7A3 end-mounted assembly, dimensioned end view');
 E.rect(-28,65,7,25,'ctx');E.rect(40,55,-18,7,'ctx');
 profile(E);E.rect(-4.6,4.6,-3.2,-1.5,'alu');
-E.rect(-3.3,12,0,7,'hid');
-E.rect(-12.9,8,0,7,'zinc');E.circ(8,3.5,3.5,'zinc');E.circ(8,3.5,1,'diff');
+E.poly(stP(-3.3),'hid');
+E.poly(stP(-12.9),'zinc');E.circ(8,3.5,1,'diff');
 E.rect(-1.5,1.5,-3,7,'hid');E.rect(-10.5,-7.5,-3,7,'hid');
 E.line(0,-31,0,28,'cl');E.line(8,-6,8,28,'cl');E.line(2,3.5,14,3.5,'cl');
 E.dimH(0,28,8,28,30,'8');E.dimH(8,28,40,7,30,'32');E.dimH(40,7,55,7,30,'15');E.dimH(55,7,65,25,30,'10');
@@ -756,7 +761,8 @@ E.dimV(-21,7,-13,0,-21,'7');E.dimV(-13,0,-16.67,-25.67,-21,'25.5');E.dimV(-28,7,
 const EP=dwg('d-ep',[-62,-32,34,26],true,'ST-7A3 end detail, dimensioned plan',true);
 EP.rect(-50,0,-13,13,'prof');EP.line(-50,0,0,0,'hid');
 EP.rect(0,2,-16.67,16.67,'ctx');
-EP.rect(0,16.2,-3.3,12,'zinc');EP.rect(-8.5,0,-12.9,8,'zinc');
+EP.poly([[0,12],[16.2,12],[16.2,-1.8]].concat(arcP(14.7,-1.8,1.5,0,-90,6),arcP(1.5,-1.8,1.5,-90,-180,6)),'zinc');
+EP.poly([[0,11.5],[0,8],[-0.55,-9]].concat(arcP(-4.25,-9,3.7,0,-180,14),[[-8.5,8],[-8.5,11.5]]),'zinc');
 [[3.55,0],[12.55,0],[-4.25,0],[-4.25,-9]].forEach(p=>EP.circ(p[0],p[1],1.5,'diff'));
 EP.line(-56,8,22,8,'cl');
 EP.text(-30,-6,'Profile base','nt','middle');EP.text(8,-7.5,'End cap','nt','middle');
