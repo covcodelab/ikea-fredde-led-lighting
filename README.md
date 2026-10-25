@@ -28,8 +28,8 @@ The 3D models load three.js from a CDN, so they need an internet connection.
 
 | | Southco small, flat | Southco medium, flat | Southco small, folded | Kipp, folded | Southco ST-7A3, end mounted |
 |---|---|---|---|---|---|
-| Part | E6-10-101-20 | E6-10-301-20 | E6-10-101-20 | K0440.56181800 (no guide tabs) | ST-7A3-15ST-50 (two, not handed) |
-| Hinge price | £8.67 | £9.91 | £8.67 | ≈ US$28.99 | £9.89 (-33 natural) |
+| Part | E6-10-101-20 | E6-10-301-20 | E6-10-101-20 | K0440.56181800 (no guide tabs) | ST-7A3-15ST-33 (two, not handed) |
+| Hinge price | £8.67 | £9.91 | £8.67 | ≈ US$28.99 | £9.89 |
 | Torque | up to 0.25 Nm | up to 0.8 Nm, adjuster reachable from below | up to 0.25 Nm | 0–5 Nm | fixed 0.17 Nm |
 | Mounting | flat bar through the clip-wall slots, hinge below it on studs, fixed leaf on a 10 mm hardwood spacer against the rail | same layout, but screw-fixed: M4 screws through the bar, wood screws into the spacer | hinge folded shut under the shelf, knuckle by the rail; shelf studs glued in, profile studs through a 3 mm plate screwed to a tapped strip | hinge folded shut under the shelf, lower leaf screwed to a tapped strip in the profile's T-slot | one hinge just past each end of the profile; body screwed under the shelf, 7 mm arm folded back over the profile base and screwed to it |
 | Profile bottom below the rail | about 17 | about 17 | about 14 | about 22 | about 8 |
@@ -100,7 +100,7 @@ Prices checked on 25 October 2026.
 
 | Item | Part | Qty | Source | Price |
 |---|---|---|---|---|
-| Hinge | ST-7A3-15ST-50 (black powder coat), type T, 0.17 Nm; -53 black zinc, -33 natural | 2 | [Southco UK shop](https://shop.southco.com/en_gb/st-7a3-15st-33) | £9.89 (-33) |
+| Hinge | ST-7A3-15ST-33, type T, 0.17 Nm, natural zinc | 2 | [Southco UK shop](https://shop.southco.com/en_gb/st-7a3-15st-33) | £9.89 |
 | Tapped strip | Aluminium, 9.5 × about 2 × 12 mm, one M3 hole 4.25 from one end | 2 | Metal or DIY supplier | – |
 | Machine screws | M3 × 8 socket head, arm to profile | 4 | Hardware supplier | – |
 | Wood screws | 3 × 16 mm pan head, hinge body to shelf | 4 | Hardware supplier | – |
