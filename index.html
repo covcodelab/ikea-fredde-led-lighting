@@ -439,7 +439,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
         </ul>
       </article>
       <article class="model">
-        <header><h3>Spacer, small</h3><span class="tag">Southco small flat · plan</span></header>
+        <header><h3>Hardwood spacer, small</h3><span class="tag">Southco small flat · plan</span></header>
         <div class="dwgwrap" id="d-sp"></div>
         <ul class="dnotes">
           <li>Hardwood, 10 thick. The rail face is on the right.</li>
@@ -457,7 +457,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
         </ul>
       </article>
       <article class="model">
-        <header><h3>Spacer, medium</h3><span class="tag">Southco medium flat · plan</span></header>
+        <header><h3>Hardwood spacer, medium</h3><span class="tag">Southco medium flat · plan</span></header>
         <div class="dwgwrap" id="d-spm"></div>
         <ul class="dnotes">
           <li>Hardwood, 10 thick. The rail face is on the right.</li>
@@ -466,14 +466,12 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
         </ul>
       </article>
       <article class="model">
-        <header><h3>Tapped strip</h3><span class="tag">Kipp · plan</span></header>
+        <header><h3>Tapped strip, Kipp</h3><span class="tag">Kipp folded · plan</span></header>
         <div class="dwgwrap" id="d-st"></div>
         <ul class="dnotes">
           <li>Aluminium, 1.8 thick. The T-slot cavity is about 9.8 wide and 2.0 deep under lips about 1.5 thick, measured from photos.</li>
           <li>Drill 2.5 and tap M3. Slide it in from the end of the profile.</li>
           <li>Fix with M3 screws and washers through the Kipp counterbores.</li>
-          <li>For the folded Southco, make it 30 long with the two M3 holes 16 apart.</li>
-          <li>For the ST-7A3, make two 12 long, each with one M3 hole 4.25 from the end at the profile's end.</li>
         </ul>
       </article>
       <article class="model">
@@ -483,6 +481,47 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
           <li>3 mm aluminium. The right-hand edge lines up with the hinge axis, toward the rail.</li>
           <li>Ø5.5 holes for the hinge studs, which pass in front of the profile with nuts underneath.</li>
           <li>Ø3.2 holes for M3 screws into the tapped strip.</li>
+        </ul>
+      </article>
+      <article class="model">
+        <header><h3>Recess spacer, folded</h3><span class="tag">Southco small folded · plan</span></header>
+        <div class="dwgwrap" id="d-rsc"></div>
+        <ul class="dnotes">
+          <li>1.5 aluminium, sized to the measured recess depth. Lies in the recess under the adapter plate.</li>
+          <li>Ø3.4 clearance holes for the plate's M3 screws. The front edge stops 1 short of the front wall.</li>
+        </ul>
+      </article>
+      <article class="model">
+        <header><h3>Tapped strip, folded</h3><span class="tag">Southco small folded · plan</span></header>
+        <div class="dwgwrap" id="d-stc"></div>
+        <ul class="dnotes">
+          <li>Aluminium, 1.8 thick. Drill 2.5 and tap M3.</li>
+          <li>Slides into the T-slot cavity under the adapter plate.</li>
+        </ul>
+      </article>
+      <article class="model">
+        <header><h3>Recess spacer, Kipp</h3><span class="tag">Kipp folded · plan</span></header>
+        <div class="dwgwrap" id="d-rsk"></div>
+        <ul class="dnotes">
+          <li>1.5 aluminium, sized to the measured recess depth. Lies in the recess under the folded leaf.</li>
+          <li>Ø3.4 clearance holes on the centreline, matching the Kipp leaf holes 36 apart.</li>
+        </ul>
+      </article>
+      <article class="model">
+        <header><h3>Tapped strip, ST-7A3</h3><span class="tag">ST-7A3 end mounted · plan</span></header>
+        <div class="dwgwrap" id="d-ste"></div>
+        <ul class="dnotes">
+          <li>Aluminium, 1.8 thick. Drill 2.5 and tap M3. Make two.</li>
+          <li>The hole is 4.25 from the end that sits flush with the end of the profile.</li>
+        </ul>
+      </article>
+      <article class="model">
+        <header><h3>Recess spacer, ST-7A3</h3><span class="tag">ST-7A3 end mounted · plan</span></header>
+        <div class="dwgwrap" id="d-rse"></div>
+        <ul class="dnotes">
+          <li>1.5 aluminium, sized to the measured recess depth. Make two, one per end.</li>
+          <li>Ø3.4 clearance hole on the centreline for the T-slot screw. Drill 2.5 and tap M3 for the rear arm screw.</li>
+          <li>The right-hand edge sits flush with the end of the profile.</li>
         </ul>
       </article>
     </div>
@@ -889,6 +928,36 @@ T.rect(0,50,-4.75,4.75,'alu');T.circ(7,0,1.25,'diff');T.circ(43,0,1.25,'diff');T
 T.text(25,3.6,'2× M3 tapped','nt');
 T.dimH(0,-4.75,7,0,-9,'7');T.dimH(7,0,43,0,-9,'36');T.dimH(43,0,50,-4.75,-9,'7');T.dimH(0,-4.75,50,-4.75,-14,'50');
 T.dimV(50,-4.75,50,4.75,55,'9.5');
+
+const RSC=dwg('d-rsc',[-30,-20,34,18],true,'Folded Southco recess spacer, dimensioned plan',true);
+RSC.rect(-13,13,-8,11,'alu');[-8,8].forEach(z=>RSC.circ(z,0,1.7,'diff'));RSC.line(-16,0,16,0,'cl');
+RSC.text(0,3.2,'2× Ø3.4','nt');
+RSC.dimH(-13,11,13,11,15,'26');RSC.dimH(-8,0,8,0,-12,'16');RSC.dimH(-13,-8,-8,0,-15.5,'5');
+RSC.dimV(13,-8,13,11,18,'19');RSC.dimV(13,-8,8,0,22,'8');
+
+const STC=dwg('d-stc',[-32,-17,32,11],false,'Folded Southco tapped strip, dimensioned plan',true);
+STC.rect(-15,15,-4.75,4.75,'alu');[-8,8].forEach(z=>STC.circ(z,0,1.25,'diff'));STC.line(-18,0,18,0,'cl');
+STC.text(0,3.6,'2× M3 tapped','nt');
+STC.dimH(-15,-4.75,15,-4.75,-13,'30');STC.dimH(-8,0,8,0,-8.5,'16');STC.dimH(-15,-4.75,-8,0,-8.5,'7');
+STC.dimV(15,-4.75,15,4.75,20,'9.5');
+
+const RSK=dwg('d-rsk',[-34,-17,40,17],true,'Kipp recess spacer, dimensioned plan',true);
+RSK.rect(-28,28,-9,11,'alu');[-18,18].forEach(z=>RSK.circ(z,0,1.7,'diff'));RSK.line(-31,0,31,0,'cl');
+RSK.text(0,3.2,'2× Ø3.4','nt');
+RSK.dimH(-28,11,28,11,14.5,'56');RSK.dimH(-18,0,18,0,-12,'36');RSK.dimH(-28,-9,-18,0,-12,'10');
+RSK.dimV(28,-9,28,11,33,'20');RSK.dimV(28,-9,18,0,37,'9');
+
+const STE=dwg('d-ste',[-26,-16,38,12],true,'ST-7A3 tapped strip, dimensioned plan',true);
+STE.rect(0,12,-4.75,4.75,'alu');STE.circ(7.75,0,1.25,'diff');STE.line(-3,0,15,0,'cl');
+STE.text(3,-3.4,'M3','nt','middle');
+STE.dimH(0,4.75,12,4.75,8,'12');STE.dimH(7.75,0,12,-4.75,-9,'4.25');
+STE.dimV(12,-4.75,12,4.75,16,'9.5');
+
+const RSE=dwg('d-rse',[-25,-20,39,17],true,'ST-7A3 recess spacer, dimensioned plan',true);
+RSE.rect(0,12,-11,11,'alu');RSE.circ(7.75,0,1.7,'diff');RSE.circ(7.75,-9,1.25,'diff');RSE.line(-3,0,15,0,'cl');
+RSE.text(2.8,1.6,'Ø3.4','nt','middle');RSE.text(3,-8,'M3','nt','middle');
+RSE.dimH(0,11,12,11,14.5,'12');RSE.dimH(7.75,-9,12,-11,-15,'4.25');
+RSE.dimV(12,-11,12,11,18,'22');RSE.dimV(7.75,-9,7.75,0,-4,'9');
 })();
 </script>
 </body>

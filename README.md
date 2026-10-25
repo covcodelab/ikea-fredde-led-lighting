@@ -58,7 +58,7 @@ Quantities are for one 800–900 mm run on two hinges, set about 180 mm in from 
 | Hinge | Southco E6-10-101-20 | 2 | [Southco UK shop](https://shop.southco.com/en_gb/e6-10-101-20) | £8.67 |
 | Clip block | Supplied profile clip, springs removed | 2 | Existing | – |
 | Flat bar | 3 mm aluminium, about 45 mm per bar | 2 | Metal or DIY supplier | – |
-| Spacer | 10 mm hardwood, 18 × 40 mm | 2 | Offcut | – |
+| Hardwood spacer | 10 mm hardwood, 18 × 40 mm | 2 | Offcut | – |
 | Retaining bolt | M2.5 × 6 pan head with nut | 2 | Hardware supplier | – |
 | Wood screws | 4 × 20 mm | 4 | Hardware supplier | – |
 
@@ -69,7 +69,7 @@ Quantities are for one 800–900 mm run on two hinges, set about 180 mm in from 
 | Hinge | Southco E6-10-301-20 (screws not supplied) | 2 | [Southco UK shop](https://shop.southco.com/en_gb/e6-10-301-20) | £9.91 |
 | Clip block | Supplied profile clip, springs removed | 2 | Existing | – |
 | Flat bar | 3 mm aluminium, about 40 × 35 mm | 2 | Metal or DIY supplier | – |
-| Spacer | 10 mm hardwood, 20 × 54 mm | 2 | Offcut | – |
+| Hardwood spacer | 10 mm hardwood, 20 × 54 mm | 2 | Offcut | – |
 | Machine screws | M4 × 10 pan or cheese head with nuts, heads to fit Ø8.9 counterbores | 4 | Hardware supplier | – |
 | Wood screws | 4 × 12 mm, hinge to spacer | 4 | Hardware supplier | – |
 | Wood screws | 4 × 20 mm, spacer to shelf | 4 | Hardware supplier | – |
