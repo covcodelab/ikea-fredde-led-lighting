@@ -13,13 +13,13 @@
 /* Layout: workshop sheet. Two model panels side by side (stacked on phones), comparison table and fit notes underneath. */
 :root{
   --bg:#f1f2f0; --fg:#1b1f24; --muted:#5b6470; --line:#d3d7db; --panel:#e4e7e9; --card:#fafaf9; --accent:#b8700f;
-  --dim:#1d6aa8; --d-ctx:#dde0e3; --d-alu:#c3cad1; --d-prof:#6b717a; --d-hinge:#2c2f34; --d-wood:#dcc193;
+  --dim:#1d6aa8; --d-ctx:#dde0e3; --d-alu:#c3cad1; --d-prof:#6b717a; --d-hinge:#2c2f34; --d-wood:#dcc193; --d-zinc:#b4babf;
   --font-display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
   --font-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --font-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141619;--fg:#e6e8eb;--muted:#9aa3ad;--line:#2c3138;--panel:#1d2126;--card:#191c20;--accent:#f0a336;--dim:#6fb0ea;--d-ctx:#262a30;--d-alu:#5a636d;--d-prof:#3b4048;--d-hinge:#0b0c0e;--d-wood:#7a6142;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#141619;--fg:#e6e8eb;--muted:#9aa3ad;--line:#2c3138;--panel:#1d2126;--card:#191c20;--accent:#f0a336;--dim:#6fb0ea;--d-ctx:#262a30;--d-alu:#5a636d;--d-prof:#3b4048;--d-hinge:#0b0c0e;--d-wood:#7a6142;color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141619;--fg:#e6e8eb;--muted:#9aa3ad;--line:#2c3138;--panel:#1d2126;--card:#191c20;--accent:#f0a336;--dim:#6fb0ea;--d-ctx:#262a30;--d-alu:#5a636d;--d-prof:#3b4048;--d-hinge:#0b0c0e;--d-wood:#7a6142;--d-zinc:#8a9198;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#141619;--fg:#e6e8eb;--muted:#9aa3ad;--line:#2c3138;--panel:#1d2126;--card:#191c20;--accent:#f0a336;--dim:#6fb0ea;--d-ctx:#262a30;--d-alu:#5a636d;--d-prof:#3b4048;--d-hinge:#0b0c0e;--d-wood:#7a6142;--d-zinc:#8a9198;color-scheme:dark}
 body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:15px;line-height:1.55}
 .page{max-width:1180px;margin:0 auto;padding-block:28px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:28px}
 h1,h2{font-family:var(--font-display);font-weight:600;letter-spacing:.01em;text-wrap:balance;margin:0}
@@ -81,6 +81,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
 .dwg .prof{fill:var(--d-prof);stroke:var(--fg);stroke-width:.3}
 .dwg .hinge{fill:var(--d-hinge);stroke:var(--fg);stroke-width:.25}
 .dwg .wood{fill:var(--d-wood);stroke:var(--fg);stroke-width:.25}
+.dwg .zinc{fill:var(--d-zinc);stroke:var(--fg);stroke-width:.3}
 .dwg .led{fill:var(--accent)}
 .dwg .diff{fill:var(--card);stroke:var(--fg);stroke-width:.25}
 .dwg .hid{fill:none;stroke:var(--fg);stroke-width:.2;stroke-dasharray:1 .7}
@@ -274,6 +275,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
         <span><i class="sw" style="background:var(--d-hinge)"></i>Hinge</span>
         <span><i class="sw" style="background:var(--d-alu)"></i>Aluminium and fixings</span>
         <span><i class="sw" style="background:var(--d-wood)"></i>Hardwood spacer</span>
+        <span><i class="sw" style="background:var(--d-zinc)"></i>Zinc hinge (ST-7A3)</span>
         <span><i class="sw" style="background:var(--d-prof)"></i>LED profile</span>
         <span><i class="sw" style="background:var(--d-ctx)"></i>Shelf and rail</span>
         <span><i class="sw" style="background:none;border-style:dashed"></i>Hidden</span>
@@ -572,12 +574,13 @@ function buildSouthcoFolded(scene,m,k){
 function buildST(scene,m,k){
   box(-60,65,7,25,-60,70,k.shelf,scene);label('Shelf',scene,-50,25,-50);
   box(40,55,-18,7,-60,70,k.rail,scene);label('Front rail',scene,47.5,-18,-55);
-  box(-3.3,12,0,7,40,56.2,k.blk,scene);cyl(2,0.25,8,3.5,56.33,'z',k.blk,scene);
+  const zn=M(0xb9bec2,{metalness:0.7,roughness:0.4});
+  box(-3.3,12,0,7,40,56.2,zn,scene);cyl(2,0.25,8,3.5,56.33,'z',zn,scene);
   [43.55,52.55].forEach(z=>cyl(2.5,0.6,0,-0.3,z,'y',k.zinc,scene));
   label('ST-7A3 hinge',scene,12,7,56);
   const pm=addProfile(m,-60,40);
   prism(PROFILE,40,42,M(0x55585e,{metalness:0.1,roughness:0.8}),m);
-  box(-12.9,8,0,7,31.5,40,k.blk,m);cyl(3.5,8.5,8,3.5,35.75,'z',k.blk,m);label('Hinge arm',m,-12.9,3.5,35.75);
+  box(-12.9,8,0,7,31.5,40,zn,m);cyl(3.5,8.5,8,3.5,35.75,'z',zn,m);label('Hinge arm',m,-12.9,3.5,35.75);
   box(-4.6,4.6,-3.2,-1.5,28,40,k.alu,m);label('Tapped strip',m,4.6,-2.5,28);
   return pm;
 }
@@ -742,7 +745,7 @@ const E=dwg('d-e',[-34,-38,100,56],true,'Southco ST-7A3 end-mounted assembly, di
 E.rect(-28,65,7,25,'ctx');E.rect(40,55,-18,7,'ctx');
 profile(E);E.rect(-4.6,4.6,-3.2,-1.5,'alu');
 E.rect(-3.3,12,0,7,'hid');
-E.rect(-12.9,8,0,7,'hinge');E.circ(8,3.5,3.5,'hinge');E.circ(8,3.5,1,'diff');
+E.rect(-12.9,8,0,7,'zinc');E.circ(8,3.5,3.5,'zinc');E.circ(8,3.5,1,'diff');
 E.rect(-1.5,1.5,-3,7,'hid');E.rect(-10.5,-7.5,-3,7,'hid');
 E.line(0,-31,0,28,'cl');E.line(8,-6,8,28,'cl');E.line(2,3.5,14,3.5,'cl');
 E.dimH(0,28,8,28,30,'8');E.dimH(8,28,40,7,30,'32');E.dimH(40,7,55,7,30,'15');E.dimH(55,7,65,25,30,'10');
@@ -753,7 +756,7 @@ E.dimV(-21,7,-13,0,-21,'7');E.dimV(-13,0,-16.67,-25.67,-21,'25.5');E.dimV(-28,7,
 const EP=dwg('d-ep',[-62,-32,34,26],true,'ST-7A3 end detail, dimensioned plan',true);
 EP.rect(-50,0,-13,13,'prof');EP.line(-50,0,0,0,'hid');
 EP.rect(0,2,-16.67,16.67,'ctx');
-EP.rect(0,16.2,-3.3,12,'hinge');EP.rect(-8.5,0,-12.9,8,'hinge');
+EP.rect(0,16.2,-3.3,12,'zinc');EP.rect(-8.5,0,-12.9,8,'zinc');
 [[3.55,0],[12.55,0],[-4.25,0],[-4.25,-9]].forEach(p=>EP.circ(p[0],p[1],1.5,'diff'));
 EP.line(-56,8,22,8,'cl');
 EP.text(-30,-6,'Profile base','nt','middle');EP.text(8,-7.5,'End cap','nt','middle');
