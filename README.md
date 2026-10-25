@@ -2,7 +2,9 @@
 
 A tilting LED light under the top shelf of an IKEA FREDDE desk. A black LEDBRITE ALP3025-B aluminium profile hangs behind the shelf's front rail on two adjustable-friction hinges, so it can be angled to throw light forward onto the desk.
 
-Open `index.html` in a browser for the full design. It contains:
+**View the design online: <https://covcodelab.github.io/ikea-fredde-led-lighting/>**
+
+The same page is `index.html` in this repository. It contains:
 
 - interactive 3D models of both hinge options, with a tilt slider
 - a comparison table
