@@ -30,6 +30,7 @@ h2{font-size:24px;line-height:1.15}
 .chip{font-family:var(--font-mono);font-size:12.5px;border:1px solid var(--line);border-radius:4px;padding:3px 8px;color:var(--muted);background:var(--card)}
 .chip b{color:var(--fg);font-weight:500}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:20px}
+.grid>.model:last-child:nth-child(odd){grid-column:1/-1}
 .model{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0}
 .model header{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
 .tag{font-family:var(--font-mono);font-size:12px;color:var(--muted)}
@@ -96,7 +97,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
 <div class="page">
   <header>
     <h1>FREDDE LED hinge options</h1>
-    <p class="lede">Four ways to hang the black ALP3025-B profile under the top shelf on adjustable-friction hinges, so it can tilt and throw light forward under the front rail. Drag any model to look around it. The slider tilts the profile on its hinge.</p>
+    <p class="lede">Five ways to hang the black ALP3025-B profile under the top shelf on adjustable-friction hinges, so it can tilt and throw light forward under the front rail. Drag any model to look around it. The slider tilts the profile on its hinge.</p>
     <div class="chips">
       <span class="chip">Rail <b>25 mm</b> deep · <b>15 mm</b> thick · back face <b>25 mm</b> from shelf edge</span>
       <span class="chip">Clip U <b>9 × 9 mm</b></span>
@@ -173,22 +174,39 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
       </div>
       <p class="hint">Hinge folded shut under the shelf. The lower leaf screws to the profile through a tapped strip in the T-slot. No clip block needed.</p>
     </article>
+
+    <article class="model">
+      <header><h2>Southco ST-7A3, end mounted</h2><span class="tag">ST-7A3-15ST · fixed 0.17 Nm</span></header>
+      <div class="view" id="v-e"></div>
+      <div class="controls">
+        <label for="t-e">Tilt</label><input id="t-e" type="range" min="0" max="60" step="1" value="0"><span class="val" id="tv-e">0°</span>
+        <label class="cb"><input id="x-e" type="checkbox">See-through profile</label>
+        <label class="cb"><input id="l-e" type="checkbox" checked>Labels</label>
+      </div>
+      <div class="readouts">
+        <div class="ro"><span>Below rail</span><b id="b-e">–</b></div>
+        <div class="ro"><span>Max tilt</span><b id="m-e">–</b></div>
+        <div class="ro"><span>From edge</span><b>65 mm</b></div>
+        <div class="ro"><span>Parts</span><b>1</b></div>
+      </div>
+      <p class="hint">One small constant-torque hinge just past each end of the profile. The body screws under the shelf. The 7 mm arm folds back over the end of the profile base, filling the gap up to the shelf, and screws to it with two M3 screws. The model shows one end.</p>
+    </article>
   </div>
 
   <div class="tablewrap">
     <table>
-      <thead><tr><th></th><th>Southco small, flat</th><th>Southco medium, flat</th><th>Southco small, folded</th><th>Kipp, folded</th></tr></thead>
+      <thead><tr><th></th><th>Southco small, flat</th><th>Southco medium, flat</th><th>Southco small, folded</th><th>Kipp, folded</th><th>ST-7A3, end mounted</th></tr></thead>
       <tbody>
-        <tr><td>Hinge price</td><td class="num">£8.67</td><td class="num">£9.91</td><td class="num">£8.67</td><td class="num">≈ US$28.99</td></tr>
-        <tr><td>Hinge size</td><td class="num">25.4 × 30.5 mm</td><td class="num">42.9 × 36.5 mm</td><td class="num">25.4 × 30.5 mm</td><td class="num">56 (63 with caps) × 54 mm</td></tr>
-        <tr><td>Torque</td><td>Up to 0.25 Nm, screw adjuster on the knuckle</td><td>Up to 0.8 Nm, screw adjuster on the leaf face, reachable from below</td><td>Up to 0.25 Nm, screw adjuster on the knuckle</td><td>0–5 Nm, 4 mm hex key in the knuckle end</td></tr>
-        <tr><td>Fixing</td><td>Studs and nuts through a flat bar and a spacer</td><td>M4 screws through counterbored holes, 31.8 × 25.4 mm pattern</td><td>Shelf studs glued into the shelf. Profile studs and nuts through a 3 mm plate</td><td>Screws through counterbored M6 holes, 36 mm apart</td></tr>
-        <tr><td>Profile below rail at rest</td><td class="num">≈17 mm</td><td class="num">≈17 mm</td><td class="num">≈14 mm</td><td class="num">≈22 mm</td></tr>
-        <tr><td>Tilt before touching the rail</td><td class="num">90°+</td><td class="num">90°+</td><td class="num">≈63°</td><td class="num">≈56°</td></tr>
-        <tr><td>Parts to make</td><td>Stepped flat bar, spacer with nut recesses, trimmed studs</td><td>Stepped flat bar, spacer</td><td>Adapter plate, short tapped strip, trimmed studs</td><td>One tapped strip, 9.5 × about 2 mm, M3 at 36 mm</td></tr>
-        <tr><td>Uses the clip block</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td></tr>
-        <tr><td>Removable</td><td>Yes</td><td>Yes</td><td>Profile yes, hinge glued to the shelf</td><td>Yes</td></tr>
-        <tr><td>Hinge travel</td><td>One way from flat</td><td>One way from flat</td><td>Unfolds from shut, if the hinge folds a full 180° (check on the part)</td><td>Up to 180° from folded</td></tr>
+        <tr><td>Hinge price</td><td class="num">£8.67</td><td class="num">£9.91</td><td class="num">£8.67</td><td class="num">≈ US$28.99</td><td class="num">£9.89</td></tr>
+        <tr><td>Hinge size</td><td class="num">25.4 × 30.5 mm</td><td class="num">42.9 × 36.5 mm</td><td class="num">25.4 × 30.5 mm</td><td class="num">56 (63 with caps) × 54 mm</td><td class="num">25.3 × 15.3 × 7 mm, 32.2 mm arm</td></tr>
+        <tr><td>Torque</td><td>Up to 0.25 Nm, screw adjuster on the knuckle</td><td>Up to 0.8 Nm, screw adjuster on the leaf face, reachable from below</td><td>Up to 0.25 Nm, screw adjuster on the knuckle</td><td>0–5 Nm, 4 mm hex key in the knuckle end</td><td>Fixed 0.17 Nm (15ST), not adjustable</td></tr>
+        <tr><td>Fixing</td><td>Studs and nuts through a flat bar and a spacer</td><td>M4 screws through counterbored holes, 31.8 × 25.4 mm pattern</td><td>Shelf studs glued into the shelf. Profile studs and nuts through a 3 mm plate</td><td>Screws through counterbored M6 holes, 36 mm apart</td><td>No. 4 wood screws into the shelf. M3 screws into the profile base</td></tr>
+        <tr><td>Profile below rail at rest</td><td class="num">≈17 mm</td><td class="num">≈17 mm</td><td class="num">≈14 mm</td><td class="num">≈22 mm</td><td class="num">≈8 mm</td></tr>
+        <tr><td>Tilt before touching the rail</td><td class="num">90°+</td><td class="num">90°+</td><td class="num">≈63°</td><td class="num">≈56°</td><td class="num">≈70° (shelf limits)</td></tr>
+        <tr><td>Parts to make</td><td>Stepped flat bar, spacer with nut recesses, trimmed studs</td><td>Stepped flat bar, spacer</td><td>Adapter plate, short tapped strip, trimmed studs</td><td>One tapped strip, 9.5 × about 2 mm, M3 at 36 mm</td><td>Two short tapped strips, plus a tapped hole in each end of the profile base</td></tr>
+        <tr><td>Uses the clip block</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td><td>No</td></tr>
+        <tr><td>Removable</td><td>Yes</td><td>Yes</td><td>Profile yes, hinge glued to the shelf</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>Hinge travel</td><td>One way from flat</td><td>One way from flat</td><td>Unfolds from shut, if the hinge folds a full 180° (check on the part)</td><td>Up to 180° from folded</td><td>Not stated. Arm folded back at rest (check on the part)</td></tr>
       </tbody>
     </table>
   </div>
@@ -232,11 +250,17 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
           <tr><td>Tapped strip</td><td>Aluminium, 9.5 × about 2 × 50 mm. Check the T-slot cavity first, then cut to the strip drawing.</td><td class="q">2</td><td>Metal or DIY supplier</td><td class="pr">–</td></tr>
           <tr><td>Machine screws</td><td>M3 × 10 mm with M3 washers, hinge to strip. Check the length against the counterbore depth.</td><td class="q">4</td><td>Hardware supplier</td><td class="pr">–</td></tr>
           <tr><td>Wood screws</td><td>5 × 16 mm, hinge to shelf, shorter than the shelf is thick</td><td class="q">4</td><td>Hardware supplier</td><td class="pr">–</td></tr>
+          <tr class="grp"><th colspan="5">Southco ST-7A3, end mounted</th></tr>
+          <tr><td>Hinge</td><td>ST-7A3-15ST-50, type T, symmetric 0.17 Nm, black powder coat. Not handed. -53 is black zinc, -33 natural (£9.89).</td><td class="q">2</td><td><a href="https://shop.southco.com/en_gb/st-7a3-15st-33" target="_blank" rel="noopener">Southco UK shop</a></td><td class="pr">£9.89 (-33)</td></tr>
+          <tr><td>Tapped strip</td><td>Aluminium, 9.5 × about 2 × 12 mm, one M3 hole 4.25 mm from one end</td><td class="q">2</td><td>Metal or DIY supplier</td><td class="pr">–</td></tr>
+          <tr><td>Machine screws</td><td>M3 × 8 mm socket head, arm to profile</td><td class="q">4</td><td>Hardware supplier</td><td class="pr">–</td></tr>
+          <tr><td>Wood screws</td><td>3 × 16 mm pan head, hinge body to shelf. Heads must fit the Ø6 counterbores</td><td class="q">4</td><td>Hardware supplier</td><td class="pr">–</td></tr>
           <tr class="grp"><th colspan="5">Tools</th></tr>
           <tr><td>Southco small, flat</td><td>Drills 2.7, 4 and 5.5 mm, an 11 mm flat or Forstner bit for the nut recesses, a hacksaw and file</td><td class="q">–</td><td>–</td><td class="pr">–</td></tr>
           <tr><td>Southco medium, flat</td><td>Drills 2.7, 3, 4 and 4.5 mm, a hacksaw and file</td><td class="q">–</td><td>–</td><td class="pr">–</td></tr>
           <tr><td>Southco small, folded</td><td>Drills 2.5, 3.2, 5.5 and 6 mm, M3 tap, a hacksaw and file</td><td class="q">–</td><td>–</td><td class="pr">–</td></tr>
           <tr><td>Kipp</td><td>2.5 mm drill, M3 tap, 4 mm hex key for the friction adjuster</td><td class="q">–</td><td>–</td><td class="pr">–</td></tr>
+          <tr><td>ST-7A3</td><td>2 mm and 2.5 mm drills with a depth stop, M3 tap, 2.5 mm hex key</td><td class="q">–</td><td>–</td><td class="pr">–</td></tr>
         </tbody>
       </table>
     </div>
@@ -245,7 +269,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
   <section class="drawings">
     <header>
       <h2>Dimensioned drawings</h2>
-      <p class="lede">End views looking along the profile, with the front of the desk on the right. All four assemblies are drawn at the same scale. Dimensions in mm, at rest with no tilt.</p>
+      <p class="lede">End views looking along the profile, with the front of the desk on the right. All five assemblies are drawn at the same scale. Dimensions in mm, at rest with no tilt.</p>
       <div class="legend">
         <span><i class="sw" style="background:var(--d-hinge)"></i>Hinge</span>
         <span><i class="sw" style="background:var(--d-alu)"></i>Aluminium and fixings</span>
@@ -305,6 +329,46 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
           </ul>
         </div>
       </article>
+      <article class="model">
+        <header><h3>Southco ST-7A3, end mounted</h3><span class="tag">End view, at the profile end</span></header>
+        <div class="drow-body">
+          <div class="dwgwrap" id="d-e"></div>
+          <ul class="dnotes">
+            <li>Hinge axis 3.5 below the shelf, the middle of the 7 mm body. The 7 mm arm folds back over the profile base and fills the gap up to the shelf.</li>
+            <li>Arm screws, M3 × 8 with heads in the arm's counterbores: one into the tapped strip in the T-slot, one into a hole tapped in the base 9 behind the centreline (dashed).</li>
+            <li>The hinge body (dashed) sits just past the end of the profile, so it never touches it.</li>
+            <li>Axis 8 in front of the profile centreline, close to its centre of gravity, so it needs very little holding torque.</li>
+            <li>Tilt stops at about 70°, when the front edge of the profile reaches the shelf.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="model">
+        <header><h3>ST-7A3 setting out, 800 and 900 mm runs</h3><span class="tag">Plan of one end, from above</span></header>
+        <div class="drow-body">
+          <div class="dwgwrap" id="d-ep"></div>
+          <div>
+            <div class="tablewrap">
+              <table class="plist" style="min-width:0">
+                <thead><tr><th>Dimension</th><th class="pr">800 run</th><th class="pr">900 run</th></tr></thead>
+                <tbody>
+                  <tr><td>Hinge to hinge, outside the bodies</td><td class="pr">832.4</td><td class="pr">932.4</td></tr>
+                  <tr><td>Shelf screws, inner pair centres</td><td class="pr">807.1</td><td class="pr">907.1</td></tr>
+                  <tr><td>Shelf screws, outer pair centres</td><td class="pr">825.1</td><td class="pr">925.1</td></tr>
+                  <tr><td>Arm screws, centres along the profile</td><td class="pr">791.5</td><td class="pr">891.5</td></tr>
+                  <tr><td>Shelf screws from the shelf's front edge</td><td class="pr">65</td><td class="pr">65</td></tr>
+                  <tr><td>Hinge axis from the shelf's front edge</td><td class="pr">57</td><td class="pr">57</td></tr>
+                  <tr><td>Torque needed per hinge, at most</td><td class="pr">0.03 Nm</td><td class="pr">0.03 Nm</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="dnotes" style="margin-top:10px">
+              <li>Centre the profile on the desk and measure the screw positions out from its middle.</li>
+              <li>All four shelf screws sit on one line, on the profile's centreline. That line is the easiest thing to mark out.</li>
+              <li>The end cap must not stand above the profile base where the hinge body sits. Trim it flush if it does.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
     </div>
     <h2>Parts to make</h2>
     <div class="parts">
@@ -353,6 +417,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
           <li>Drill 2.5 and tap M3. Slide it in from the end of the profile.</li>
           <li>Fix with M3 screws and washers through the Kipp counterbores.</li>
           <li>For the folded Southco, make it 30 long with the two M3 holes 16 apart.</li>
+          <li>For the ST-7A3, make two 12 long, each with one M3 hole 4.25 from the end at the profile's end.</li>
         </ul>
       </article>
       <article class="model">
@@ -397,6 +462,18 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
       </ul>
     </section>
     <section>
+      <h2>ST-7A3, end mounted: fit notes</h2>
+      <ul>
+        <li>Order two ST-7A3-15ST. Type T isn't handed. Southco says a pair must face opposite ways, which they do when fitted at opposite ends.</li>
+        <li>The 15ST at 0.17 Nm is the lightest. The 30ST at 0.34 Nm works but is stiff to move, and the torque can't be adjusted down.</li>
+        <li>Order the black version: -50 is powder coated, -53 is black zinc. -33, the one listed at £9.89, is natural zinc.</li>
+        <li>The folded arm sits against the underside of the shelf, so screw the arms to the profile first, then screw the bodies up into the shelf.</li>
+        <li>At rest the arm is folded back beside the hinge body. Southco doesn't state the travel, so check the arm folds that far before cutting anything.</li>
+        <li>Tap the rear arm hole into the profile base no deeper than 4 mm. The base looks about 5 mm thick there on the supplier's drawing, so measure it first. The LED channel is below.</li>
+        <li>Run the LED cable out through the end cap under one of the hinges, where it moves least as the light tilts.</li>
+      </ul>
+    </section>
+    <section>
       <h2>Kipp, folded: fit notes</h2>
       <ul>
         <li>Order the version without guide tabs. The 6–10 mm tabs won't fit this profile's slot.</li>
@@ -413,6 +490,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
         <li>Profile T-slot sizes are scaled from the supplier's cross-section drawing.</li>
         <li>One hinge set is shown on a 120 mm length of profile. An 800–900 mm run uses two, about 180 mm in from each end, on one straight axis.</li>
         <li>Profile weight of about 0.4 kg per metre, used for the torque figures.</li>
+        <li>ST-7A3 type T geometry from Southco drawing J-ST-7A3-T: axis 3.5 from the mounting face, 7 mm arm centred on the axis, arm holes 8 and 17 from the axis, body holes 8 from the axis and 3.55 and 12.55 from the arm side.</li>
       </ul>
     </section>
   </div>
@@ -431,12 +509,13 @@ function prism(pts,z0,z1,m,p){const sh=new THREE.Shape(pts.map(q=>new THREE.Vect
 function label(t,p,x,y,z){const d=document.createElement('div');d.className='lbl';d.textContent=t;const o=new THREE.CSS2DObject(d);o.position.set(x,y,z);p.add(o);}
 const PROFILE=[[-39,0],[-5,0],[-5,4],[-15,4],[-15,10],[15,10],[15,4],[5,4],[5,0],[39,0],[39,70],[50,70],[50,77],[28,77],[28,16],[-28,16],[-28,77],[-50,77],[-50,70],[-39,70]].map(q=>[q[0]/3,-q[1]/3]);
 function mats(){return{alu:M(0xc4c8cc,{metalness:0.6,roughness:0.35}),bar:M(0xa9afb6,{metalness:0.6,roughness:0.4}),blk:M(0x26262a,{metalness:0.1,roughness:0.65}),zinc:M(0x9aa0a6,{metalness:0.7,roughness:0.3}),dark:M(0x050505,{metalness:0,roughness:1}),shelf:M(0x2a2a2a,{transparent:true,opacity:0.28,depthWrite:false}),rail:M(0x35353a,{metalness:0.5,roughness:0.45}),wood:M(0xc79a5f,{metalness:0,roughness:0.8})};}
-function addProfile(m){
-  const pm=M(0x2f2f33,{metalness:0.4,roughness:0.5});prism(PROFILE,-60,60,pm,m);
+function addProfile(m,z0,z1){
+  z0=z0===undefined?-60:z0;z1=z1===undefined?60:z1;
+  const pm=M(0x2f2f33,{metalness:0.4,roughness:0.5});prism(PROFILE,z0,z1,pm,m);
   label('LED profile',m,-16.7,-16,-60);
-  box(-6,6,-5.9,-5.33,-58,58,new THREE.MeshStandardMaterial({color:0xffb347,emissive:0xffa020,emissiveIntensity:0.8}),m);
-  box(-9.3,9.3,-23.6,-22.8,-60,60,new THREE.MeshStandardMaterial({color:0xffffff,transparent:true,opacity:0.55,emissive:0xfff2d6,emissiveIntensity:0.3}),m);
-  prism([[-9,-24],[9,-24],[28,-80],[-28,-80]],-60,60,new THREE.MeshBasicMaterial({color:0xffc56b,transparent:true,opacity:0.12,depthWrite:false,side:THREE.DoubleSide}),m);
+  box(-6,6,-5.9,-5.33,z0+2,z1-2,new THREE.MeshStandardMaterial({color:0xffb347,emissive:0xffa020,emissiveIntensity:0.8}),m);
+  box(-9.3,9.3,-23.6,-22.8,z0,z1,new THREE.MeshStandardMaterial({color:0xffffff,transparent:true,opacity:0.55,emissive:0xfff2d6,emissiveIntensity:0.3}),m);
+  prism([[-9,-24],[9,-24],[28,-80],[-28,-80]],z0,z1,new THREE.MeshBasicMaterial({color:0xffc56b,transparent:true,opacity:0.12,depthWrite:false,side:THREE.DoubleSide}),m);
   return pm;
 }
 function buildSouthco(scene,m,k){
@@ -490,6 +569,18 @@ function buildSouthcoFolded(scene,m,k){
   [-7.5,7.5].forEach(z=>{cyl(2.5,7,19.84,-0.5,z,'y',k.zinc,m);cyl(5.77,3,19.84,-1.5,z,'y',k.zinc,m,6);});
   return pm;
 }
+function buildST(scene,m,k){
+  box(-60,65,7,25,-60,70,k.shelf,scene);label('Shelf',scene,-50,25,-50);
+  box(40,55,-18,7,-60,70,k.rail,scene);label('Front rail',scene,47.5,-18,-55);
+  box(-3.3,12,0,7,40,56.2,k.blk,scene);cyl(2,0.25,8,3.5,56.33,'z',k.blk,scene);
+  [43.55,52.55].forEach(z=>cyl(2.5,0.6,0,-0.3,z,'y',k.zinc,scene));
+  label('ST-7A3 hinge',scene,12,7,56);
+  const pm=addProfile(m,-60,40);
+  prism(PROFILE,40,42,M(0x55585e,{metalness:0.1,roughness:0.8}),m);
+  box(-12.9,8,0,7,31.5,40,k.blk,m);cyl(3.5,8.5,8,3.5,35.75,'z',k.blk,m);label('Hinge arm',m,-12.9,3.5,35.75);
+  box(-4.6,4.6,-3.2,-1.5,28,40,k.alu,m);label('Tapped strip',m,4.6,-2.5,28);
+  return pm;
+}
 function buildKipp(scene,m,k){
   const AX=17.75,AY=10.5;
   box(-60,55,21,39,-60,60,k.shelf,scene);label('Shelf',scene,-50,39,-50);
@@ -511,7 +602,7 @@ function maxTilt(cfg){
   const pts=[];cfg.polys.forEach(p=>{for(let i=0;i<p.length;i++){const a=p[i],b=p[(i+1)%p.length];const n=Math.max(1,Math.ceil(Math.hypot(b[0]-a[0],b[1]-a[1])/0.5));for(let k=0;k<n;k++)pts.push([a[0]+(b[0]-a[0])*k/n,a[1]+(b[1]-a[1])*k/n]);}});
   const rl=cfg.rail;let last=0;
   for(let d=0;d<=120;d++){const t=d*Math.PI/180,c=Math.cos(t),s=Math.sin(t);
-    const hit=pts.some(q=>{const a=q[0]-cfg.ax,b=q[1]-cfg.ay;const X=cfg.ax+a*c-b*s,Y=cfg.ay+a*s+b*c;return X>rl[0]+0.5&&X<rl[1]&&Y>rl[2]&&Y<rl[3]-0.5;});
+    const hit=pts.some(q=>{const a=q[0]-cfg.ax,b=q[1]-cfg.ay;const X=cfg.ax+a*c-b*s,Y=cfg.ay+a*s+b*c;return (X>rl[0]+0.5&&X<rl[1]&&Y>rl[2]&&Y<rl[3]-0.5)||(cfg.shelfY!==undefined&&Y>cfg.shelfY+0.05);});
     if(hit)break;last=d;}
   return last;
 }
@@ -547,6 +638,7 @@ function viewer(id,cfg){
 viewer('s',{build:buildSouthco,ax:33,ay:1,railBottom:-9,target:[15,-5],rail:[52,67,-9,16],polys:[PROFILE,RC(-9,32,6,9),RC(17.84,27.84,9,12),RC(20.34,25.34,12,15),RC(-7.5,7.5,0,12)]});
 viewer('m',{build:buildSouthcoMedium,ax:27,ay:-0.7,railBottom:-9,target:[15,-5],rail:[48,63,-9,16],polys:[PROFILE,RC(-9,10,6,9),RC(10,26,6,9),RC(10.26,18.34,9,12.2),RC(-7.5,7.5,0,12),RC(8.75,27,0.2,6)]});
 viewer('c',{build:buildSouthcoFolded,ax:30,ay:8,railBottom:-12,target:[12,-3],rail:[37,52,-12,13],polys:[PROFILE,RC(-8,30,0,3),RC(14.84,24.84,-3,0),RC(17.34,22.34,-4,0),[[14.75,3],[30,3],[30,8],[16.5,4.5]]]});
+viewer('e',{build:buildST,ax:8,ay:3.5,railBottom:-18,target:[10,-5],rail:[40,55,-18,7],shelfY:7,polys:[PROFILE,RC(-12.9,8,0,7)]});
 viewer('k',{build:buildKipp,ax:17.75,ay:10.5,railBottom:-4,target:[5,0],rail:[30,45,-4,21],polys:[PROFILE,RC(-9.25,17.75,0,8)]});
 })();
 </script>
@@ -645,6 +737,29 @@ PL.line(-3,0,41,0,'cl');
 PL.text(8,3.2,'2× Ø3.2','nt');PL.text(27.84,3.2,'2× Ø5.5','nt');
 PL.dimH(0,-13,8,-8,-17,'8');PL.dimH(8,-8,27.84,-7.5,-17,'19.84');PL.dimH(27.84,-7.5,38,-13,-17,'10.16');PL.dimH(0,-13,38,-13,-22,'38');
 PL.dimV(8,-8,8,8,-5,'16');PL.dimV(38,-13,38,13,43,'26');PL.dimV(27.84,-7.5,27.84,7.5,49,'15');
+
+const E=dwg('d-e',[-34,-38,100,56],true,'Southco ST-7A3 end-mounted assembly, dimensioned end view');
+E.rect(-28,65,7,25,'ctx');E.rect(40,55,-18,7,'ctx');
+profile(E);E.rect(-4.6,4.6,-3.2,-1.5,'alu');
+E.rect(-3.3,12,0,7,'hid');
+E.rect(-12.9,8,0,7,'hinge');E.circ(8,3.5,3.5,'hinge');E.circ(8,3.5,1,'diff');
+E.rect(-1.5,1.5,-3,7,'hid');E.rect(-10.5,-7.5,-3,7,'hid');
+E.line(0,-31,0,28,'cl');E.line(8,-6,8,28,'cl');E.line(2,3.5,14,3.5,'cl');
+E.dimH(0,28,8,28,30,'8');E.dimH(8,28,40,7,30,'32');E.dimH(40,7,55,7,30,'15');E.dimH(55,7,65,25,30,'10');
+E.dimH(0,28,65,25,36,'65');
+E.dimV(55,7,55,-18,73,'25');E.dimV(55,-18,16.67,-25.67,62,'7.5');
+E.dimV(-21,7,-13,0,-21,'7');E.dimV(-13,0,-16.67,-25.67,-21,'25.5');E.dimV(-28,7,-16.67,-25.67,-28,'32.5');
+
+const EP=dwg('d-ep',[-62,-32,34,26],true,'ST-7A3 end detail, dimensioned plan',true);
+EP.rect(-50,0,-13,13,'prof');EP.line(-50,0,0,0,'hid');
+EP.rect(0,2,-16.67,16.67,'ctx');
+EP.rect(0,16.2,-3.3,12,'hinge');EP.rect(-8.5,0,-12.9,8,'hinge');
+[[3.55,0],[12.55,0],[-4.25,0],[-4.25,-9]].forEach(p=>EP.circ(p[0],p[1],1.5,'diff'));
+EP.line(-56,8,22,8,'cl');
+EP.text(-30,-6,'Profile base','nt','middle');EP.text(8,-7.5,'End cap','nt','middle');
+EP.dimH(-4.25,0,0,13,22,'4.25');EP.dimH(0,13,3.55,0,17,'3.55');EP.dimH(3.55,0,12.55,0,17,'9');EP.dimH(12.55,0,16.2,12,17,'3.65');
+EP.dimV(-4.25,0,-4.25,8,-53,'8');EP.dimV(-4.25,-9,-4.25,0,-53,'9');
+EP.text(-61,9.2,'Axis','nt','start');
 
 const K=dwg('d-k',[-34,-38,100,56],true,'Kipp K0440 assembly, dimensioned end view');
 K.rect(-28,55,21,39,'ctx');K.rect(30,45,-4,21,'ctx');
