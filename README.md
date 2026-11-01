@@ -118,6 +118,8 @@ Setting out (profile centred on the desk):
 | Shelf screws from the shelf's front edge | 65 | 65 |
 | Hinge axis from the shelf's front edge | 57 | 57 |
 
+These positions match Southco's panel preparation drawing (J-ST-7A3-T): body holes 9 apart and 8 from the hinge centreline, arm holes 8 and 17 from it, and 7.8 between the arm holes and the nearer body hole. Southco allows only ±0.1, so use the table to find the area, then screw the arms to the profile, hold the light up and mark the shelf pilots through the hinge bodies.
+
 Prices checked on 25 October 2026.
 
 ## Open checks

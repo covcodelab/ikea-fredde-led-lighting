@@ -378,7 +378,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
               </table>
             </div>
             <ul class="dnotes" style="margin-top:10px">
-              <li>Centre the profile on the desk and measure the screw positions out from its middle.</li>
+              <li>Centre the profile on the desk and measure the screw positions out from its middle. Southco's panel preparation allows only ±0.1, so use these to find the area, then mark the final pilots through the hinges with the arms already screwed to the profile.</li>
               <li>All four shelf screws sit on one line, on the profile's centreline. That line is the easiest thing to mark out.</li>
               <li>The end cap must not stand above the profile base where the hinge body sits. Trim it flush if it does.</li>
             </ul>
@@ -391,7 +391,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
       <div class="fx-grid">
         <figure style="margin:0;display:flex;flex-direction:column;gap:6px;min-width:0">
           <div class="dwgwrap" id="d-fx"></div>
-          <figcaption class="hint">Section A–A through both arm screws, 4.25 from the end of the profile, looking along the profile. Front of the desk on the right.</figcaption>
+          <figcaption class="hint">Section A–A through both arm screws, 4.25 from the end of the profile, looking along the profile. Front of the desk on the right. The 1.5 recess spacer sits on the hooks and stands 0.1 above the side walls, so the arm bears on the spacer.</figcaption>
         </figure>
         <figure style="margin:0;display:flex;flex-direction:column;gap:6px;min-width:0">
           <div class="dwgwrap" id="d-fp"></div>
@@ -405,7 +405,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
                 <tr><td class="q">1</td><td>Hinge arm, ST-7A3-15ST-33. Holes Ø3.25 with Ø6.03 × 2.3 deep counterbores on both faces, 8 and 17 from the axis</td><td class="q">1</td><td class="q">2</td></tr>
                 <tr><td class="q">2</td><td>Low-head socket cap screws, DIN 7984, stainless: one M3 × 10 cut down to 9 into the tapped strip, one M3 × 6 into the recess spacer. A standard socket head is 3 tall and would stand 0.7 above the arm and catch the shelf</td><td class="q">2</td><td class="q">4</td></tr>
                 <tr><td class="q">3</td><td>Tapped strip, ST-7A3: aluminium 12 × 9.5 × 1.8. Drill Ø2.5 and tap M3 through, 4.25 from one end. Slides into the T-slot cavity from the end of the profile and bears on both lips. This screw carries the load</td><td class="q">1</td><td class="q">2</td></tr>
-                <tr><td class="q">4</td><td>Recess spacer, ST-7A3: aluminium 12 × 22 × 1.5. Fills the 1.4 recess between the side walls so the arm sits flat. Ø3.4 hole on the centreline and an M3 tapped hole 9 behind it, both 4.25 from the end. The rear screw in it mainly stops the arm twisting</td><td class="q">1</td><td class="q">2</td></tr>
+                <tr><td class="q">4</td><td>Recess spacer, ST-7A3: aluminium 12 × 22 × 1.5. Sits on the hooks in the 1.4 recess and stands 0.1 above the side walls, so the arm bears on the spacer and sits flat. Ø3.4 hole on the centreline and an M3 tapped hole 9 behind it, both 4.25 from the end. The rear screw in it mainly stops the arm twisting</td><td class="q">1</td><td class="q">2</td></tr>
                 <tr><td class="q">5</td><td>Profile back, measured from photos: side walls stand about 1.4 above the hook tops. T-slot opening about 7.2, cavity about 9.8 × 2.0 under lips about 1.5 thick. The outer slots only have a small tooth on the wall side</td><td class="q">–</td><td class="q">–</td></tr>
                 <tr><td class="q">6</td><td>Hinge body to shelf: 3 × 16 pan-head wood screws (head Ø6 or less) through the body counterbores, into Ø2 pilot holes 12 deep</td><td class="q">2</td><td class="q">4</td></tr>
                 <tr><td class="q">–</td><td>Low-strength threadlocker on the arm screws</td><td class="q">–</td><td class="q">1</td></tr>
@@ -419,8 +419,9 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
             <li>Make a recess spacer for each end and check it sits flush with the tops of the side walls.</li>
             <li>Slide a tapped strip into the T-slot cavity at each end so its hole sits 4.25 from the end.</li>
             <li>Lay the recess spacer in the recess, fold the arm back over it and fit the two screws. Their heads sit below the arm's top face.</li>
-            <li>Mark the shelf screw line 65 from the shelf's front edge and the screw positions from the setting-out table. Drill the pilot holes.</li>
-            <li>Hold the light up, with the arms resting against the shelf, and screw the hinge bodies to the shelf.</li>
+            <li>Mark the shelf screw line 65 from the shelf's front edge and the rough screw positions from the setting-out table.</li>
+            <li>Hold the light up, with the arms resting against the shelf, and mark the pilot holes through the hinge body counterbores. Take it down and drill Ø2 pilots, 12 deep.</li>
+            <li>Hold the light up again and screw the hinge bodies to the shelf.</li>
           </ol></div>
         <div style="min-width:0"><h3 style="font-size:16px;margin-bottom:6px">Check first</h3>
           <ul class="dnotes"><li>Slot, cavity and recess sizes are measured from photos against a ruler, to about ±0.3. Dry-fit the tapped strip, recess spacer and screws first, and trim the T-slot screw so it doesn't touch the web.</li><li>Use low-head screws: the arm's top face rests against the shelf, so nothing may stand above it.</li><li>Southco's drawing note also recommends low-profile cap screws where the head must sit below the surface.</li></ul></div>
@@ -674,12 +675,12 @@ function buildST(scene,m,k){
   prism(stP(-3.3),40,56.2,zn,scene);cyl(2,0.25,8,3.5,56.33,'z',zn,scene);
   [43.55,52.55].forEach(z=>cyl(2.5,0.6,0,-0.3,z,'y',k.zinc,scene));
   label('Southco ST-7A3',scene,12,7,56);
-  const pm=addProfile(m,-60,40);
-  prism(PROFILE,40,42,M(0x55585e,{metalness:0.1,roughness:0.8}),m);
+  const pm=addProfile(m,-60,40,-0.1);
+  prism(PROFILE.map(q=>[q[0],q[1]-0.1]),40,42,M(0x55585e,{metalness:0.1,roughness:0.8}),m);
   const armP=[[8,40],[-9,39.45]];for(let i=1;i<12;i++){const a=Math.PI/2+i*Math.PI/12;armP.push([-9+3.7*Math.cos(a),35.75+3.7*Math.sin(a)]);}armP.push([-9,32.05],[8,31.5]);
   const ag=new THREE.ExtrudeGeometry(new THREE.Shape(armP.map(q=>new THREE.Vector2(q[0],q[1]))),{depth:7,bevelEnabled:false});ag.rotateX(Math.PI/2);ag.translate(0,7,0);m.add(new THREE.Mesh(ag,zn));
   cyl(3.5,8.5,8,3.5,35.75,'z',zn,m);label('Hinge arm',m,-12.9,3.5,35.75);
-  box(-4.75,4.75,-4.7,-2.9,28,40,k.alu,m);label('Tapped strip',m,4.75,-3.8,28);box(-11,11,-1.4,0,28,40,k.bar,m);label('Recess spacer',m,-11,-0.7,40);
+  box(-4.75,4.75,-4.8,-3,28,40,k.alu,m);label('Tapped strip',m,4.75,-3.9,28);box(-11,11,-1.5,0,28,40,k.bar,m);label('Recess spacer',m,-11,-0.75,40);
   return pm;
 }
 function buildKipp(scene,m,k){
@@ -739,7 +740,7 @@ function viewer(id,cfg){
 viewer('s',{build:buildSouthco,ax:33,ay:1,railBottom:-9,target:[15,-5],dy:1.4,rail:[52,67,-9,16],polys:[PROFILE_UP,RC(-9,32,6,9),RC(17.84,27.84,9,12),RC(20.34,25.34,12,15),RC(-7.5,7.5,0,12)]});
 viewer('m',{build:buildSouthcoMedium,ax:27,ay:-0.7,railBottom:-9,target:[15,-5],dy:1.4,rail:[48,63,-9,16],polys:[PROFILE_UP,RC(-9,10,6,9),RC(10,26,6,9),RC(10.26,18.34,9,12.2),RC(-7.5,7.5,0,12),RC(8.75,27,0.2,6)]});
 viewer('c',{build:buildSouthcoFolded,ax:30,ay:8,railBottom:-12,target:[12,-3],rail:[37,52,-12,13],polys:[PROFILE,RC(-8,30,0,3),RC(14.84,24.84,-3,0),RC(17.34,22.34,-4,0),[[14.75,3],[30,3],[30,8],[16.5,4.5]]]});
-viewer('e',{build:buildST,ax:8,ay:3.5,railBottom:-18,target:[10,-5],rail:[40,55,-18,7],shelfY:7,polys:[PROFILE,RC(-12.9,8,0,7)]});
+viewer('e',{build:buildST,ax:8,ay:3.5,railBottom:-18,target:[10,-5],rail:[40,55,-18,7],shelfY:7,dy:-0.1,polys:[PROFILE.map(q=>[q[0],q[1]-0.1]),RC(-12.9,8,0,7)]});
 viewer('k',{build:buildKipp,ax:17.75,ay:10.5,railBottom:-4,target:[5,0],rail:[30,45,-4,21],polys:[PROFILE,RC(-9.25,17.75,0,8)]});
 })();
 </script>
@@ -845,15 +846,15 @@ PL.dimV(8,-8,8,8,-5,'16');PL.dimV(38,-13,38,13,43,'26');PL.dimV(27.84,-7.5,27.84
 
 const E=dwg('d-e',[-34,-38,100,56],true,'Southco ST-7A3, end mounted assembly, dimensioned end view');
 E.rect(-28,65,7,25,'ctx');E.rect(40,55,-18,7,'ctx');
-profile(E);E.rect(-4.75,4.75,-4.7,-2.9,'alu');E.rect(-11,11,-1.4,0,'alu');
+profile(E,-0.1);E.rect(-4.75,4.75,-4.8,-3,'alu');E.rect(-11,11,-1.5,0,'alu');
 E.poly(stP(-3.3),'hid');
 E.poly(stP(-12.9),'zinc');E.circ(8,3.5,1,'diff');
 E.rect(-1.5,1.5,-4.3,7,'hid');E.rect(-10.5,-7.5,-1.3,7,'hid');
 E.line(0,-31,0,28,'cl');E.line(8,-6,8,28,'cl');E.line(2,3.5,14,3.5,'cl');
 E.dimH(0,28,8,28,30,'8');E.dimH(8,28,40,7,30,'32');E.dimH(40,7,55,7,30,'15');E.dimH(55,7,65,25,30,'10');
 E.dimH(0,28,65,25,36,'65');
-E.dimV(55,7,55,-18,73,'25');E.dimV(55,-18,16.67,-25.67,62,'7.5');
-E.dimV(-21,7,-13,0,-21,'7');E.dimV(-13,0,-16.67,-25.67,-21,'25.5');E.dimV(-28,7,-16.67,-25.67,-28,'32.5');
+E.dimV(55,7,55,-18,73,'25');E.dimV(55,-18,16.67,-25.77,62,'7.8');
+E.dimV(-21,7,-13,-0.1,-21,'7.1');E.dimV(-13,-0.1,-16.67,-25.77,-21,'25.5');E.dimV(-28,7,-16.67,-25.77,-28,'32.6');
 
 const EP=dwg('d-ep',[-62,-32,34,26],true,'ST-7A3 setting out, dimensioned plan',true);
 EP.rect(-50,0,-13,13,'prof');EP.line(-50,0,0,0,'hid');
@@ -869,18 +870,18 @@ EP.text(17,9.2,'Hinge axis','nt','start');
 
 const FX=dwg('d-fx',[-20.5,-9.5,23,13.5],true,'ST-7A3 arm fixing, section through the arm screws',false,0.45);
 FX.rect(-20.5,23,7,12,'ctx');
-FX.poly(PROF,'prof');FX.rect(-4,4,-6.8,-6.2,'led');
-FX.rect(-4.75,4.75,-4.7,-2.9,'alu');FX.rect(-11,11,-1.4,0,'alu');
+FX.poly(PROF.map(q=>[q[0],q[1]-0.1]),'prof');FX.rect(-4,4,-6.9,-6.3,'led');
+FX.rect(-4.75,4.75,-4.8,-3,'alu');FX.rect(-11,11,-1.5,0,'alu');
 FX.poly(stP(-12.9),'zinc');
 [0,-9].forEach(x=>{FX.rect(x-3.015,x+3.015,4.7,7,'diff');FX.rect(x-3.015,x+3.015,0,2.3,'diff');FX.rect(x-1.625,x+1.625,2.3,4.7,'diff');
   FX.rect(x-1.5,x+1.5,x===0?-4.3:-1.3,4.7,'alu');FX.rect(x-2.75,x+2.75,4.7,6.7,'alu');FX.rect(x-1.25,x+1.25,5.9,6.7,'diff');});
 FX.circ(8,3.5,0.5,'diff');
 FX.line(0,-9.5,0,12,'cl');FX.line(8,-1,8,9,'cl');FX.line(4,3.5,13,3.5,'cl');
 FX.dimH(-9,6.9,0,6.9,9.3,'9');FX.dimH(0,6.9,8,9,9.3,'8');FX.dimH(-9,6.9,8,9,12.2,'17');
-FX.dimV(11.5,7,11.5,0,16,'7');FX.dimV(13,3.5,13,0,18.5,'3.5');
-FX.dimV(-13,0,-11.3,-1.4,-14.4,'1.4');FX.dimV(-13,0,-11.3,-4.9,-16.2,'4.9');FX.dimV(-13,0,-11.3,-6.2,-18,'6.2');
+FX.dimV(11.5,7,11.5,0,16,'7');FX.dimV(11,0,11,-1.5,16,'1.5');FX.dimV(13,3.5,13,0,18.5,'3.5');
+FX.dimV(-13,-0.1,-11.3,-1.5,-14.4,'1.4');FX.dimV(-13,-0.1,-11.3,-5,-16.2,'4.9');FX.dimV(-13,-0.1,-11.3,-6.3,-18,'6.2');
 FX.bal(1,-16.5,4.8,-12.4,3.5);FX.bal(2,-16.5,1.6,-11.75,5.6);
-FX.bal(3,16,-5,4.75,-3.8);FX.bal(4,-16.2,-8.2,-10.5,-0.7);FX.bal(5,16,-1.8,3.6,-2.2);
+FX.bal(3,19.5,-5.4,4.75,-3.9);FX.bal(4,-16.2,-8.2,-10.5,-0.75);FX.bal(5,19.5,-2.6,3.6,-2.3);
 
 const FP=dwg('d-fp',[-22,-17,20,21],true,'ST-7A3 arm fixing, plan of the profile end',false,0.45);
 FP.rect(-22,0,-13,13,'prof');FP.rect(0,2,-16.67,16.67,'ctx');
