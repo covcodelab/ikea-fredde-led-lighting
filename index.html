@@ -108,7 +108,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
 <div class="page">
   <header>
     <h1>FREDDE LED hinge options</h1>
-    <p class="lede">Three ways to hang the black ALP3025-B profile under the top shelf on friction hinges, so it can tilt and throw light forward under the front rail. Drag any model to look around it. The slider tilts the profile on its hinge.</p>
+    <p class="lede">Four ways to hang the black ALP3025-B profile under the top shelf on friction hinges, so it can tilt and throw light forward under the front rail. Drag any model to look around it. The slider tilts the profile on its hinge.</p>
     <div class="chips">
       <span class="chip">Rail <b>25 mm</b> deep · <b>15 mm</b> thick · back face <b>25 mm</b> from shelf edge</span>
       <span class="chip">Profile <b>33 / 26 × 25.5 mm</b></span>
@@ -166,21 +166,38 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
       </div>
       <p class="hint">One small constant-torque hinge just past each end of the profile. The body screws under the shelf. The 7 mm arm folds back over the end of the profile base, filling the gap up to the shelf, and screws to a tapped strip and recess spacer with two M3 screws. The model shows one end.</p>
     </article>
+
+    <article class="model">
+      <header><h2>Southco ST-7A3, rail mounted</h2><span class="tag">ST-7A3-15ST-33 · fixed 0.17 Nm</span></header>
+      <div class="view" id="v-r"></div>
+      <div class="controls">
+        <label for="t-r">Tilt</label><input id="t-r" type="range" min="0" max="60" step="1" value="0"><span class="val" id="tv-r">0°</span>
+        <label class="cb"><input id="x-r" type="checkbox">See-through profile</label>
+        <label class="cb"><input id="l-r" type="checkbox" checked>Labels</label>
+      </div>
+      <div class="readouts">
+        <div class="ro"><span>Below rail</span><b id="b-r">–</b></div>
+        <div class="ro"><span>Max tilt</span><b id="m-r">–</b></div>
+        <div class="ro"><span>Rail screws</span><b>14 mm up</b></div>
+        <div class="ro"><span>Parts to make</span><b>2</b></div>
+      </div>
+      <p class="hint">The same hinge, screwed upright to the back of the steel front rail with its pivot at the bottom, just past each end of the profile. The arm points back and carries the profile, which hangs below the rail. Nothing is fixed to the shelf. The model shows one end.</p>
+    </article>
   </div>
 
   <div class="tablewrap">
     <table>
-      <thead><tr><th></th><th>Southco small, folded</th><th>Kipp, folded</th><th>Southco ST-7A3, end mounted</th></tr></thead>
+      <thead><tr><th></th><th>Southco small, folded</th><th>Kipp, folded</th><th>Southco ST-7A3, end mounted</th><th>Southco ST-7A3, rail mounted</th></tr></thead>
       <tbody>
-        <tr><td>Hinge price</td><td class="num">£8.67</td><td class="num">≈ US$28.99</td><td class="num">£9.89</td></tr>
-        <tr><td>Hinge size</td><td class="num">25.4 × 30.5 mm</td><td class="num">56 (63 with caps) × 54 mm</td><td class="num">25.3 × 15.3 × 7 mm, 32.2 mm arm</td></tr>
-        <tr><td>Torque</td><td>Up to 0.25 Nm, screw adjuster on the knuckle</td><td>0–5 Nm, 4 mm hex key in the knuckle end</td><td>Fixed 0.17 Nm (15ST), not adjustable</td></tr>
-        <tr><td>Fixing</td><td>Shelf studs glued into the shelf. Profile studs and nuts through a 3 mm adapter plate</td><td>Screws through counterbored M6 holes, 36 mm apart</td><td>No. 4 wood screws into the shelf. M3 screws into the profile base</td></tr>
-        <tr><td>Profile below rail at rest</td><td class="num">≈14 mm</td><td class="num">≈22 mm</td><td class="num">≈8 mm</td></tr>
-        <tr><td>Tilt before touching the rail</td><td class="num">≈63°</td><td class="num">≈56°</td><td class="num">≈70° (shelf limits)</td></tr>
-        <tr><td>Parts to make</td><td>Adapter plate, tapped strip, recess spacer, trimmed studs</td><td>Tapped strip, recess spacer</td><td>Tapped strip, recess spacer</td></tr>
-        <tr><td>Removable</td><td>Profile yes, hinge glued to the shelf</td><td>Yes</td><td>Yes</td></tr>
-        <tr><td>Hinge travel</td><td>Unfolds from shut, if the hinge folds a full 180° (check on the part)</td><td>Up to 180° from folded</td><td>Not stated. Arm folded back at rest (check on the part)</td></tr>
+        <tr><td>Hinge price</td><td class="num">£8.67</td><td class="num">≈ US$28.99</td><td class="num">£9.89</td><td class="num">£9.89</td></tr>
+        <tr><td>Hinge size</td><td class="num">25.4 × 30.5 mm</td><td class="num">56 (63 with caps) × 54 mm</td><td class="num">25.3 × 15.3 × 7 mm, 32.2 mm arm</td><td class="num">25.3 × 15.3 × 7 mm, 32.2 mm arm</td></tr>
+        <tr><td>Torque</td><td>Up to 0.25 Nm, screw adjuster on the knuckle</td><td>0–5 Nm, 4 mm hex key in the knuckle end</td><td>Fixed 0.17 Nm (15ST), not adjustable</td><td>Fixed 0.17 Nm (15ST), not adjustable</td></tr>
+        <tr><td>Fixing</td><td>Shelf studs glued into the shelf. Profile studs and nuts through a 3 mm adapter plate</td><td>Screws through counterbored M6 holes, 36 mm apart</td><td>No. 4 wood screws into the shelf. M3 screws into the profile base</td><td>M3 low-head screws into the rail's back wall, tapped or with rivet nuts. M3 screws into the profile base</td></tr>
+        <tr><td>Profile below rail at rest</td><td class="num">≈14 mm</td><td class="num">≈22 mm</td><td class="num">≈8 mm</td><td class="num">≈23 mm</td></tr>
+        <tr><td>Tilt before touching the rail</td><td class="num">≈63°</td><td class="num">≈56°</td><td class="num">≈70° (shelf limits)</td><td class="num">≈67°</td></tr>
+        <tr><td>Parts to make</td><td>Adapter plate, tapped strip, recess spacer, trimmed studs</td><td>Tapped strip, recess spacer</td><td>Tapped strip, recess spacer</td><td>Tapped strip, recess spacer</td></tr>
+        <tr><td>Removable</td><td>Profile yes, hinge glued to the shelf</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>Hinge travel</td><td>Unfolds from shut, if the hinge folds a full 180° (check on the part)</td><td>Up to 180° from folded</td><td>Not stated. Arm folded back at rest (check on the part)</td><td>Rests at 90°, opens towards flat as it tilts (shown on Southco's drawing)</td></tr>
       </tbody>
     </table>
   </div>
@@ -188,7 +205,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
   <section class="drawings" id="parts">
     <header>
       <h2>Parts list</h2>
-      <p class="lede">Quantities are for one run of 800–900 mm, hung on two hinges: about 180 mm in from each end for the folded layouts, at the ends for the ST-7A3. Prices were checked on 25 October 2026 and may change.</p>
+      <p class="lede">Quantities are for one run of 800–900 mm, hung on two hinges: about 180 mm in from each end for the folded layouts, at the ends for the ST-7A3 layouts. Prices were checked on 25 October 2026 and may change.</p>
     </header>
     <div class="tablewrap">
       <table class="plist">
@@ -216,10 +233,19 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
           <tr><td>Recess spacer, ST-7A3</td><td>Aluminium 1.5 mm, 12 × 22 mm, Ø3.4 hole and M3 tapped hole 9 apart. Cut to its drawing in Parts to make.</td><td class="q">2</td><td>Metal or DIY supplier</td><td class="pr">–</td></tr>
           <tr><td>Machine screws</td><td>Low-head socket cap screws (DIN 7984): two M3 × 10 cut to 9 mm, two M3 × 6. See the arm fixing detail</td><td class="q">2 + 2</td><td>Hardware supplier</td><td class="pr">–</td></tr>
           <tr><td>Wood screws</td><td>3 × 16 mm pan head, hinge body to shelf. Heads must fit the Ø6 counterbores</td><td class="q">4</td><td>Hardware supplier</td><td class="pr">–</td></tr>
+          <tr class="grp"><th colspan="5">Southco ST-7A3, rail mounted</th></tr>
+          <tr><td>Hinge</td><td>ST-7A3-15ST-33, type T, symmetric 0.17 Nm, natural zinc. Not handed.</td><td class="q">2</td><td><a href="https://shop.southco.com/en_gb/st-7a3-15st-33" target="_blank" rel="noopener">Southco UK shop</a></td><td class="pr">£9.89</td></tr>
+          <tr><td>Tapped strip, ST-7A3</td><td>Aluminium, 12 × 9.5 × 1.8 mm, one M3 hole 4.25 from one end. Cut to its drawing in Parts to make.</td><td class="q">2</td><td>Metal or DIY supplier</td><td class="pr">–</td></tr>
+          <tr><td>Recess spacer, ST-7A3</td><td>Aluminium 1.5 mm, 12 × 22 mm, Ø3.4 hole and M3 tapped hole 9 apart. Fitted turned over, so the tapped hole is in front of the centreline. Cut to its drawing in Parts to make.</td><td class="q">2</td><td>Metal or DIY supplier</td><td class="pr">–</td></tr>
+          <tr><td>Machine screws, arm</td><td>Low-head socket cap screws (DIN 7984): two M3 × 10 cut to 9 mm, two M3 × 6. See the rail fixing detail</td><td class="q">2 + 2</td><td>Hardware supplier</td><td class="pr">–</td></tr>
+          <tr><td>Machine screws, rail</td><td>Low-head socket cap screws (DIN 7984), M3 × 8, into M3 threads tapped in the rail's back wall</td><td class="q">4</td><td>Hardware supplier</td><td class="pr">–</td></tr>
+          <tr><td>Rivet nuts (if the wall is thin)</td><td>M3 steel rivet nuts with a flange no bigger than Ø6, so it sits in the body's front counterbore. Only if the rail wall is too thin to tap</td><td class="q">4</td><td>Hardware supplier</td><td class="pr">–</td></tr>
+          <tr><td>Threadlocker</td><td>Low strength, for the arm and rail screws</td><td class="q">1</td><td>Hardware supplier</td><td class="pr">–</td></tr>
           <tr class="grp"><th colspan="5">Tools</th></tr>
           <tr><td>Southco small, folded</td><td>Drills 2.5, 3.2, 5.5 and 6 mm, M3 tap, a hacksaw and file</td><td class="q">–</td><td>–</td><td class="pr">–</td></tr>
           <tr><td>Kipp, folded</td><td>2.5 mm drill, M3 tap, 4 mm hex key for the friction adjuster</td><td class="q">–</td><td>–</td><td class="pr">–</td></tr>
           <tr><td>Southco ST-7A3, end mounted</td><td>2, 2.5 and 3.4 mm drills, M3 tap, 2.5 mm hex key, hacksaw</td><td class="q">–</td><td>–</td><td class="pr">–</td></tr>
+          <tr><td>Southco ST-7A3, rail mounted</td><td>2.5 and 3.4 mm drills (or the rivet-nut drill and tool), M3 tap, 3 mm transfer punch, 2.5 mm hex key, hacksaw</td><td class="q">–</td><td>–</td><td class="pr">–</td></tr>
         </tbody>
       </table>
     </div>
@@ -228,7 +254,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
   <section class="drawings">
     <header>
       <h2>Dimensioned drawings</h2>
-      <p class="lede">End views looking along the profile, with the front of the desk on the right. All three assemblies are drawn at the same scale. Dimensions in mm, at rest with no tilt.</p>
+      <p class="lede">End views looking along the profile, with the front of the desk on the right. All four assemblies are drawn at the same scale. Dimensions in mm, at rest with no tilt.</p>
       <div class="legend">
         <span><i class="sw" style="background:var(--d-hinge)"></i>Hinge</span>
         <span><i class="sw" style="background:var(--d-alu)"></i>Aluminium and fixings</span>
@@ -304,6 +330,19 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
           </div>
         </div>
       </article>
+      <article class="model">
+        <header><h3>Southco ST-7A3, rail mounted</h3><span class="tag">End view, at the profile end</span></header>
+        <div class="drow-body">
+          <div class="dwgwrap" id="d-r"></div>
+          <ul class="dnotes">
+            <li>Hinge body upright on the back face of the rail, pivot at the bottom. Axis 6 above the rail bottom and 3.5 behind its back face.</li>
+            <li>Two M3 low-head screws into the rail, 8 above the axis and 14 above the rail bottom (dashed through the body).</li>
+            <li>The arm points back at rest. The profile hangs under it, centred on the far arm hole, 17 behind the axis, so no part of it swings up into the rail.</li>
+            <li>The hinge body sits just past the end of the profile. Its lower edge is 2 above the rail bottom, about 0.4 below the tops of the profile's side walls but 0.5 in front of the front wall, so the end cap clears it.</li>
+            <li>Tilt stops at about 67°, when the front edge of the profile reaches the rail.</li>
+          </ul>
+        </div>
+      </article>
     </div>
     <article class="model" id="st-fixing">
       <header><h3>ST-7A3 arm fixing to the back of the profile</h3><span class="tag">Detail, one end · ST-7A3-15ST-33</span></header>
@@ -344,6 +383,61 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
           </ol></div>
         <div style="min-width:0"><h3 style="font-size:16px;margin-bottom:6px">Check first</h3>
           <ul class="dnotes"><li>Slot, cavity and recess sizes are measured from photos against a ruler, to about ±0.3. Dry-fit the tapped strip, recess spacer and screws first, and trim the T-slot screw so it doesn't touch the web.</li><li>Use low-head screws: the arm's top face rests against the shelf, so nothing may stand above it.</li><li>Southco's drawing note also recommends low-profile cap screws where the head must sit below the surface.</li></ul></div>
+      </div>
+    </article>
+    <article class="model" id="rail-fixing">
+      <header><h3>ST-7A3 fixing to the steel rail</h3><span class="tag">Detail, one end · rail mounted</span></header>
+      <div class="fx-grid">
+        <figure style="margin:0;display:flex;flex-direction:column;gap:6px;min-width:0">
+          <div class="dwgwrap" id="d-rx"></div>
+          <figcaption class="hint">Section looking along the profile, through the rail screws and the arm screws. Front of the desk on the right. The rail's back wall is drawn 1.5 thick: measure it.</figcaption>
+        </figure>
+        <figure style="margin:0;display:flex;flex-direction:column;gap:6px;min-width:0">
+          <div class="dwgwrap" id="d-rr"></div>
+          <figcaption class="hint">Rear view, looking forward at the back of the rail. The arm sits over the end of the profile base and the body just past the end cap.</figcaption>
+        </figure>
+      </div>
+      <div class="tablewrap">
+        <table class="plist" style="min-width:0">
+          <thead><tr><th class="q">No.</th><th>Part or hole</th><th class="q">Per end</th><th class="q">Per light</th></tr></thead>
+          <tbody>
+            <tr><td class="q">1</td><td>Hinge body, ST-7A3-15ST-33, upright on the rail's back face with the pivot at the bottom. Lower edge 2 above the rail bottom</td><td class="q">1</td><td class="q">2</td></tr>
+            <tr><td class="q">2</td><td>Rail screws: low-head socket cap screws, DIN 7984, M3 × 8, heads in the body's back counterbores, into M3 threads tapped in the rail's back wall. If the wall is too thin to tap, use M3 rivet nuts with a flange no bigger than Ø6, which sits in the body's front counterbore</td><td class="q">2</td><td class="q">4</td></tr>
+            <tr><td class="q">3</td><td>Hinge arm, pointing back at rest. Holes Ø3.25 with Ø6.03 × 2.3 deep counterbores on both faces, 8 and 17 from the axis</td><td class="q">1</td><td class="q">2</td></tr>
+            <tr><td class="q">4</td><td>Tapped strip, ST-7A3, in the T-slot cavity, with an M3 × 10 low-head screw cut to 9 through the far arm hole, on the profile centreline. This screw carries the load</td><td class="q">1</td><td class="q">2</td></tr>
+            <tr><td class="q">5</td><td>Recess spacer, ST-7A3, turned over so its tapped hole is 9 in front of the centreline, with an M3 × 6 low-head screw through the near arm hole</td><td class="q">1</td><td class="q">2</td></tr>
+            <tr><td class="q">6</td><td>Steel front rail, 25 × 15, a closed section. Back wall thickness to be measured</td><td class="q">–</td><td class="q">–</td></tr>
+            <tr><td class="q">–</td><td>Low-strength threadlocker on the arm and rail screws</td><td class="q">–</td><td class="q">1</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="fx-grid">
+        <div style="min-width:0"><h3 style="font-size:16px;margin-bottom:6px">Setting out on the rail</h3>
+          <div class="tablewrap">
+            <table class="plist" style="min-width:0">
+              <thead><tr><th>Dimension</th><th class="pr">800 run</th><th class="pr">900 run</th></tr></thead>
+              <tbody>
+                <tr><td>Hinge to hinge, outside the bodies</td><td class="pr">832.4</td><td class="pr">932.4</td></tr>
+                <tr><td>Rail screws, inner pair centres</td><td class="pr">807.1</td><td class="pr">907.1</td></tr>
+                <tr><td>Rail screws, outer pair centres</td><td class="pr">825.1</td><td class="pr">925.1</td></tr>
+                <tr><td>Arm screws, centres along the profile</td><td class="pr">791.5</td><td class="pr">891.5</td></tr>
+                <tr><td>Rail screws above the rail bottom</td><td class="pr">14</td><td class="pr">14</td></tr>
+                <tr><td>Body lower edge above the rail bottom</td><td class="pr">2</td><td class="pr">2</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="dnotes" style="margin-top:10px"><li>Centre the profile on the desk and measure out from its middle. The spacings along the run are the same as for the end-mounted layout.</li><li>Southco's panel preparation allows ±0.1, so use the table to find the area, then mark the final holes through the hinges.</li></ul>
+        </div>
+        <div style="min-width:0"><h3 style="font-size:16px;margin-bottom:6px">Assembly order</h3>
+          <ol class="dnotes">
+            <li>Measure the rail's back wall. Tap M3 if it is about 1.5 thick or more; otherwise use rivet nuts.</li>
+            <li>Cut the profile and diffuser to length and fit the end caps. Trim the end caps flush with the side walls if they stand above them.</li>
+            <li>Slide a tapped strip into the T-slot cavity at each end, hole 4.25 from the end. Lay a recess spacer in the recess, turned over so its tapped hole is towards the front.</li>
+            <li>Set each arm at 90° to its body, pointing back over the spacer, and fit the two arm screws. Their heads sit below the arm's top face.</li>
+            <li>Draw a line along the rail's back face 2 above its bottom edge, and mark the rough screw positions from the table.</li>
+            <li>Hold the light up with each body on the rail, lower edge on the line, and mark the holes through the body counterbores with a transfer punch.</li>
+            <li>Take the light down. Drill Ø2.5 and tap M3, or drill for the rivet nuts, then screw the bodies to the rail.</li>
+          </ol></div>
       </div>
     </article>
     <h2>Parts to make</h2>
@@ -391,7 +485,7 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
         </ul>
       </article>
       <article class="model">
-        <header><h3>Tapped strip, ST-7A3</h3><span class="tag">Southco ST-7A3, end mounted · plan</span></header>
+        <header><h3>Tapped strip, ST-7A3</h3><span class="tag">Southco ST-7A3, end or rail mounted · plan</span></header>
         <div class="dwgwrap" id="d-ste"></div>
         <ul class="dnotes">
           <li>Aluminium, 1.8 thick. Drill 2.5 and tap M3. Make two.</li>
@@ -399,12 +493,13 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
         </ul>
       </article>
       <article class="model">
-        <header><h3>Recess spacer, ST-7A3</h3><span class="tag">Southco ST-7A3, end mounted · plan</span></header>
+        <header><h3>Recess spacer, ST-7A3</h3><span class="tag">Southco ST-7A3, end or rail mounted · plan</span></header>
         <div class="dwgwrap" id="d-rse"></div>
         <ul class="dnotes">
           <li>1.5 aluminium, sized to the measured recess depth. Make two, one per end.</li>
           <li>Ø3.4 clearance hole on the centreline for the T-slot screw. Drill 2.5 and tap M3 for the rear arm screw.</li>
           <li>The right-hand edge sits flush with the end of the profile.</li>
+          <li>Rail mounted: fit it turned over, so the tapped hole is 9 in front of the centreline.</li>
         </ul>
       </article>
     </div>
@@ -443,11 +538,22 @@ h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:0}
       </ul>
     </section>
     <section>
+      <h2>Southco ST-7A3, rail mounted: fit notes</h2>
+      <ul>
+        <li>Uses the same hinges, tapped strips and recess spacers as the end-mounted layout, with the spacer turned over. Nothing is screwed into the shelf.</li>
+        <li>The hinge rests at 90° and opens towards flat as the light tilts forward. Flat is the position Southco's panel preparation drawing shows, so the travel is known.</li>
+        <li>Only the hinge friction holds the light level: there is no rest stop. A 900 mm run needs about 0.03 Nm per hinge, well within the 0.17 Nm.</li>
+        <li>It hangs about 23 mm below the rail, 15 mm lower than the end-mounted layout. Raising the pivot reduces the tilt: at 8 mm above the rail bottom it hangs about 21 mm below and tilts about 55°.</li>
+        <li>The rail is a closed steel section. Check its back wall thickness, and that a 2.5 mm hex key can reach the rail screws from behind with the light in place.</li>
+      </ul>
+    </section>
+    <section>
       <h2>Assumptions</h2>
       <ul>
         <li>Profile back-face sizes are measured from photos against a ruler, to about ±0.3 mm.</li>
-        <li>The folded layouts show one hinge on a 120 mm length of profile. An 800–900 mm run uses two, about 180 mm in from each end, on one straight axis. The ST-7A3 uses one at each end.</li>
+        <li>The folded layouts show one hinge on a 120 mm length of profile. An 800–900 mm run uses two, about 180 mm in from each end, on one straight axis. The ST-7A3 layouts use one at each end.</li>
         <li>Profile weight of about 0.4 kg per metre, used for the torque figures.</li>
+        <li>Rail mounted: the front rail is a closed steel section with a back wall about 1.5 thick. Not yet measured.</li>
         <li>ST-7A3 type T geometry from Southco drawing J-ST-7A3-T: axis 3.5 from the mounting face, 7 mm arm centred on the axis, arm holes 8 and 17 from the axis, body holes 8 from the axis and 3.55 and 12.55 from the arm side.</li>
       </ul>
     </section>
@@ -507,6 +613,21 @@ function buildST(scene,m,k){
   box(-4.75,4.75,-4.8,-3,28,40,k.alu,m);label('Tapped strip',m,4.75,-3.9,28);box(-11,11,-1.5,0,28,40,k.bar,m);label('Recess spacer',m,-11,-0.75,40);
   return pm;
 }
+function buildSTR(scene,m,k){
+  box(-60,45.5,7,25,-60,70,k.shelf,scene);label('Shelf',scene,-50,25,-50);
+  box(20.5,35.5,-18,7,-60,70,k.rail,scene);label('Front rail',scene,28,-18,-55);
+  const zn=M(0xb9bec2,{metalness:0.7,roughness:0.4});
+  box(13.5,20.5,-16,-0.7,40,56.2,zn,scene);
+  [43.55,52.55].forEach(z=>{const c=cyl(2.75,0.6,13.2,-4,z,undefined,k.zinc,scene);c.rotation.z=Math.PI/2;});
+  label('Southco ST-7A3',scene,13.5,-0.7,56);
+  const pm=addProfile(m,-60,40,-15.6);
+  prism(PROFILE.map(q=>[q[0],q[1]-15.6]),40,42,M(0x55585e,{metalness:0.1,roughness:0.8}),m);
+  const armP=[[17,40],[0,39.45]];for(let i=1;i<12;i++){const a=Math.PI/2+i*Math.PI/12;armP.push([3.7*Math.cos(a),35.75+3.7*Math.sin(a)]);}armP.push([0,32.05],[17,31.5]);
+  const ag=new THREE.ExtrudeGeometry(new THREE.Shape(armP.map(q=>new THREE.Vector2(q[0],q[1]))),{depth:7,bevelEnabled:false});ag.rotateX(Math.PI/2);ag.translate(0,-8.5,0);m.add(new THREE.Mesh(ag,zn));
+  cyl(3.5,8.5,17,-12,35.75,'z',zn,m);label('Hinge arm',m,-3.7,-12,35.75);
+  box(-4.75,4.75,-20.3,-18.5,28,40,k.alu,m);label('Tapped strip',m,4.75,-19.4,28);box(-11,11,-17,-15.5,28,40,k.bar,m);label('Recess spacer',m,11,-16.25,40);
+  return pm;
+}
 function buildKipp(scene,m,k){
   const AX=17.75,AY=10.5;
   box(-60,55,21,39,-60,60,k.shelf,scene);label('Shelf',scene,-50,39,-50);
@@ -562,6 +683,7 @@ function viewer(id,cfg){
   (function loop(){requestAnimationFrame(loop);ctl.update();r.render(scene,cam);lr.render(scene,cam);})();
 }
 viewer('c',{build:buildSouthcoFolded,ax:30,ay:8,railBottom:-12,target:[12,-3],rail:[37,52,-12,13],polys:[PROFILE,RC(-8,30,0,3),RC(14.84,24.84,-3,0),RC(17.34,22.34,-4,0),[[14.75,3],[30,3],[30,8],[16.5,4.5]]]});
+viewer('r',{build:buildSTR,ax:17,ay:-12,railBottom:-18,target:[10,-15],rail:[20.5,35.5,-18,7],shelfY:7,dy:-15.6,polys:[PROFILE.map(q=>[q[0],q[1]-15.6]),RC(-3.7,17,-15.5,-8.5)]});
 viewer('e',{build:buildST,ax:8,ay:3.5,railBottom:-18,target:[10,-5],rail:[40,55,-18,7],shelfY:7,dy:-0.1,polys:[PROFILE.map(q=>[q[0],q[1]-0.1]),RC(-12.9,8,0,7)]});
 viewer('k',{build:buildKipp,ax:17.75,ay:10.5,railBottom:-4,target:[5,0],rail:[30,45,-4,21],polys:[PROFILE,RC(-9.25,17.75,0,8)]});
 })();
@@ -642,6 +764,50 @@ EP.text(-30,-6,'Profile base','nt','middle');EP.text(8,-7.5,'End cap','nt','midd
 EP.dimH(-4.25,0,0,13,22,'4.25');EP.dimH(0,13,3.55,0,17,'3.55');EP.dimH(3.55,0,12.55,0,17,'9');EP.dimH(12.55,0,16.2,12,17,'3.65');
 EP.dimV(-4.25,0,-4.25,8,-53,'8');EP.dimV(-4.25,-9,-4.25,0,-53,'9');
 EP.text(17,9.2,'Hinge axis','nt','start');
+
+const RA=dwg('d-r',[-34,-50,100,44],true,'Southco ST-7A3, rail mounted assembly, dimensioned end view');
+RA.rect(-28,45.5,7,25,'ctx');RA.rect(20.5,35.5,-18,7,'ctx');
+profile(RA,-15.6);RA.rect(-4.75,4.75,-20.3,-18.5,'alu');RA.rect(-11,11,-17,-15.5,'alu');
+RA.rect(13.5,20.5,-16,-0.7,'zinc');RA.rect(13.8,22,-5.5,-2.5,'hid');RA.rect(13.8,15.8,-6.75,-1.25,'hid');
+RA.poly([[-3.7,-15.5]].concat(arcP(17,-12,3.5,-90,90,14),[[-3.7,-8.5]]),'zinc');RA.circ(17,-12,1,'diff');
+RA.rect(-1.5,1.5,-19.8,-8.8,'hid');RA.rect(7.5,10.5,-16.8,-8.8,'hid');
+RA.line(0,-47,0,28,'cl');RA.line(17,-20,17,28,'cl');RA.line(10,-12,24,-12,'cl');
+RA.dimH(0,28,17,28,30,'17');RA.dimH(17,-12,20.5,-18,-24,'3.5');RA.dimH(20.5,7,35.5,7,30,'15');RA.dimH(35.5,7,45.5,25,30,'10');
+RA.dimH(0,28,45.5,25,36,'45.5');
+RA.dimV(35.5,-18,20.5,-12,40,'6');RA.dimV(35.5,-18,22,-4,44,'14');
+RA.dimV(35.5,7,35.5,-18,52,'25');RA.dimV(35.5,-18,16.67,-41.27,52,'23.3');
+RA.dimV(-21,7,-13,-15.6,-21,'22.6');RA.dimV(-13,-15.6,-16.67,-41.27,-21,'25.5');RA.dimV(-28,7,-16.67,-41.27,-28,'48.3');
+
+const RX=dwg('d-rx',[-21,-45,47,19],true,'ST-7A3 rail fixing, section through the rail and arm screws',false,0.45);
+RX.rect(-21,47,7,12,'ctx');RX.rect(20.5,35.5,-18,7,'ctx');RX.rect(22,34,-16.5,5.5,'diff');RX.rect(22,34,-16.5,5.5,'hid');
+RX.poly(PROF.map(q=>[q[0],q[1]-15.6]),'prof');RX.rect(-4,4,-22.4,-21.8,'led');
+RX.rect(-4.75,4.75,-20.3,-18.5,'alu');RX.rect(-11,11,-17,-15.5,'alu');
+RX.rect(13.5,20.5,-16,-0.7,'zinc');
+RX.rect(13.5,15.8,-7.015,-0.985,'diff');RX.rect(18.2,20.5,-7.015,-0.985,'diff');RX.rect(15.8,18.2,-5.625,-2.375,'diff');
+RX.rect(13.8,15.8,-6.75,-1.25,'alu');RX.rect(15.8,23.8,-5.5,-2.5,'alu');RX.rect(14.55,15.05,-4.6,-3.4,'diff');
+RX.poly([[-3.7,-15.5]].concat(arcP(17,-12,3.5,-90,90,14),[[-3.7,-8.5]]),'zinc');
+[0,9].forEach(x=>{RX.rect(x-3.015,x+3.015,-10.8,-8.5,'diff');RX.rect(x-3.015,x+3.015,-15.5,-13.2,'diff');RX.rect(x-1.625,x+1.625,-13.2,-10.8,'diff');
+  RX.rect(x-1.5,x+1.5,x===0?-19.8:-16.8,-10.8,'alu');RX.rect(x-2.75,x+2.75,-10.8,-8.8,'alu');RX.rect(x-1.25,x+1.25,-9.6,-8.8,'diff');});
+RX.circ(17,-12,0.5,'diff');
+RX.line(0,-44,0,18,'cl');RX.line(9,-17,9,15,'cl');RX.line(17,-13,17,18,'cl');RX.line(11,-12,40,-12,'cl');RX.line(12,-4,43,-4,'cl');
+RX.dimH(0,-8.5,9,-8.5,14,'9');RX.dimH(9,-8.5,17,-12,14,'8');RX.dimH(0,-8.5,17,-12,17,'17');
+RX.dimH(17,-12,20.5,-18,-24,'3.5');RX.dimH(20.5,-18,22,-16.5,-27,'1.5');
+RX.dimV(35.5,-18,40,-12,39.5,'6');RX.dimV(35.5,-18,43,-4,43,'14');
+RX.bal(1,6,3,14.5,-1.5);RX.bal(2,6,-2.5,14.3,-4);RX.bal(3,-9,-5,-2,-10);
+RX.bal(4,-17,-21,-3.5,-19.4);RX.bal(5,-17,-13,10.5,-16.2);RX.bal(6,28,-27,21.25,-10);
+
+const RR=dwg('d-rr',[-30,-50,30,20],true,'ST-7A3 rail fixing, rear view',false,0.45);
+RR.rect(-30,30,7,12,'ctx');RR.rect(-30,30,-18,7,'ctx');RR.text(-28,1.5,'Back face of rail','nt','start');
+RR.rect(-30,0,-41.27,-15.6,'prof');RR.rect(0,2,-41.27,-15.6,'ctx');
+RR.rect(0,16.2,-16,-0.7,'zinc');
+[3.55,12.55].forEach(z=>{RR.circ(z,-4,3.015,'diff');RR.circ(z,-4,2.75,'alu');RR.circ(z,-4,1.1,'diff');});
+RR.rect(-8.5,0,-15.5,-8.5,'zinc');
+RR.line(-14,-12,24,-12,'cl');RR.line(-4.25,-20,-4.25,-6,'cl');
+RR.dimH(-8.5,-8.5,0,-0.7,18.5,'8.5');RR.dimH(0,-0.7,16.2,-0.7,18.5,'16.2');
+RR.dimH(0,-0.7,3.55,-4,14.5,'3.55');RR.dimH(3.55,-4,12.55,-4,14.5,'9');
+RR.dimV(16.2,-18,16.2,-16,20,'2');RR.dimV(16.2,-18,12.55,-4,25,'14');
+RR.text(4,-30,'End cap','nt','start');RR.text(-15,-46,'LED profile','nt','middle');
+RR.bal(1,22,-26,14,-14);RR.bal(3,-20,-4,-6,-12);
 
 const FX=dwg('d-fx',[-20.5,-9.5,23,13.5],true,'ST-7A3 arm fixing, section through the arm screws',false,0.45);
 FX.rect(-20.5,23,7,12,'ctx');
